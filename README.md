@@ -4,9 +4,9 @@
 
 # Channel youtube python indonesia:
 ### kelas terbuka
-[![Youtube](https://img.shields.io/badge/youtube-kelas terbuka-red.svg)](https://www.youtube.com/c/kelasterbuka)
+[![Youtube](https://img.shields.io/badge/youtube-kelasterbuka-red.svg)](https://www.youtube.com/c/kelasterbuka)
 
 ### Indonesia Belajar
-[![Youtube](https://img.shields.io/badge/youtube-indonesia belajar-red.svg)](https://www.youtube.com/c/IndonesiaBelajarKomputer)
+[![Youtube](https://img.shields.io/badge/youtube-indonesiabelajar-red.svg)](https://www.youtube.com/c/IndonesiaBelajarKomputer)
 
 
