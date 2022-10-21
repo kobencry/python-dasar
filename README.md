@@ -4,10 +4,10 @@
 
 # Channel youtube python indonesia:
 ###### kelas terbuka
-[![Youtube](https://img.shields.io/badge/youtube-kelasterbuka-red.svg)](https://www.youtube.com/c/kelasterbuka)
+[![Youtube](https://img.shields.io/badge/youtube-KelasTerbuka-red.svg)](https://www.youtube.com/c/kelasterbuka)
 
 ###### Indonesia Belajar
-[![Youtube](https://img.shields.io/badge/youtube-indonesiabelajar-red.svg)](https://www.youtube.com/c/IndonesiaBelajarKomputer)
+[![Youtube](https://img.shields.io/badge/youtube-IndonesiaBelajar-red.svg)](https://www.youtube.com/c/IndonesiaBelajarKomputer)
 
 ###### Programmer Zaman Now
-[![Youtube](https://img.shields.io/badge/youtube-indonesiabelajar-red.svg)](https://www.youtube.com/c/ProgrammerZamanNow)
+[![Youtube](https://img.shields.io/badge/youtube-ProgrammerZamanNow-red.svg)](https://www.youtube.com/c/ProgrammerZamanNow)
