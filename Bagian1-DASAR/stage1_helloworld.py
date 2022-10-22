@@ -1,3 +1,4 @@
+# https://id.wikipedia.org/wiki/Python_(bahasa_pemrograman)
 # Apa itu Python?
 # Python adalah bahasa pemrograman yang populer. 
 # Itu dibuat oleh Guido van Rossum, dan dirilis pada tahun 1991.
@@ -74,9 +75,10 @@
 # with          digunakan untuk mempermudah penanganan exception
 # yield         untuk mengakhiri fungsi, mengembalikan generator
 
-# "Peringatan"
-# Jika anda ingin membuat file/nama fungsi jangan menggunakan nama dari sebuah fungsi/modul bawaan dari python
-# karna di python semua adalah objek
 
 # ini adalah komentar
 print("hello world")
+
+def keywords_python():
+    return help("keywords")
+keywords_python()
