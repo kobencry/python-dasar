@@ -7,5 +7,4 @@
 # Website tentang python:
 [![Website](https://img.shields.io/badge/website-W3Schools-darkblue.svg)](https://www.w3schools.com/python/) [![Website](https://img.shields.io/badge/website-programiz-darkblue.svg)](https://www.programiz.com/python-programming) [![Website](https://img.shields.io/badge/website-geeksforgeeks-darkblue.svg)](https://www.geeksforgeeks.org/python-programming-language/) [![Website](https://img.shields.io/badge/website-jagongoding-darkblue.svg)](https://jagongoding.com/python/) [![Website](https://img.shields.io/badge/website-realpython-darkblue.svg)](https://realpython.com/)
 
-###### alat ini sengaja dibuat untuk mempermudah pekerjaan programmer python. sumua rangkum dari berbagai  sumber website tentang python,  ini sangat cocok untuk pemula, menengah, hingga mahir
-###### tutorial ini sangat mudah dimengerti dalam penjelasan yang sangat dasar, dan berbagai contoh program kode yang mudah dipahami
+###### alat ini sengaja dibuat untuk mempermudah pekerjaan programmer python. sumua dirangkum dari berbagai sumber website tentang python, ini sangat cocok untuk pemula, menengah, hingga mahir tutorial ini sangat mudah dimengerti dalam penjelasan yang sangat dasar, dan berbagai contoh program kode yang mudah dipahami
