@@ -7,3 +7,4 @@
 
 # Website tentang python:
 [![Website](https://img.shields.io/badge/website-W3Schools-darkblue.svg)](https://www.w3schools.com/python/) [![Website](https://img.shields.io/badge/website-programiz-darkblue.svg)](https://www.programiz.com/python-programming) [![Website](https://img.shields.io/badge/website-geeksforgeeks-darkblue.svg)](https://www.geeksforgeeks.org/python-programming-language/) [![Website](https://img.shields.io/badge/website-jagongoding-darkblue.svg)](https://jagongoding.com/python/) [![Website](https://img.shields.io/badge/website-realpython-darkblue.svg)](https://realpython.com/)
+[![Website](https://img.shields.io/badge/website?logo=python?style=social)](https://www.w3schools.com/python/) 
