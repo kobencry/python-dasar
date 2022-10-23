@@ -6,6 +6,6 @@
 [![Youtube](https://img.shields.io/badge/youtube-KelasTerbuka-red.svg)](https://www.youtube.com/c/kelasterbuka)    [![Youtube](https://img.shields.io/badge/youtube-IndonesiaBelajar-red.svg)](https://www.youtube.com/c/IndonesiaBelajarKomputer)    [![Youtube](https://img.shields.io/badge/youtube-ProgrammerZamanNow-red.svg)](https://www.youtube.com/c/ProgrammerZamanNow)
 
 # Website tentang python:
-[![Website](https://img.shields.io/badge/website-W3Schools-red.svg)](https://www.w3schools.com/python/)
+[![Website](https://img.shields.io/badge/website-W3Schools-darkblue.svg)](https://www.w3schools.com/python/)
 
-[![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/label=Kelas%20Terbuka&style=social)](https://www.youtube.com/c/kelasterbuka)
+![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCQ4Jo2IJeyRGzZBvjaaLzrw?label=Indonesia%20Belajar&style=social)
