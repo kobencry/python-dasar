@@ -125,3 +125,26 @@ print(z)
 # hello world
 # hello world
 # hello world
+
+# membongkar/unpack koleksi
+# jika memiliki kumpulan nilai dalam type data list, tuple dll
+# python memungkinkan untuk mengekstrak nilai dalam variabel ini disebut unpack/membongkar
+nama = ["alice", "bob", "carl"] #type data list
+x, y, z = nama
+print(x)
+print(y)
+print(z)
+# variabel nama berjumlah 3, berarti buatlah 3 variabel
+# sesuaikan jumlahnya jika tidak akan menghasilkan runtime error/kesalahan runtime
+
+# otuput
+# alice
+# bob
+# carl
+
+# beberapa contoh kecil:
+x = "hello "
+y = "world!"
+print(x + y)
+# output
+# hello world! 
