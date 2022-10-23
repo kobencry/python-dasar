@@ -8,4 +8,4 @@
 # Website tentang python:
 [![Website](https://img.shields.io/badge/website-W3Schools-red.svg)](https://www.w3schools.com/python/)
 
-[![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/Kelas%20Terbuka?label=Kelas%20Terbuka&style=social)](https://www.youtube.com/c/kelasterbuka)
+[![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/label=Kelas%20Terbuka&style=social)](https://www.youtube.com/c/kelasterbuka)
