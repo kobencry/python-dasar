@@ -69,3 +69,9 @@ print("world" in txt) # mengembalikan tipe data boolean True
 # periksa apakah ada "war world" Tidak ada dalam txt.
 txt = "hello world!"
 print("war world!" not in txt) # megembalikan tipe data boolean True
+
+# menggabungkan string dengan operator aritmatika tambah (+)
+x = "hello"
+y = "world"
+print(x + y)
+print(x + " " + y) # menggunakan spasi
