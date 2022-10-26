@@ -16,7 +16,7 @@
 # Menadapatkan tipe data
 # fungsi type() menampilkan tipe data objek apa pun
 x = 5
-print(type(x))
+print(type(x), x)   # <class 'int'> 5
 
 
 # Mengatur tipe data
@@ -24,63 +24,63 @@ print(type(x))
 
 # tipe set
 str_x = "hello world"
-print(str_x, type(str_x))
+print(type(str_x), str_x)   # <class 'str'> hello world
 
 # tipe int
 int_x = 10
-print(int_x, type(int_x))
+print(type(int_x), int_x)   # <class 'int'> 10
 
 # tipe float
 float_x = 10.5
-print(float_x, type(float_x))
+print(type(float_x), float_x)   # <class 'float'> 10.5
 
 # tipe complex
 complex_x = 1j
-print(complex_x, type(complex_x))
+print(type(complex_x), complex_x)   # <class 'complex'> 1j
 
 # tipe list
 list_x = ['alice', 'carl', 'eliot']
-print(list_x, type(list_x))
+print(type(list_x), list_x)     # <class 'list'> ['alice', 'carl', 'eliot']
 
 # tipe tuple
 tuple_x = ('alice', 'carl', 'eliot')
-print(tuple_x, type(tuple_x))
+print(type(tuple_x), tuple_x)   # <class 'tuple'> ('alice', 'carl', 'eliot')
 
 # tipe range
 range_x = range(5)
-print(range_x, type(range_x))
+print(type(range_x), range_x)   # <class 'range'> range(0,5)
 
 # tipe dict
 dict_x = {'nama':'alice', 'usia':23}
-print(dict_x, type(dict_x))
+print(type(dict_x), dict_x)     # <class 'dict'> {'nama':'alice', 'usia':23}
 
 # tipe set
 set_x = {'alice', 'carl', 'eliot'}
-print(set_x, type(set_x))
+print(type(set_x), set_x)       # <class 'set'> {'alice', 'carl', 'eliot'}
 
 # tipe frozenset
 frozen_x = frozenset({'alice', 'carl', 'eliot'})
-print(frozen_x, type(frozen_x))
+print(type(frozen_x), frozen_x) # <class 'frozenset'> frozenset({'eliot', 'carl', 'alice'})
 
 # tipe boolean
 true_x = True
 false_x = False
-print(true_x, type(true_x))
-print(false_x, type(false_x))
+print(type(true_x), true_x)     # <class 'bool'> True
+print(type(false_x), false_x)   # <class 'bool'> False
 
 # tipe biner
 bytes_x = b"hello world"
 bytes_y = bytes(10)
 bytearray_x = bytearray(5)
 bytmemory_x = memoryview(bytes(5))
-print(bytes_x, type(bytes_x))
-print(bytes_y, type(bytes_y))
-print(bytearray_x, type(bytearray_x))
-print(bytmemory_x, type(bytmemory_x))
+print(type(bytes_x), bytes_x)   # <class 'bytes'> b'hello world'
+print(type(bytes_y), bytes_y)   # <class 'bytes'> b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+print(type(bytearray_x), bytearray_x)   # <class 'bytearray'> bytearray(b'\x00\x00\x00\x00\x00')
+print(type(bytmemory_x), bytmemory_x)   # <class 'memoryview'> <memory at 0x00000272DCADE200> 
 
 # tipe tidak ada
 none_x = None
-print(none_x, type(none_x))
+print(type(none_x), none_x)     # <class 'NoneType'> None
 
 #===============================================================================
 # mengatur tipe data tertentu
