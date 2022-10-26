@@ -1,0 +1,2 @@
+# fungsi len()
+

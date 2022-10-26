@@ -52,7 +52,7 @@ for x in "hello world!":
 
 # panjang string
 # untuk mendapatkan panjang string, gunakan fungsi len()
-# pelajari labih lanjut tentang fungsi len() di file_name: "Fungsi-Bawaan"
+# pelajari labih lanjut tentang fungsi len() di file_name: "Fungsi-Bawaan/fungsi_len.py"
 x = "hello world!"
 print(len(x))
 
