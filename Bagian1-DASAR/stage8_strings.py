@@ -70,7 +70,7 @@ print("world" in txt) # mengembalikan tipe data boolean True
 txt = "hello world!"
 print("war world!" not in txt) # megembalikan tipe data boolean True
 
-# menggabungkan string dengan operator aritmatika tambah (+)
+# menggabungkan string dengan operator tambah (+)
 x = "hello"
 y = "world"
 print(x + y)
