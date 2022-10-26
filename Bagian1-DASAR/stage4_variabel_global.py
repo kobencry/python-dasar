@@ -1,5 +1,5 @@
 # Catatan:
-# Jika anda belum mengetahui fungsi python maka lewati tutorial ini
+# Jika anda belum mengetahui definisi fungsi di python maka lewati tutorial ini
 
 # variabel global
 # variabel yang dibuat di luar fungsi (seperti dalam semua contoh di atas) 
