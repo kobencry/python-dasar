@@ -13,13 +13,13 @@
 # tidak ada nilai parameter
 
 # contoh yang benar
-print("Hello WoRLd".casefold())
+print("Hello WoRLd".casefold())     # hello world
 
 x = "Hello WoRLd".casefold()
-print(x)
+print(x)    # hello world
 
 y = "100 Hello WoRLd".casefold()
-print(y)
+print(y)    # 100 hello world
 
 
 # Ingat: 
