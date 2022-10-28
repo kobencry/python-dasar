@@ -50,6 +50,14 @@ print(s[2:25:2])     # cegikmoqsuwy
 print(s[2:len(s):2]) # cegikmoqsuwy 
 # jika anda ingin mengetahui fungsi len() kunjungi file_name: "Fungsi-Bawaan/fungsi_len.py"
 
+# parameter awal nilainya 2 berarti mulai dari huruf c "ingat indeks string dimulai dari angka 0"
+# parameter akhir nilainya 25 berarti di akhiri dari huruf z lalu, 
+# parameter langkah nilainya 2 berarti langkah huruf 2 kali
+# a b c d e f g h i j k  l ...dst
+# 0 1 2 3 4 5 6 7 8 9 10 11 ...dst
+# c, e, g, i, k, ...dst
+
+
 # membalikkan string/karakter menggunakan slicing/mengiris
 # kita dapat membalikkan string/karakter menggunakan slice dengan 
 # memberikan nilai parameter langkah sebagai -1.
@@ -82,4 +90,3 @@ x = '****'
 y = 11
 print(text[:y] + x + text[y + len(x):])
 # jika anda ingin mengetahui fungsi len() kunjungi file_name: "Fungsi-Bawaan/fungsi_len.py"
-
