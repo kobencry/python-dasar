@@ -13,7 +13,7 @@
 # Nilai Parameter
 # Parameter             Deskripsi
 # panjang               panjang yang dibutuhkan. panjang string yang di kembalikan
-# karakter_opsional     karakter untuk mengisi spasi yang hilang di setiap sisi. defaultnya adalah (spasi)
+# karakter              opsional. karakter untuk mengisi spasi yang hilang di setiap sisi. defaultnya adalah (spasi)
 
 # menggunakan parameter panjang
 x = "hello world".center(20)
