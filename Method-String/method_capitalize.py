@@ -26,6 +26,7 @@ print(y) # 100 hello world
 # Semua method/metode/fungsi string mengembalikan nilai baru. 
 # Mereka tidak mengubah string asli.
 s = "hello world"
+# string melakukan perubahan
 print(s.capitalize())   # Hello world
 # string tidak melakukan perubahan
 print(s)                # hello world

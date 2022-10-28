@@ -12,7 +12,6 @@
 # Nilai Parameter
 # tidak ada nilai parameter
 
-# contoh yang benar
 print("Hello WoRLd".casefold())     # hello world
 
 x = "Hello WoRLd".casefold()
