@@ -6,6 +6,11 @@ x = "hello"
 y = "world"
 print(x + y)    # helloworld
 
+x = "abc"
+y = "123"
+z = x + y
+print(z)    # abc123
+
 # untuk menambahkan spasi diantara mereka, tambahkan " " atau ' '
 x = "hello"
 y = "world"
