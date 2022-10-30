@@ -22,5 +22,11 @@ print("usia" + ": " + "23")     # usia: 23
 # menampilkan kesalahan runtime
 # print("noid" + ": " + 12345)    # error
 
-# gunakan casting data dengan memanggil fungsi/konstraktor str()
+# menggunakan casting data dengan memanggil fungsi/konstraktor str()
 print("noid" + ": " + str(12345))   # noid: 12345
+
+# menggunakan fungsi format() kunjungi file_name: "stage12_format_string.py"
+nama = "alice"
+usia = 23
+text = "nama: {} dan usia: {}"
+print(text.format(nama, usia))      # nama: alice dan usia: 23
