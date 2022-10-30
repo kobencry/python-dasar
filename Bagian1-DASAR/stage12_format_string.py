@@ -28,6 +28,10 @@ email = "alice@gmail.com"
 text = "email: {2} nama: {0} usia: {1}"
 print(text.format(nama, usia, email))   # email: alice@gmail.com nama: alice usia: 23
 
-print("hello {}".format("world"))
+print("hello {}".format("world"))   # hello world
 
-# jika ingin mempelajari lebih lanjut tentang pemformatan string kunjung foder_name: "python-format"
+# menggunakan f-string
+nama = "alice"
+usia = 23
+print(f"nama: {nama} usia: {usia}")     # nama: alice usia: 23
+# jika ingin mempelajari lebih lanjut tentang pemformatan string kunjung folder_name: "python-format"
