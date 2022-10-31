@@ -143,16 +143,16 @@ print(txt)  # nilai x: 255 hexa x: ff hexa X: FF
 txt = "nilai x: {x} persen %: {x:%}".format(x=0.35)
 print(txt)  # nilai x: 0.35 persen %: 35.000000%
 
-# jika anda mengetahui tentang tipe data dict
-# menampung berbagai jenis data ke konstraktor dict()
-data_dict = {"nama":'alice', "usia":23, "email":'alice@gmail.com', "jurusan":'teknik komputer'}
-print("{nama} {usia} {email} {jurusan}".format(**data_dict))
-
 #for i in range(1, 10):
 #    print("nilai: {i} persen %: {i:%}".format(i=i))
 
 #for i in range(1, 10):
 #    print("nilai: {i} persen %: {i:.0%}".format(i=i))
+
+# menggunakan konstraktor dict()
+data_dict = {"nama":'alice', "usia":23, "email":'alice@gmail.com', "jurusan":'teknik komputer'}
+print("{nama} {usia} {email} {jurusan}".format(**data_dict))
+
 
 x = 0.3
 y = 5.5
