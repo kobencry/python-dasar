@@ -1,4 +1,4 @@
-# Jenis Pemformatan
+# Jenis Pemformatan menggunakan fungsi format()
 # Di dalam placeholder {} Anda dapat menambahkan tipe pemformatan untuk memformat hasil
 
 # :<
@@ -77,7 +77,9 @@ print(txt)  # nilai 50 => biner 110010
 # Mengonversi nilai menjadi karakter unicode yang sesuai
 #for i in range(1,256):
 #    txt = "unicode: {x} karakter: {x:c}".format(x=i)
-#    print(txt) # unicode: 48 karakter: 0
+#    print(txt) # unicode: 1  karakter:^1
+                # unicode:... karakter:...
+                # unicode: 48 karakter: 0
                 # unicode: 49 karakter: 1
                 # unicode: 50 karakter: 2
                 # unicode: 51 karakter: 3
@@ -87,7 +89,7 @@ print(txt)  # nilai 50 => biner 110010
                 # unicode: 55 karakter: 7
                 # unicode: 56 karakter: 8
                 # unicode: 57 karakter: 9
-                # unicode:... karakter: ...
+                # unicode:... karakter:...
 
 #============================================
 
@@ -101,7 +103,7 @@ print(txt)  # biner: 110010 decimal: 50
 # :e  Format ilmiah, dengan huruf kecil e
 # :E  Format ilmiah, dengan huruf besar E
 txt = "nilai e: {x:e} nilai E: {x:E}".format(x=50000)
-print(txt)
+print(txt)  # nilai e: 5.000000e+04 nilai E: 5.000000E+04
 
 #============================================
 
@@ -110,9 +112,14 @@ print(txt)
 # Memperbaiki format angka titik, dalam format huruf besar (tampilkan inf dan nan sebagai INF dan NAN)
 txt = "nilai f: {x:f} nilai F: {x:F}".format(x=4.1)
 print(txt)  # nilai f: 4.100000 nilai F: 4.100000
-
 txt = "nilai f: {x:} nilai F: {x:F}".format(x=float('inf'))
 print(txt)  # nilai f: inf nilai F: INF
+# format float
+# anda bisa mengatur jumlah angka dibelakang titik
+txt = "angka float x: {x:f} angka float y:{y:.2f}".format(x=5, y=5)
+print(txt)  # angka float x: 5.000000 angka float y:5.00
+txt = "angka float x: {x:.3f} angka float y: {y:.5f}".format(x=5.112233, y=5.112233)
+print(txt)  # angka float x: 5.112 angka float y: 5.11223
 
 #=============================================
 
@@ -136,11 +143,16 @@ print(txt)  # nilai x: 255 hexa x: ff hexa X: FF
 txt = "nilai x: {x} persen %: {x:%}".format(x=0.35)
 print(txt)  # nilai x: 0.35 persen %: 35.000000%
 
-# for i in range(1,10):
-#     print(f"nilai: {i} persen %: {i:%}")
+# jika anda mengetahui tentang tipe data dict
+# menampung berbagai jenis data ke konstraktor dict()
+data_dict = {"nama":'alice', "usia":23, "email":'alice@gmail.com', "jurusan":'teknik komputer'}
+print("{nama} {usia} {email} {jurusan}".format(**data_dict))
 
-# for i in range(1, 10):
-#     print(f"nilai: {i} persen %: {i:.0%}")
+#for i in range(1, 10):
+#    print("nilai: {i} persen %: {i:%}".format(i=i))
+
+#for i in range(1, 10):
+#    print("nilai: {i} persen %: {i:.0%}".format(i=i))
 
 x = 0.3
 y = 5.5
