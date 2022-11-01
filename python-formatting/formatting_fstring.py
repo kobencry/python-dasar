@@ -171,3 +171,20 @@ print(f"nilai x: {x} nilai persen: {x:%}") # nilai x: 0.39 nilai persen: 39.0000
 print(f"\n\t\rhello\n\t\rworld")
 print(fr"\n\t\rhello\n\t\rworld")   # \n\t\rhello\n\t\rworld
 
+
+#========================================
+
+# !s !r dan !a
+# pola !s sama dengan fungsi str()
+# pola !r sama dengan fungsi repr()
+# pola !a sama dengan fungsi ascii()
+# konversi !s !r dan !a tidak benar-benar diperlukan. 
+# karena ekspresi sewenang-wenang diperbolehkan di dalam format string kode ini
+x = "Hello ålice"
+# hasil default string dari program python
+print("{!s}".format(x))
+# untuk keperluan debuging
+print("{!r}".format(x))
+# pola !a/fungsi ascii() menggantikan karakter non-ascii dengan karakter escape
+print("{!a}".format(x))
+# Pelajari lebih lanjut tentang fungsi str(), repr() dan ascii() di folder_name: "Fungsi-Bawaan".

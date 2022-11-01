@@ -74,7 +74,8 @@ print(txt)  # nilai 50 => biner 110010
 #============================================
 
 # :c 
-# Mengonversi nilai menjadi karakter unicode yang sesuai
+# mengonversi nilai menjadi karakter unicode yang sesuai
+# print("{:c}".format(1)) # \x01
 #for i in range(1,256):
 #    txt = "unicode: {x} karakter: {x:c}".format(x=i)
 #    print(txt) # unicode: 1  karakter:^1
@@ -148,6 +149,24 @@ print(txt)  # nilai x: 0.35 persen %: 35.000000%
 
 #for i in range(1, 10):
 #    print("nilai: {i} persen %: {i:.0%}".format(i=i))
+
+
+#================================================
+
+# !s !r dan !a
+# pola !s sama dengan fungsi str()
+# pola !r sama dengan fungsi repr()
+# pola !a sama dengan fungsi ascii()
+# konversi !s !r dan !a tidak benar-benar diperlukan. 
+# karena ekspresi sewenang-wenang diperbolehkan di dalam format string kode ini
+x = "Hello ålice"
+# hasil default string dari program python
+print("{!s}".format(x))
+# untuk keperluan debuging
+print("{!r}".format(x))
+# pola !a/fungsi ascii() menggantikan karakter non-ascii dengan karakter escape
+print("{!a}".format(x))
+# Pelajari lebih lanjut tentang fungsi str(), repr() dan ascii() di folder_name: "Fungsi-Bawaan".
 
 # menggunakan konstraktor dict()
 data_dict = {"nama":'alice', "usia":23, "email":'alice@gmail.com', "jurusan":'teknik komputer'}
