@@ -124,6 +124,20 @@ print(txt)  # angka float x: 5.112 angka float y: 5.11223
 
 #=============================================
 
+# :g
+# :G
+# angka nol yang tidak signifikan dihapus dari angka signifikan, dan 
+# titik desimal juga dihapus jika tidak ada digit tersisa yang mengikutinya, 
+# kecuali opsi '#' digunakan.
+# format float dengan angka 5.0100 nilai float akan di bulatkan menjadi 5.01
+print("{x:g}".format(x=5.0100))     # 5.01
+print("{y:G}".format(y=-5.0100))    # -5.01
+# tidak menggunakan flag :g/:G secara default python membulatkan floating
+print(5.0100)   # 5.01
+print(-5.0100)  # -5.01
+
+#=============================================
+
 # :o
 # format oktal
 txt = "nilai x: {x} nilai oktal: {x:o}".format(x=9)
@@ -150,6 +164,27 @@ print(txt)  # nilai x: 0.35 persen %: 35.000000%
 #for i in range(1, 10):
 #    print("nilai: {i} persen %: {i:.0%}".format(i=i))
 
+#================================================
+
+# :#
+# opsi ' # digunakan untuk konversi. 
+# Bentuk alternatif didefinisikan secara berbeda untuk jenis yang berbeda.
+# opsi ini hanya berlaku untuk tipe integer, float, dan complex. 
+# untuk bilangan bulat, ketika output biner, oktal, atau heksadesimal digunakan,
+# opsi ini menambahkan awalan masing-masing '0b', '0o', '0x', atau '0x' ke nilai output. 
+# Untuk float dan complex, bentuk alternatif menyebabkan hasil konversi selalu 
+# berisi karakter titik desimal, meskipun tidak ada angka yang mengikutinya. 
+# biasanya, karakter titik desimal muncul di hasil konversi ini hanya jika digit mengikutinya.
+# Selain itu, untuk konversi' g' dan 'G', angka nol tidak dihapus dari hasil.
+angka = 255
+print("biner: {:b}".format(angka))      # biner: 11111111
+print("biner: {:#b}".format(angka))     # biner: 0b11111111
+print("oktal: {:o}".format(angka))      # oktal: 377
+print("oktal: {:#o}".format(angka))     # oktal: 0o377
+print("hexa: {:x}".format(angka))       # hexa: ff
+print("hexa: {:#x}".format(angka))      # hexa: 0xff
+print("float: {:g}".format(5.000))      # float: 5
+print("float: {:#g}".format(5.000))     # float: 5.00000
 
 #================================================
 
@@ -180,3 +215,6 @@ print()
 print(f"x {x}: {x:%} {x:.0%}") # x 0.3: 30.000000% 30%
 print(f"y {y}: {y:%} {y:.0%}") # y 5.5: 550.000000% 550%
 print(f"z {z}: {z:%} {z:.0%}") # z 10: 1000.000000% 1000%
+
+# Catatan:
+# tentang kecepatan formatting kunjungi file_name: "example.py"
