@@ -213,7 +213,7 @@ print("float: {:#g}".format(5.000))     # float: 5.00000
 # konversi !s !r dan !a tidak benar-benar diperlukan. 
 # karena ekspresi sewenang-wenang diperbolehkan di dalam format string kode ini
 x = "Hello ålice"
-# hasil default string dari program python
+# string default/standar python
 print("{!s}".format(x))
 # untuk keperluan debuging
 print("{!r}".format(x))
