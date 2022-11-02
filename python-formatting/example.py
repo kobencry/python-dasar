@@ -36,3 +36,30 @@ print(timeit.timeit("""nama = "alice"; usia = 23; 'nama: {nama} usia: {usia}'"""
 
 # lihat selisihnya formatting persen%, str.format() dan f-string.
 # jadi gunakanlah f-string
+
+
+#===============================================================================
+
+# latihan str.format()
+var = """
+x = {{'{0}':'{1}', '{2}':{3}}}
+print(x)
+"""
+print(var.format("nama", "alice", "usia", 23))
+
+# latihan f-string
+def data_mahasiswa(nama, usia):
+    return (
+            f"nama: {nama}\n"
+            f"usia: {usia}"
+            )
+print(data_mahasiswa('alice', 23))
+
+# latihan persen %
+import time
+import sys
+
+for i in range(1,101):
+    time.sleep(0.05)
+    sys.stdout.write("\rLoading: " + "#" * (i//5) + "[%d" % i + "%]")
+    sys.stdout.flush()
