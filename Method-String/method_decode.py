@@ -45,7 +45,7 @@ print(var.decode(encoding="ascii", errors="backslashreplace"))  # \xc3\xa5lice
 # passed
 # print(var.decode(encoding="utf-8", errors="backslashreplace"))  # ålice
 
-# ingat perameter maupun di tulis atau tidak opsional defaultnya utf-8
+# ingat perameter dari fungsi decode() opsional di tulis atau tidak, defaultnya utf-8.
 txt = "ålice"
 var = txt.encode()
 # errors
