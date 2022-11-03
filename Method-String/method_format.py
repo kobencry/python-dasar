@@ -21,7 +21,7 @@ data1 = "nama: {x} usia: {y}".format(x="alice", y=23)
 data2 = "nama: {0} usia: {1}".format("carl", 23)
 data3 = "nama: {} usia: {}".format("eliot", 23)
 
-print(data1)
-print(data2)
-print(data3)
+print(data1)    # nama: alice usia: 23
+print(data2)    # nama: carl usia: 23
+print(data3)    # nama: eliot usia: 23
 # Pelajari lebih lanjut tentang formatting python di folder_name: "python-formatting"
