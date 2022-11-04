@@ -52,7 +52,7 @@ for x in "hello world!":
 
 # panjang string
 # untuk mendapatkan panjang string, gunakan fungsi len()
-# pelajari labih lanjut tentang fungsi len() di file_name: "Fungsi-Bawaan/fungsi_len.py"
+# pelajari labih lanjut tentang fungsi-bawaan len() di folder_name: "Fungsi-Bawaan/fungsi_len.py"
 x = "hello world!"
 print(len(x))
 
@@ -63,6 +63,7 @@ print(panjang)
 # menggunakan keyword "in" yang sudah di jelaskan di file_name: "stage1_hello world.py"
 # memeriksa string apakah ada suatu karakter tertentu dalam sebuah string.
 txt = "hello world!"
+# apakah "world" ada di dalam variabel txt
 print("world" in txt) # mengembalikan tipe data boolean True
 
 # menggunakan keyword "not" dan "in"

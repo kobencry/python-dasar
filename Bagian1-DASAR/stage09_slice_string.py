@@ -48,7 +48,7 @@ print(y[0:])        # hello world!
 s = "abcdefghijklmnopqrstuvwxyz"
 print(s[2:25:2])     # cegikmoqsuwy
 print(s[2:len(s):2]) # cegikmoqsuwy 
-# jika anda ingin mengetahui fungsi len() kunjungi file_name: "Fungsi-Bawaan/fungsi_len.py"
+# jika anda ingin mengetahui tentang fungsi-bawaan len() kunjungi folder_name: "Fungsi-Bawaan/fungsi_len.py"
 
 # parameter awal nilainya 2 berarti mulai dari huruf c "ingat indeks string dimulai dari angka 0"
 # parameter akhir nilainya 25 berarti di akhiri dari huruf z lalu, 
@@ -89,4 +89,3 @@ text = "email: hello_world@gmail.com"
 x = '****'
 y = 11
 print(text[:y] + x + text[y + len(x):])
-# jika anda ingin mengetahui fungsi len() kunjungi file_name: "Fungsi-Bawaan/fungsi_len.py"

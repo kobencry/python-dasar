@@ -25,7 +25,8 @@ print("usia" + ": " + "23")     # usia: 23
 # menggunakan casting data dengan memanggil fungsi/konstraktor str()
 print("noid" + ": " + str(12345))   # noid: 12345
 
-# menggunakan fungsi format() kunjungi file_name: "stage12_format_string.py"
+# menggunakan fungsi-string format() 
+# jika ingin mempelajari lebih lanjut tentang fungsi-string format() kunjungi folder_name: "python-formatting/formatting_format.py"
 nama = "alice"
 usia = 23
 text = "nama: {} dan usia: {}"

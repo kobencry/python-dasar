@@ -21,4 +21,4 @@ print(s.strip())    #<-hello world->
 s = "hello world"
 print(s.replace('hello', 'war'))
 
-# Pelajari lebih lanjut tentang method/metode/fungsi bawaan folder_name: "Method-String"
+# Pelajari lebih lanjut tentang method/metode/fungsi-string folder_name: "Method-String"

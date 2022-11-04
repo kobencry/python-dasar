@@ -22,6 +22,8 @@ print(type(oc), oc) # 65
 print(type(hx), hx) # 257
 print(type(t), t)   # 1
 print(type(f), f)   # 0
+# Jika anda ingin mengetahui tentang fungsi-bawaan type() kunjungi folder_name: "Fungsi-Bawaan/fungsi_type.py"
+
 
 # float()
 x = float(1)        # int
@@ -32,6 +34,7 @@ oc = float(0o101)   # octal
 hx = float(0x101)   # hexa
 t = float(True)     # boolean
 f = float(False)    # boolean
+# Jika anda ingin mengetahui tentang fungsi-bawaan float() kunjungi folder_name: "Fungsi-Bawaan/fungsi_float.py"
 
 print(type(x), x)   # 1.0
 print(type(y), y)   # 4.0
@@ -51,6 +54,7 @@ oc = str(0o101)
 hx = str(0x101)
 t = str(True)
 f = str(False)
+# Jika anda ingin mengetahui tentang fungsi-bawaan str() kunjungi folder_name: "Fungsi-Bawaan/fungsi_str.py"
 
 print(type(x), x)   # 1
 print(type(y), y)   # 4.0
@@ -65,7 +69,7 @@ print(type(f), f)   # False
 # Anda tidak dapat mengonversi bilangan kompleks menjadi jenis bilangan lain.
 
 
-# Jika anda ingin mengetahui tentang fungsi int() kunjungi file_name: "Fungsi-Bawaan/fungsi_int.py"
+# Jika anda ingin mengetahui tentang fungsi-bawaan int() kunjungi folder_name: "Fungsi-Bawaan/fungsi_int.py"
 print(int('1010', 2))  # 10     biner
 print(int('1010', 8))  # 520    octal
 print(int('1010', 10)) # 1010   default

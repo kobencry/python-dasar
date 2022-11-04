@@ -34,4 +34,4 @@ print("hello {}".format("world"))   # hello world
 nama = "alice"
 usia = 23
 print(f"nama: {nama} usia: {usia}")     # nama: alice usia: 23
-# jika ingin mempelajari lebih lanjut tentang pemformatan string kunjung folder_name: "python-format"
+# jika ingin mempelajari lebih lanjut tentang pemformatan string python kunjung folder_name: "python-formatting/formatting_format.py"
