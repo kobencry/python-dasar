@@ -7,7 +7,7 @@
 
 # Nilai Parameter
 # Parameter         Deskripsi
-# value             Dibutuhkan. Angka, string, boolean True False yang dapat diubah menjadi angka float
+# value             Dibutuhkan. Angka, string, boolean True False, inf, Nan yang dapat diubah menjadi angka float
 
 s = "5"
 i = 5
