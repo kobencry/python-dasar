@@ -22,3 +22,9 @@ print(type(s))
 s = input("--> ").upper()
 # pelajari lebih lanjut tentang fungsi-string upper() folder_name: "Method-String/fungsi_upper.py"
 print(s)
+
+s = input("masukan data: nama; usia; elmail; :~# ").split('; ')
+#input alice; 23; alice@gmail.com
+print(s)
+#output ['alice', '23', 'alice@gmail.com']
+# pelajari lebih lanjut tentang fungsi-string split() folder_name: "Method-String/fungsi_split.py"

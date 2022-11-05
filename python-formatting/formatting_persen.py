@@ -17,6 +17,11 @@
 # objek String memiliki operasi bawaan menggunakan operator %,
 # yang dapat Anda gunakan untuk memformat string.
 # inilah yang terlihat seperti dalam tutorial
+# rumus persen %[<flag>][<lebar>][.<presisi>]<type>
+# <flag>     = #, *, +, -, ' ', angka/integer
+# <lebar>    = angka/integer
+# <.presisi> = .angka/integer
+# <type>     = s, d, i, f, x, o, g, r, a, u
 
 x = "alice"
 print("hello %s" % x)   # hello world
@@ -52,6 +57,8 @@ print("nama: %(nama)s usia: %(usia)s noid: %(noid)s email: %(email)s" % {'nama':
 # opsi s
 # format string
 print("nama: %s usia: %s" % ('alice', 23))  # nama: alice usia: 23 
+print("%.5s" % "hello world")   # hello
+print("%.11s" % "hello world")  # hello world
 
 #=========================================
 
@@ -168,18 +175,42 @@ print("integer positif: %+d integer negatif: %-d" % (25, -25))
 # opsi + atau - akan diabaikan jika tipe string
 print("string positif: %+s" % ("25"))
 
+# opsi - bisa juga untuk spasi kosong ke kanan
+print("%-10s hello world" % ('alice'))   # alice      hello world
+print("%-10d hello world" % (25))        # 25         hello world
+
+# opsi -* untuk spasi kosong ke kanan
+print("%-*s world" % (10, 'hello'))     # hello      world
+
+# opsi * untuk spasi kosong ke kiri
+print("%*s world" % (10, 'hello'))      #      hello world
+print("%*d" % (10, 25))                 #         25
+
+#=========================================
+
+# opsi %
+# cara menampilkan persen %
+print("%s diskon %d%%" % ('item', 25))    # item diskon 25%
+
 #=========================================
 
 # opsi s, r, dan a
 # opsi s dari str(), opsi r dari repr() dan opsi a dari ascii()
 x = "Hello ålice"
+y = "Café"
+
 # string default/standar python
 print("%s" % x) # Hello ålice
+print("%s" % y) # Café
+
 # untuk keperluan debuging
 print("%r" % x) # 'Hello ålice'
+print("%r" % y) # 'Café'
+
 # opsi a/fungsi ascii() menggantikan karakter non-ascii dengan karakter escape
 print("%a" % x) # 'Hello \xe5lice'
-# Pelajari lebih lanjut tentang fungsi str(), repr() dan ascii() di folder_name: "Fungsi-Bawaan".
+print("%a" % y) # 'Caf\xe9'
+# Pelajari lebih lanjut tentang fungsi-bawaan str(), repr() dan ascii() di folder_name: "Fungsi-Bawaan".
 
 # Catatan:
 # tentang kecepatan formatting kunjungi file_name: "example.py"
