@@ -4,7 +4,8 @@
 # Semua method/metode/fungsi string mengembalikan nilai baru. 
 # Mereka tidak mengubah string asli.
 
-# fungsi isascii() mengembalikan True jika semua karakter adalah karakter ascii.
+# fungsi isascii() mengembalikan nilai boolean True jika semua karakter adalah karakter ascii.
+# jika tidak, maka akan mengembalikan nilai boolean False.
 
 # Syntax
 # string.isascii()

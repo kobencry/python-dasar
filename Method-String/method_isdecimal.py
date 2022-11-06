@@ -4,7 +4,7 @@
 # Semua method/metode/fungsi string mengembalikan nilai baru. 
 # Mereka tidak mengubah string asli.
 
-# fungsi isdecimal() mengembalikan boolean True jika semua karakter decimal (0-9)
+# fungsi isdecimal() mengembalikan nilai boolean True jika semua karakter decimal (0-9)
 # dan bisa juga digunakan pada objek unicode
 
 # Syntax

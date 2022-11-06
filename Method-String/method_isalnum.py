@@ -7,6 +7,7 @@
 # fungsi isalnum() mengembalikan nilai boolean True jika semua karakter
 # huruf alfabet (a-z) dan angka (0-9) 
 # contoh karakter yang bukan alfanumerik (spasi)!@#$%^_{}? dll.
+# jika tidak, maka akan mengembalikan nilai boolean False
 
 # Syntax
 # string.isalnum()

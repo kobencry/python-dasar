@@ -5,7 +5,7 @@
 # Mereka tidak mengubah string asli.
 
 # fungsi isdigit() mengembalikan nilai boolean True jika semua karakter adalah angka, 
-# jika tidak, akan mengembalikan nilai boolean False
+# jika tidak, maka akan mengembalikan nilai boolean False.
 # seperti eksponen/perpangkatan ⁰¹²³⁴⁵⁶⁷⁸⁹, unicode berjenis angka \u0030 juga dianggap digit
 # jika unicode berjenis huruf maka akan False
 
