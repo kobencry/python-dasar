@@ -26,9 +26,14 @@ print(x.isdigit())  # True
 
 print("\u0030".isdigit())   # True
 print("\u00B2".isdigit())   # True
-print("\u00B3".isdigit())   # True
 print("\u0078".isdigit())   # False karena jenis unicode huruf 'x'
 print("\u0079".isdigit())   # False karena jenis unicode huruf 'y'
+
+# periksa apakah karakter unicode adalah jenis angka?
+if "\u00B3".isdigit():
+    print("passed")
+else:
+    print("failed")
 
 x = "\u0030" # int 0 unicode
 y = "\u0039" # int 9 unicode
