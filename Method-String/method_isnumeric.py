@@ -1,5 +1,7 @@
 # -- Method String --
 
+# https://docs.python.org/3/library/stdtypes.html?highlight=isnumeric#str.isnumeric
+
 # Catatan: 
 # Semua method/metode/fungsi string mengembalikan nilai baru. 
 # Mereka tidak mengubah string asli.

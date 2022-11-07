@@ -1,5 +1,7 @@
 # -- Method String --
 
+# https://docs.python.org/3/library/stdtypes.html?highlight=count#str.count
+
 # fungsi count() mengembalikan berapa kali nilai tertentu muncul dalam string.
 
 # Syntax

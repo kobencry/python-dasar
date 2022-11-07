@@ -1,5 +1,7 @@
 # -- Method String --
 
+# https://docs.python.org/3/library/stdtypes.html?highlight=isdecimal#str.isdecimal
+
 # Catatan: 
 # Semua method/metode/fungsi string mengembalikan nilai baru. 
 # Mereka tidak mengubah string asli.
