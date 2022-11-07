@@ -15,8 +15,8 @@
 
 x = "HELLO WORLD"
 y = "H3Ll0_w0RlD#1"
-print(x.lower())
-print(y.lower())
+print(x.lower())    # hello world
+print(y.lower())    # h3ll0_w0rld#1
 
-print("heLlO_WoRlD@gmail.com".lower())
-print("ABCDEFGHIJKLMNOPQRSTUVWXYZ".lower())
+print("heLlO_WoRlD@gmail.com".lower())  # hello_world@gmail.com
+print("ABCDEFGHIJKLMNOPQRSTUVWXYZ".lower()) # abcdefghijklmnopqrstuvwxyz
