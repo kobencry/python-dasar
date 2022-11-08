@@ -1,5 +1,7 @@
 # -- Method String --
 
+# https://docs.python.org/3/library/stdtypes.html?highlight=replace#str.replace
+
 # Catatan: 
 # Semua method/metode/fungsi string mengembalikan nilai baru. 
 # Mereka tidak mengubah string asli.
@@ -56,3 +58,4 @@ print(s)    # hello world
 s = "hello world"
 s.replace('hello', 'war')
 print(s)    # hello world
+# jika ingin mempelajari lebih lanjut tentang escape/pelarian karakter kunjungi folder_name: "Bagian1-DASAR/stage13_escape_character.py"
