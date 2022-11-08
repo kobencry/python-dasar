@@ -6,7 +6,7 @@
 # Semua method/metode/fungsi string mengembalikan nilai baru. 
 # Mereka tidak mengubah string asli.
 
-# fungsi lstrip() menghapus semua karakter tertentu atau utama.
+# fungsi lstrip() menghapus semua karakter tertentu atau utama (karakter diawal/dikiri string).
 # (defaultnya/standarnya adalah karakter spasi yang akan dihapus)
 
 # Syntax
