@@ -31,11 +31,14 @@ print(text[y:]) # carl eliot
 text = "hello alice carl eliot alice world"
 x = text.rfind('alice')
 y = text.rfind('e')
-
+z = text.rfind('e', 14, 20)
 print(x)    # 23
 print(y)    # 27
+print(z)    # 17
 print(text[x:]) # alice world
 print(text[y:]) # e world
+print(text[z:]) # eliot alice world
+
 
 print("hello world".rfind('war'))   # -1
-# jika ingin mempelajari lebih lanjut tentang string slice[:] kunjungi folder_name: "Bagian1-DASAR/stage09_slice_string.py"
+# jika ingin mempelajari lebih lanjut tentang string slice[start:end] kunjungi folder_name: "Bagian1-DASAR/stage09_slice_string.py"
