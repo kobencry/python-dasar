@@ -34,4 +34,4 @@ print(x)    # ('hello ', 'alice', ' carl eliot alice')
 print(y)    # ('hello alice carl eliot alice', '', '')
 
 print("hello world".partition('war'))   # ('hello world', '', '')
-# jika ingin mempelajari lebih lanjut tentang Method-Dict kunjungi folder_name: "Method-Dict"
+# jika ingin mempelajari lebih lanjut tentang Method-Tuple kunjungi folder_name: "Method-Tuple"

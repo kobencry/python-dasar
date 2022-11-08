@@ -6,7 +6,7 @@
 # Semua method/metode/fungsi string mengembalikan nilai baru. 
 # Mereka tidak mengubah string asli.
 
-# fungsi ljust() akan menyelaraskan/menyesuaikan string ke kiri, menggunakan karakter tertentu 
+# fungsi ljust() akan menyelaraskan/menyesuaikan/menggeser string ke kiri, menggunakan karakter tertentu 
 # (default/standarnya adalah spasi) sebagai karakter isian.
 
 # Syntax
