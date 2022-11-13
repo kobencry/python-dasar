@@ -83,6 +83,10 @@ for i in ['alice', 2.5, False]:
 # 2.5
 # False
 
+# menghitung jumlah item list
+listku = ['alice', 2.5, False, 'carl', None]
+print(len(listku))  # 5
+
 # periksa apakah 'carl' ada dalam list
 listku = ['alice', 'carl', 'eliot']
 if 'carl' in listku:
@@ -93,3 +97,4 @@ if 'carl' in listku:
 # jika ingin mempelajari lebih lanjut tentang Method-List sort() kunjungi folder_name: "Method-List/method_sort.py"
 # jika ingin mempelajari lebih lanjut tentang Method-List reverse() kunjungi folder_name: "Method-List/method_reversed.py"
 # jika ingin mempelajari lebih lanjut tentang fungsi-bawaan list() kunjungi folder_name: "Fungsi-Bawaan/fungsi_list.py"
+# jika anda ingin mengetahui tentang fungsi-bawaan len() kunjungi folder_name: "Fungsi-Bawaan/fungsi_len.py"
