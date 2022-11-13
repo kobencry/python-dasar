@@ -39,8 +39,6 @@ print(['alice', 2.5, True, 0xff, 'carl', False, 0b111, None])
 x = list(('alice', 2.5, True, 0xff, 0b11))
 print(x)    # ['alice', 2.5, True, 255, 3]
 
-#===============================================================================
-
 # akses item list 
 # item list diindeks dan anda dapat mengaksesnya dengan mengacu pada nomor indeks.
 # catatan: item list pertama memiliki indeks 0
@@ -67,6 +65,24 @@ listku = ['eliot', '2.5', 'carl', 'Alice', '1']
 listku.reverse()
 print(listku)   # ['1', 'Alice', 'carl', '2.5', 'eliot']
 
+# gabungkan item list
+list1 = ['alice', 'carl', 'eliot']
+list2 = [1, 2.5, False, None]
+hasil = list1 + list2
+print(hasil)    # ['alice', 'carl', 'eliot', 1, 2.5, False, None]
+
+# copy list menggunakan konstruktor list()
+x = ['alice', 'carl', 'eliot']
+copy_x = list(x)
+print(copy_x)   # ['alice', 'carl', 'eliot']
+
+# looping list
+for i in ['alice', 2.5, False]:
+    print(i)
+# alice
+# 2.5
+# False
+
 # periksa apakah 'carl' ada dalam list
 listku = ['alice', 'carl', 'eliot']
 if 'carl' in listku:
@@ -76,3 +92,4 @@ if 'carl' in listku:
 # jika ingin mempelajari lebih lanjut tentang modify list kunjungi folder_name: "Bagian1-DASAR/stage18_modify_list.py"
 # jika ingin mempelajari lebih lanjut tentang Method-List sort() kunjungi folder_name: "Method-List/method_sort.py"
 # jika ingin mempelajari lebih lanjut tentang Method-List reverse() kunjungi folder_name: "Method-List/method_reversed.py"
+# jika ingin mempelajari lebih lanjut tentang fungsi-bawaan list() kunjungi folder_name: "Fungsi-Bawaan/fungsi_list.py"
