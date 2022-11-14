@@ -27,4 +27,15 @@ listku = ['alice', 'carl', 'eliot', 'geral']
 listku.pop(len(listku) - 2)
 print(listku)   # ['alice', 'carl', 'geral']
 
+# Catatan: fungsi pop()mengembalikan nilai yang dihapus.
+
+listku = ['alce', 'carl', 'eliot']
+x = []
+while len(listku):
+    i = listku.pop()
+    print(i)
+    x.append(i)
+print(x)    # ['eliot', 'carl', 'alce']
+
+
 # jika ingin mempelajari lebih lanjut tentang fungsi-bawaan len() kunjungi folder_name: "Fungsi-Bawaan/fungsi_len.py"
