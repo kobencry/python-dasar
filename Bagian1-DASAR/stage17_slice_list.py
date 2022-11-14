@@ -75,6 +75,13 @@ print(l[-3:])       # ['carl', 'eliot', 'geral']
 print(l[-10:-1])    # ['alice', 'carl', 'eliot']
 print(l[-10:])      # ['alice', 'carl', 'eliot', 'geral']
 
+# menggunakan list dalam list atau disebut list bersarang.
+l = ['alice', ['carl', 'eliot'], False, [2.5, [True, [None, 'geral']]]]
+# mendapatkan item list 'eliot'
+print(l[1][1])
+# mendapatkan item list 'geral'
+print(l[3][1][1][1])
+
 # looping beberapa item list
 listku = ['alice', 'carl', 'eliot', 'geral']
 for i in listku[1:len(listku)]:
