@@ -60,5 +60,5 @@ list_nama = [i for i in listku if type(i) == type(str())]
 print(list_nama)    # ['alice', 'carl', 'eliot', 'geral']
 
 # jika ingin mempelajari lebih lanjut tentang Method-List insert() kunjungi folder_name: "Method-List/method_insert.py"
-# jika ingin mempelajari lebih lanjut tentang jenis Method-List python kunjungi folder_name: "Method-List"
+# jika ingin mempelajari lebih lanjut tentang jenis2 Method-List python kunjungi folder_name: "Method-List"
 # jika ingin mempelajari lebih lanjut tentang comprehension kunjungi folder_name: "python-comprehension"
