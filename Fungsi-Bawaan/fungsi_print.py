@@ -1,5 +1,7 @@
 # -- Fungsi bawaan python --
 
+# https://docs.python.org/3/library/functions.html?highlight=built-function-print#print
+
 # fungsi print() mencetak pesan yang ditentukan ke layar, atau perangkat output standar lainnya.
 # pesan dapat berupa string, atau objek lain, objek tersebut akan diubah menjadi string sebelum ditulis ke layar.
 

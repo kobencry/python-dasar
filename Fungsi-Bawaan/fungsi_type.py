@@ -1,5 +1,7 @@
 # -- Fungsi bawaan python --
 
+# https://docs.python.org/3/library/functions.html?highlight=built-function-type#type
+
 # fungsi type() mengembalikan jenis objek yang ditentukan.
 
 # Syntax
@@ -34,4 +36,9 @@ print(type(t))  # <class 'tuple'>
 print(type(d))  # <class 'dict'>
 print(type(st)) # <class 'set'>
 print(type(bt)) # <class 'bool'>
-print(type(n)) # <class 'NoneType'>
+print(type(n))  # <class 'NoneType'>
+
+def main():
+    return "hello world"
+
+print(type(main))   # <class 'function'>

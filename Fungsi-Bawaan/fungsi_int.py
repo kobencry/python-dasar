@@ -1,5 +1,8 @@
 # -- Fungsi bawaan python --
 
+# https://docs.python.org/3/library/functions.html?highlight=built-function-int#int
+# https://docs.python.org/3/library/stdtypes.html?highlight=int#int.bit_length
+
 # fungsi int() mengubah nilai yang ditentukan menjadi bilangan bulat/int
 
 # Syntax:

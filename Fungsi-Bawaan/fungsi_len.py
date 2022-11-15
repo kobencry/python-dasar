@@ -1,4 +1,7 @@
 # -- Fungsi bawaan python --
+
+# https://docs.python.org/3/library/functions.html?highlight=built-function-len#len
+
 # fungsi len() mengembalikan jumlah item dalam suatu objek.
 # ketika objek adalah string, fungsi len() mengembalikan jumlah karakter dalam string.
 

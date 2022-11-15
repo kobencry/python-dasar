@@ -1,5 +1,7 @@
 # -- Fungsi bawaan python --
 
+# https://docs.python.org/3/library/functions.html?highlight=built-function-input#input
+
 # fungsi input() memungkinkan input/masukan pengguna
 # jika argumen prompt hadir, itu ditulis ke output standar tanpa tambahan baris baru/(\n).
 # fungsi input() kemudian membaca baris dari input, mengubahnya menjadi string 
