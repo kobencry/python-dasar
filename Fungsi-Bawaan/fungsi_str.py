@@ -28,9 +28,11 @@ x = str(b"\xc2\xbc sendok teh", encoding='utf-8')
 print(x)    # ¼ sendok teh
 
 x = "python 🐍"
-y = str("python 🐍") # python 🐍
+y = str("python 🐍")
 print(x)    # python 🐍
 print(y)    # python 🐍
 
 print(True + True)  # 2
 print(str(True) + str(True))    # TrueTrue
+
+# jika ingin mempelajari lebih lanjut tentang Method-String kunjungi folder_name: "Method-String"
