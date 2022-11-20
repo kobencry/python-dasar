@@ -53,6 +53,13 @@ print(listku[-1])   # eliot
 print(listku[-2])   # carl
 print(listku[-3])   # alice
 
+# unpacking/membongkar list
+packing_list = ['alice', 'carl', 'eliot']
+x, y, z = packing_list
+print(x)    # alice
+print(y)    # carl
+print(z)    # eliot
+
 # urutkan list Secara Alfanumerik (0-9A-Za-z)
 # menggunakan "Method-List" dengan fungsi sort(), mengurutkan list secara alfanumerik, secara default ascending/menaik. 
 listku = ['eliot', '2.5', 'carl', 'Alice', '1']
@@ -61,9 +68,9 @@ print(listku) # ['1', '2.5', 'Alice', 'carl', 'eliot']
 
 # urutan terbalik 
 # menggunakan "Method-List" dengan fungsi reverse(), membalikan urutan pengurutan item list.
-listku = ['eliot', '2.5', 'carl', 'Alice', '1']
+listku = ['alice', 'carl', 'eliot']
 listku.reverse()
-print(listku)   # ['1', 'Alice', 'carl', '2.5', 'eliot']
+print(listku)   # ['eliot', 'carl', 'alice']
 
 # gabungkan item list
 list1 = ['alice', 'carl', 'eliot']
