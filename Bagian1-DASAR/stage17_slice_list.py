@@ -22,7 +22,7 @@ print(l[0])     # alice
 print(l[1])     # carl
 print(l[2])     # eliot
 
-# mendapatkan item list dari posisi 1 sampai ke posisi 3 (3 tidak termasuk)
+# mendapatkan item list dari posisi 1 sampai ke posisi 3 (item ke 3 tidak termasuk)
 l = ['alice', 'carl', 'eliot', 'geral']
 print(l[1:3])   # ['carl', 'eliot']
 print(l[1:4])   # ['carl', 'eliot', 'geral']
