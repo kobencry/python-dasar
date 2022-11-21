@@ -16,4 +16,6 @@ else:
 print(2 == 2)
 print(2 != 2)
 
+# Catatan: operator & | hanya untuk menangani biner/bytes.
+
 # jika ingin mempelajari lebih lanjut tentang python-operator kunjungi folder_name: "python-operator"
