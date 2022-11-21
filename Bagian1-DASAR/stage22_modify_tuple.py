@@ -57,3 +57,4 @@ del x
 print(x)
 
 # jika anda ingin mengetahui tentang python-operator kunjungi folder_name: "python-operator"
+# jika anda ingin mengetahui tentang Method-Tuple kunjungi folder_name: "Method-Tuple"
