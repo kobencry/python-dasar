@@ -17,7 +17,7 @@ print(x)
 # {'carl', 'alice', 'eliot'}
 # {'alice', 'eliot', 'carl'}
 # {'eliot', 'alice', 'carl'}
-# jadi di contoh ini tidak akan menampilkan hasil keluarannya karna berubah-ubah.
+# jadi di contoh ini tidak akan menampilkan hasil keluarannya karna nilainya berubah-ubah.
 
 # membuat set dengan konstuktor set()
 x = set(('alice', 'carl', 'eliot'))
