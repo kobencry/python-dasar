@@ -5,47 +5,33 @@
 
 x = 5
 y = "hello world"
-print(x)
-print(y)
-#output
-# 5
-# alice
+print(x)    # 5
+print(y)    # alice
 
 # variabel tidak perlu dideklarasikan dengan tipe tertentu , 
 # dan bahkan dapat mengubah tipe setelah ditetapkan.
 x = 4 # type int
 x = "hello world" # type str
-print(x)
-# output
-# hello world
+print(x)    # # hello world
 
 # dapatkan jenisnya
 # fungsi type() menampilkan tipe data
 x = 5
 y = "hello world"
-print(type(x))
-print(type(y))
-# output
-# <class 'int'>
-# <class 'str'>
+print(type(x))  # <class 'int'>
+print(type(y))  # <class 'str'>
 
 # tanda kutip tunggal('') atau ganda ("")
 x = "hello"
 y = 'world'
-print(x)
-print(y)
-# output
-# hello
-# world
+print(x)    # hello
+print(y)    # world
 
 # nama variabel peka huruf besar/kecil
 x = 4
 X = "hello world"
-print(x)
-print(X)
-# output
-# 4
-# hello world
+print(x)    # 4
+print(X)    # hello world
 
 #===============================================================================
 # nama Variabel
@@ -67,7 +53,6 @@ print(X)
 # VARNAMA   = "hello world"
 # var2      = "hello world"
 # var_nama_saya = "hello world"
-
 
 
 # jenis-jenis nama variabel yang tidak boleh diterapkan
@@ -103,14 +88,10 @@ print(X)
 # Catatan: 
 # Pastikan jumlah variabel sesuai dengan jumlah nilai, atau Anda akan mendapatkan kesalahan.
 x, y, z = "alice", "bob", "carl"
-print(x)
-print(y)
-print(z)
+print(x)    # alice
+print(y)    # bob
+print(z)    # carl
 # print(x, y, z)
-# output
-# alice
-# bob
-# carl
 
 # contoh kesalahan
 # x, y, z = "alice", "carl"
@@ -118,33 +99,29 @@ print(z)
 
 # satu nilai ke beberapa variabel
 x = y = z = "hello world"
-print(x)
-print(y)
-print(z)
-# output
-# hello world
-# hello world
-# hello world
+print(x)    # hello world
+print(y)    # hello world
+print(z)    # hello world
 
 # membongkar/unpack koleksi
 # jika memiliki kumpulan nilai dalam type data list, tuple dll
 # python memungkinkan untuk mengekstrak nilai dalam variabel ini disebut unpack/membongkar
-nama = ["alice", "bob", "carl"] #type data list
+nama = ["alice", "bob", "carl"] #tipe data list
 x, y, z = nama
-print(x)
-print(y)
-print(z)
+print(x)    # alice
+print(y)    # bob
+print(z)    # carl
 # variabel nama berjumlah 3, berarti buatlah 3 variabel
-# sesuaikan jumlahnya jika tidak akan menghasilkan runtime error/kesalahan runtime
+# sesuaikan jumlahnya jika tidak akan menghasilkan runtime error/kesalahan runtime.
 
-# otuput
-# alice
-# bob
-# carl
+# menukar nilai antar variabel
+x = 100
+y = 500
+x, y = y, x
+print(x)    # 500
+print(y)    # 100
 
 # beberapa contoh kecil:
 x = "hello "
 y = "world!"
-print(x + y)
-# output
-# hello world! 
+print(x + y)    # hello world!
