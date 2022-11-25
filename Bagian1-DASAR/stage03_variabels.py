@@ -12,7 +12,7 @@ print(y)    # alice
 # dan bahkan dapat mengubah tipe setelah ditetapkan.
 x = 4 # type int
 x = "hello world" # type str
-print(x)    # # hello world
+print(x)    # hello world
 
 # dapatkan jenisnya
 # fungsi type() menampilkan tipe data
