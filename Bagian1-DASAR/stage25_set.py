@@ -20,6 +20,13 @@ print(x)
 # jadi di contoh ini tidak akan menampilkan hasil keluarannya karna nilainya berubah-ubah.
 
 # membuat set dengan konstuktor set()
+set_kosong = set()
+print(set_kosong)       # set()
+print(type(set_kosong)) # <class 'set'>
+
+# jika anda ingin membuat set kosong gunakan konstruktor set()
+# jangan menggunakan tanda kurung kurawal {} = tipe data dict
+
 x = set(('alice', 'carl', 'eliot'))
 print(x)
 
