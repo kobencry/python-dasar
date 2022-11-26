@@ -34,6 +34,11 @@ y = {6, 5, 4, 3, 2}
 hasil = x.issubset(y)
 print(hasil)    # False
 
+# sementara set dianggap sebagai set bagian dari dirinya sendiri.
+x = {'alice', 'carl', 'eliot'}
+hasil = x.issubset(x)
+print(hasil)    # True
+
 # menggunakan operator comparison/perbandingan <=
 # kode ini setara dengan yang diatas
 x = {'alice', 'carl', 'eliot'}
@@ -46,7 +51,7 @@ y = {6, 5, 4, 3, 2, 1}
 hasil = x <= y
 print(hasil)    # True
 
-# mengembalikan False jika tidak semua item dalam set x ada di set y
+# mengembalikan False jika tidak semua, item dalam set x ada di set y
 x = {'alice', 'carl', 'eliot'}
 y = {'geral', 'alice', 'carl'}
 hasil = x <= y
@@ -55,6 +60,24 @@ print(hasil)    # False
 x = {1, 2, 3}
 y = {6, 5, 4, 3, 2}
 hasil = x <= y
+print(hasil)    # False
+
+# sementara set dianggap sebagai set bagian dari dirinya sendiri.
+x = {'alice', 'carl', 'eliot'}
+hasil = x <= x
+print(hasil)    # True
+
+# menggunakan operator comparison/perbandingan <
+# Catatan: Operator <adalah satu-satunya cara untuk menguji apakah suatu 
+# set adalah subset yang tepat. 
+x = {'alice', 'carl', 'eliot'}
+y = {'geral', 'alice', 'carl', 'eliot'}
+hasil = x < y
+print(hasil)    # True
+
+# suatu set bukanlah sebagai set bagian dari dirinya sendiri.
+x = {'alice', 'carl', 'eliot'}
+hasil = x < x
 print(hasil)    # False
 
 # jika anda ingin mengetahui tentang operator python kunjungi folder_name: "python-operator"
