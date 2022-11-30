@@ -19,7 +19,7 @@ dictku = {'nama':'alice', 'usia':23, 'alamat':'jakarta'}
 hasil = dictku.setdefault('alamat')
 print(hasil)    # jakarta
 
-# catatan: fungsi setdefault() jika nama value/kunci tidak ada maka objek dictionary akan ditambahkan dan diperbarui.
+# catatan: fungsi setdefault() jika nama keys/kunci tidak ada, maka akan ditambahkan dan diperbarui.
 
 # jika nama keys/kunci tidak ada value/nilai defaultnya None
 dictku = {'nama':'alice', 'usia':23, 'alamat':'jakarta'}
