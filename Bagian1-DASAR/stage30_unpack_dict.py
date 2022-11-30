@@ -17,17 +17,34 @@ print(packing_dict[z])  # jakarta
 # unpcaking menggunakan tanda bintang *
 packing_dict = {'nama':'carl', 'usia':23, 'alamat':'jakarta', 'email':'carl@gmail.com', 'jurusan':'teknik komputer'}
 x, y, *z = packing_dict
+print(x)    # nama
+print(y)    # usia
+print(z)    # ['alamat', 'email', 'jurusan']
 print(x, y, z)  # nama usia ['alamat', 'email', 'jurusan']
 
 # Jika tanda bintang ditambahkan ke nama variabel lain selain yang terakhir,
 # Python akan memberikan nilai ke variabel sampai jumlah nilai yang tersisa 
 # sesuai dengan jumlah variabel yang tersisa.
 
+# mengembalikan keys/kunci
 x, *y, z = packing_dict
+print(x)    # nama
+print(y)    # ['usia', 'alamat', 'email']
+print(z)    # jurusan
 print(x, y, z)  # nama ['usia', 'alamat', 'email'] jurusan
 
 *x, y, z = packing_dict
+print(x)    # ['nama', 'usia', 'alamat']
+print(y)    # email
+print(z)    # jurusan
 print(x, y, z)  # ['nama', 'usia', 'alamat'] email jurusan
+
+# mengembalikan value/nilai dengan "Method-Dict" values()
+x, y, *z = packing_dict.values()
+print(x)    # carl
+print(y)    # 23
+print(z)    # ['jakarta', 'carl@gmail.com', 'teknik komputer']
+print(x, y, z)  # carl 23 ['jakarta', 'carl@gmail.com', 'teknik komputer']
 
 # unpacking menggunakan tanda bintang dua kali **
 dict1 = {'nama':'carl', 'usia':23, 'alamat':'jakarta'}
