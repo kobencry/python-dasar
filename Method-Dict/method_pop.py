@@ -25,6 +25,11 @@ dictku = {'nama':'carl', 'usia':26, 'alamat':'bandung'}
 hasil = dictku.pop('alamat')
 print(hasil)    # bandung
 
+# menggunakan parameter nilai default
+dictku = {'nama':'alice', 'usia':23}
+hasil = dictku.pop('alamat', 'tidak ada')
+print(hasil)    # tidak ada
+
 # jika nama kunci tidak ada, akan menampilkan pesan kesalahan KeyError
 dictku = {'nama':'eliot', 'usia':22, 'alamat':'surabaya'}
 dictku.pop('jurusan')
