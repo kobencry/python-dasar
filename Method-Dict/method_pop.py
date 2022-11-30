@@ -1,5 +1,7 @@
 # -- Method Dictionary --
 
+# https://docs.python.org/3/library/stdtypes.html?#dict.pop
+
 # fungsi pop() menghapus item yang ditentukan dari dictionary.
 # Nilai item yang dihapus adalah nilai kembalian dari fungsi pop().
 
