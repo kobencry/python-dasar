@@ -46,8 +46,11 @@ print(y)    # 23
 print(z)    # ['jakarta', 'carl@gmail.com', 'teknik komputer']
 print(x, y, z)  # carl 23 ['jakarta', 'carl@gmail.com', 'teknik komputer']
 
-# packing menggunakan tanda bintang dua kali **
+# https://peps.python.org/pep-0448/
+# unpacking menggunakan operator tanda bintang dua kali **
 dict1 = {'nama':'carl', 'usia':23, 'alamat':'jakarta'}
 dict2 = {'email':'carl@gmail.com', 'jurusan':'teknik komputer'}
-x = {**dict1, **dict2}
-print(x)    # {'nama': 'carl', 'usia': 23, 'alamat': 'jakarta', 'email': 'carl@gmail.com', 'jurusan': 'teknik komputer'}
+x, y, *z = {**dict1, **dict2}   # menggabungkan dict1 dan dict2 lalu unpack
+print(x)    # nama
+print(y)    # usia
+print(z)    # ['alamat', 'email', 'jurusan']
