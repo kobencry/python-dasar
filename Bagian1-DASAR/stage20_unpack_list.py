@@ -27,3 +27,8 @@ x, *y, z = packing_list
 print(x)    # alice
 print(y)    # ['carl', 'eliot']
 print(z)    # geral
+
+*x, y, z = packing_list
+print(x)    # ['alice', 'carl']
+print(y)    # eliot
+print(z)    # geral
