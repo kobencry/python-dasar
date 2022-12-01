@@ -46,7 +46,7 @@ print(y)    # 23
 print(z)    # ['jakarta', 'carl@gmail.com', 'teknik komputer']
 print(x, y, z)  # carl 23 ['jakarta', 'carl@gmail.com', 'teknik komputer']
 
-# unpacking menggunakan tanda bintang dua kali **
+# packing menggunakan tanda bintang dua kali **
 dict1 = {'nama':'carl', 'usia':23, 'alamat':'jakarta'}
 dict2 = {'email':'carl@gmail.com', 'jurusan':'teknik komputer'}
 x = {**dict1, **dict2}
