@@ -52,3 +52,21 @@ for i in range(len(s)):
 # 8
 # 9
 # 10
+
+# unpacking dari nilai dari hasil range()
+x, y, z = range(3)
+print(x)    # 0
+print(y)    # 1
+print(z)    # 2
+
+# Catatan: Jumlah variabel harus sesuai dengan jumlah nilai dalam range(),
+# jika tidak, Anda harus menggunakan tanda bintang (*) untuk mengumpulkan
+# nilai yang tersisa sebagai list.
+
+*x, = range(5)
+print(x)    # [0, 1, 2, 3, 4]
+
+x, *y, z = range(5)
+print(x)    # 0
+print(y)    # [1, 2, 3]
+print(z)    # 4
