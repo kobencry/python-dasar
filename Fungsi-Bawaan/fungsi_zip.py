@@ -31,9 +31,8 @@ nama = ['alice', 'carl', 'eliot']
 usia = [23, 22, 20]
 alamat = ['jakarta', 'bandung', 'surabaya']
 
-hasil = zip(nama, usia, alamat)
-print(hasil)        # <zip object at 0x0000019F5893AA40>
-print(list(hasil))  # [('alice', 23, 'jakarta'), ('carl', 22, 'bandung'), ('eliot', 20, 'surabaya')]
+hasil = list(zip(nama, usia, alamat))
+print(hasil)  # [('alice', 23, 'jakarta'), ('carl', 22, 'bandung'), ('eliot', 20, 'surabaya')]
 
 # menggunakan forloop untuk menampilkan data
 nama = ['alice', 'carl', 'eliot']
@@ -54,3 +53,16 @@ hasil = zip(nama, usia)
 print(hasil)        # <zip object at 0x0000019F2334AEC0>
 print(tuple(hasil)) # (('alice', 23), ('carl', 20))
 # lihat item 'eliot' diabaikan
+
+# menggunakan tipe dict
+x = ['nama', 'usia', 'alamat']
+y = ['alice', 23, 'jakarta']
+
+hasil = dict(zip(x, y))
+print(hasil)    # {'nama': 'alice', 'usia': 23, 'alamat': 'jakarta'}
+
+# anda dapat menggunakan operator * untuk unpack
+dataku = [('nama', 'alice'), ('usia', 23), ('alamat', 'jakarta')]
+x, y = zip(*dataku)
+print(x)    # ('nama', 'usia', 'alamat')
+print(y)    # ('alice', 23, 'jakarta')
