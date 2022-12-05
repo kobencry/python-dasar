@@ -181,7 +181,6 @@ if nama == 'alice': print("hello alice")
 elif nama == 'carl': print("hello carl"); print("statement carl");
 elif nama == 'eliot': print("-------------"); print("hello eliot"); print("------------------");
 else: print("hello world")  # hello world
-
 # Sementara semua ini berfungsi, dan penerjemah mengizinkannya, 
 # umumnya tidak disarankan dengan alasan menyebabkan keterbacaan yang buruk, 
 # terutama untuk pernyataan if yang rumit. PEP8 secara khusus merekomendasikan untuk tidak melakukannya.
