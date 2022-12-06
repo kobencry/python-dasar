@@ -37,6 +37,16 @@ for i in range(1, 5, 2):
 # 1
 # 3
 
+# kita bisa memulainya dari angka yang terbersar
+# jika ingin hasilnya dari 0 gunakan for i in range(5, -1, -1)
+for i in range(5, 0, -1):
+    print(i)
+# 5
+# 4
+# 3
+# 2
+# 1
+
 # contoh menggunakan tipe data string
 s = "hello world"
 for i in range(len(s)):
