@@ -15,7 +15,7 @@
 # step                      Opsional. Angka bilangan bulat yang menentukan penambahan. Standarnya/default adalah 1
 
 # contoh menggunakan parameter start
-for i in range(5):
+for i in range(5):  # mencetak dari 0 - 4
     print(i)
 # 0
 # 1
@@ -24,7 +24,7 @@ for i in range(5):
 # 4
 
 # contoh menggunakan parameter start, stop
-for i in range(1, 5):
+for i in range(1, 5):   # mencetak dari 1 - 4
     print(i)
 # 1
 # 2
