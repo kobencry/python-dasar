@@ -7,7 +7,7 @@ for i in "hello world":
 
 for i in range(1, 6):
     print(i)
-    for j in "dalam perencanaan program kode":
+    for j in "kode program dalam perencanaan":
        pass
 # 1
 # 2
