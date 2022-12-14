@@ -2,6 +2,7 @@
 # membuat variabel
 # python tidak memiliki perintah untuk mendeklarasikan variabel.
 # variabel dibuat saat Anda pertama kali menetapkan nilai padanya.
+# dan diakhir baris ada variabel annotations untuk mengetahui tipe variabel
 
 x = 5
 y = "hello world"
@@ -125,3 +126,23 @@ print(y)    # 100
 x = "hello "
 y = "world!"
 print(x + y)    # hello world!
+
+# variabel annotations
+# variabel anotasi adalah untuk mengetahui tipe variabel
+
+# Syntax
+# nama_variabel:tipe
+x:int = 10
+y:str = "hello world"
+print(x)    # 10
+print(y)    # hello world
+
+# anda bisa memasukan jenist data apapun walaupun annotasinya berbeda
+x:int = "hello world"
+y:str = 20
+print(x)    # hello world
+print(y)    # 20
+# tapi dalam tutorial ini tidak akan menggunakan variabel annotations
+# karna buat pemula sedikit membingungkan
+# jika ingin mempelajari lebih lanjut tentang variabel annotations kunjungi:
+# https://peps.python.org/pep-0526/
