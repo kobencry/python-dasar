@@ -50,9 +50,6 @@ fungsiku(5)
 def listku():
     return ['alice', 'carl', 'eliot']
 
-for f in tupleku():
-    print(f)
-
 print(listku()[0])
 # alice
 

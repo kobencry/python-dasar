@@ -53,5 +53,7 @@ print(func3('hello', 2.5, 10))
 #===============================================================================
 
 # menggunakan positional-only dan keyword-only argument
-def func4(nama, /, usia=0, *, alamat):
-    
+def func4(text, /, border="*", *, lebar=50):
+    return f" {text} ".center(lebar, border)
+
+print(func4('hello world'))
