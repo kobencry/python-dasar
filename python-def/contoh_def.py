@@ -53,7 +53,17 @@ print(func3('hello', 2.5, 10))
 #===============================================================================
 
 # menggunakan positional-only dan keyword-only argument
-def func4(text, /, border="*", *, lebar=50):
+def func4(text, /, border="*", *, lebar=30):
     return f" {text} ".center(lebar, border)
 
-print(func4('hello world'))
+print(func4('hello world')) # ******** hello world *********
+print(func4('alice', '♦'))  # ♦♦♦♦♦♦♦♦ hello world ♦♦♦♦♦♦♦♦♦
+print(func4('carl', lebar=20)) # ****** eliot *******
+print(func4('eliot', '=', lebar=20)) # ====== eliot =======
+
+# jika anda tidak menggunakan keyword-argument di argument 'lebar' akan mendapatkan pesan kesalahan TypeError.
+# print(func4('python', ':', 20))
+
+# jika anda mencoba menggunakan keyword-argument di argument 'text' akan mendapatkan pesan kesalahan TypeError atau SyntaxError.
+# print(func4(text='python', border':', lebar=20))
+# print(func4(text='python', ':', lebar=20))

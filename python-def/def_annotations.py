@@ -39,4 +39,22 @@ print(main.__annotations__)
 main(2, 3)
 # 2 3
 
+# menghitung berapa jumlah fungsi yang dipanggil
+def fungsiku(text:str) -> 0:
+    fungsiku.__annotations__['return'] += 1
+    print(f"{fungsiku.__name__}() telah dipanggil ke: {fungsiku.__annotations__['return']} kali")
+    print(text)
+
+fungsiku('hello')
+# fungsiku() telah dipanggil ke: 1 kali
+# hello
+
+fungsiku('world')
+# fungsiku() telah dipanggil ke: 2 kali
+# world
+
+fungsiku(100)
+# fungsiku() telah dipanggil ke: 3 kali
+# 100
+
 # jika anda ingin mengetahui tentang annotations kunjungi folder_name: "python-annotations"
