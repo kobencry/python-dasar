@@ -61,4 +61,10 @@ print('sebelum:', angka)    # sebelum: [4, 2, 6, 1, 8]
 angka.sort(key=lambda x: -x)
 print('sesudah:', angka)    # sesudah: [8, 6, 4, 2, 1]
 
+# contoh menggunakan fungsi currying 
+tambah = lambda x: lambda y: lambda z: x + y + z
+print(tambah(10)(20)(30))   # 60
+
 # Catatan: Jika anda memiliki fungsi yang berisi satu statement gunakan fungsi lambda.
+
+# jika anda ingin mengetahui tentang fungsi currying pada python kunjungi folder_name: "python-def/def_currying.py"
