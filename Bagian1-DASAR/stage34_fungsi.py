@@ -96,4 +96,4 @@ print(x)    # nama: alice usia: 23 alamat: jakarta
 print(y)    # nama: carl usia: 25 alamat: bandung
 
 # jenis-jenis keyword python kunjungi file_name: "stage01_helloworld.py"
-# jika anda ingin mengetahui tentang jenis-jenis argumen/parameter pada fungsi python kunjungi folder_name: "python-functions"
+# jika anda ingin mengetahui tentang jenis-jenis argumen/parameter pada fungsi python kunjungi folder_name: "python-def"
