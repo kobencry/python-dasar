@@ -60,3 +60,5 @@ angka = [4, 2, 6, 1, 8]
 print('sebelum:', angka)    # sebelum: [4, 2, 6, 1, 8]
 angka.sort(key=lambda x: -x)
 print('sesudah:', angka)    # sesudah: [8, 6, 4, 2, 1]
+
+# Catatan: Jika anda memiliki fungsi yang berisi satu statement gunakan fungsi lambda.
