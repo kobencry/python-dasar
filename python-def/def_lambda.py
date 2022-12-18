@@ -17,6 +17,12 @@
 fungsiku = lambda x: x
 print(fungsiku('hello world'))
 
+# menggunakan fungsi 'normal' biasa
+# def tambah(x, y):
+#     return x + y
+# print(tambah(2, 3)) # 5
+
+# kode ini setara dengan diatas
 tambah = lambda x, y: x + y
 print(tambah(2, 3))     # 5
 
