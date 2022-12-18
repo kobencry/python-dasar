@@ -19,7 +19,7 @@ def tambah(x):
 print(tambah(1)(2)(3))  # 6
 
 
-# anda dapat memanggilnya dengan fungsi lain
+# anda dapat memanggilnya dengan fungsi "normal" dan nilai argumen diteruskan ke fungsi curry
 def main(nama, usia, alamat):
     return masukan_nama(nama)(usia)(alamat)
 
