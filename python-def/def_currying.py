@@ -33,7 +33,7 @@ def masukan_nama(nama):
 print(main('alice', 23, 'jakarta'))  # ['alice', 23, 'jakarta']
 print(main('eliot', 23, 'surabaya')) # ['eliot', 23, 'surabaya']
 
-# contoh menggunakan fungsi "normal" dengan argumen yang menjadi sebuah fungsi
+# contoh menggunakan fungsi "normal" dengan argumen yang berisi sebuah fungsi
 def main(arg_fungsi:'argumen yang menerima sebagai fungsi'):
     def curried(x: int):
         def apply(y: int):
@@ -41,7 +41,7 @@ def main(arg_fungsi:'argumen yang menerima sebagai fungsi'):
         return apply
     return curried
 # contoh penggunaan
-fungsi_tambah = main(lambda p, q: p + q) # argumen yang berisi penjumlahan p + q
+fungsi_tambah = main(lambda p, q: p + q) # argumen yang berisi fungsi penjumlahan p + q
 fungsi_tambah_2 = fungsi_tambah(20)
 print(fungsi_tambah_2(30))  # 50
 print(fungsi_tambah_2(40))  # 60
