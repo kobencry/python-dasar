@@ -1,10 +1,9 @@
 # Catatan:
 # Jika anda belum mengetahui definisi fungsi di python maka lewati tutorial ini
+# saya akan bahas di stage36_variabel_scope.py
 
 # variabel global
-# variabel yang dibuat di luar fungsi (seperti dalam semua contoh di atas) 
-# dikenal sebagai variabel global.
-# variabel global dapat digunakan oleh semua orang, baik di dalam fungsi maupun di luar.
+# variabel global dapat digunakan di seluruh program, baik di dalam fungsi maupun di luar.
 
 x = "alice"
 
