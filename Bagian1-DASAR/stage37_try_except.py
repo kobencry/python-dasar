@@ -32,34 +32,6 @@ except:
 # Tanpa blok try, program akan macet dan menimbulkan kesalahan
 # print(x) # akan menampilkan kesalahan NameError: name 'x' is not defined
 
-# Menangkap kesalahan atau exception/pengecualian
-# anda dapat menentukan blok except sebanyak yang Anda inginkan, 
-# misalnya jika Anda ingin mengeksekusi blok kode khusus untuk jenis kesalahan tertentu
-try:
-    print(100/0)  # type error: ZeroDivisionError
-    print(x)      # type error: NameError
-except NameError:   # menangani kesalahan NameError
-    print("variabel x tidak ada")
-except ZeroDivisionError:   # menangani kesalahan ZeroDivisionError
-    print("bilangan tidak bisa dibagi dengan angka nol")
-# output:
-# bilangan tidak bisa dibagi dengan angka nol
-
-# cara untuk mengetahui type error jalankan program dibawah ini:
-#print(100/0)
-# output:
-# Traceback (most recent call last):
-#   File "stage37_try_except.py", line 50, in <module>
-#     print(100/0)
-# ZeroDivisionError: division by zero
-
-#print(x)
-# output:
-# Traceback (most recent call last):
-#   File "stage37_try_except.py", line 57, in <module>
-#     print(x)
-# NameError: name 'x' is not defined
-
 #===============================================================================
 
 # menggunakan blok else
@@ -143,6 +115,7 @@ finally:
 
 # Jika anda ingin menangani kesalahan dengan menggunakan jenis kesalahan 
 # yang spesifik, seperti ZeroDivisionError, ValueError, IndexError, dll.
+
 try:
     print(100 / 0)
 except ZeroDivisionError as err:
@@ -150,5 +123,36 @@ except ZeroDivisionError as err:
 # output:
 # [!] Error: division by zero
 
+# Anda dapat menentukan blok except sebanyak yang Anda inginkan, dan
+# membuat sebuah pesan kesalahan yang anda inginkan
+try:
+    print(100/0)  # type error: ZeroDivisionError
+    print(x)      # type error: NameError
+except NameError:   # menangani kesalahan NameError
+    print("variabel x tidak ada")
+except ZeroDivisionError:   # menangani kesalahan ZeroDivisionError
+    print("bilangan tidak bisa dibagi dengan angka nol")
+# output:
+# bilangan tidak bisa dibagi dengan angka nol
+
+# cara untuk mengetahui type error jalankan program dibawah ini:
+#print(100/0)
+
+# output:
+# Traceback (most recent call last):
+#   File "stage37_try_except.py", line 50, in <module>
+#     print(100/0)
+# ZeroDivisionError: division by zero
+
+#print(z)
+
+# output:
+# Traceback (most recent call last):
+#   File "stage37_try_except.py", line 57, in <module>
+#     print(z)
+# NameError: name 'z' is not defined
+
 # Dengan menggunakan jenis kesalahan yang spesifik, Anda dapat memberikan 
 # respons yang lebih spesifik terhadap kesalahan yang terjadi.
+
+# jika anda ingin mengetahui tentang menangani kesalahan kunjungi folder_name: "python-exception"
