@@ -23,8 +23,9 @@ assert(x > y), "hello world"
 # periksa system operasi windows, linux, macos
 import sys  # standar library python anda akan mempelajari di Bagian2-MODUL
 def info_os():
-    # jika anda memakai os windos 
+    # jika anda memakai os windows pesan error tidak di tampilkan 
     assert('win32' in sys.platform), "program ini hanya berlaku untuk windows"
+
     # jika anda memakai os linux
     # assert('linux' in sys.platform), "program ini hanya berlaku untuk linux & macos"
 info_os()
@@ -54,14 +55,16 @@ def bagi(x, y):
     raise ValueError("Tidak bisa membagi dengan 0")
   return x / y
 
-# Mencoba memanggil fungsi divide
-try:
-  hasil = bagi(10, 0)
-  print(hasil)
-except ValueError as e:
-  print("Terjadi kesalahan:", e)
-# output:
-# Terjadi kesalahan: Tidak bisa membagi dengan 0
+
+if __name__=='__main__':
+    # Mencoba memanggil fungsi bagi()
+    try:
+      hasil = bagi(10, 0)
+      print(hasil)
+    except ValueError as e:
+      print("Terjadi kesalahan:", e)
+    # output:
+    # Terjadi kesalahan: Tidak bisa membagi dengan 0
 
 # Pada contoh di atas, fungsi bagi() akan menaikan kesalahan exception ValueError 
 # jika terjadi pembagian dengan nol (nilai y sama dengan 0). 
@@ -69,6 +72,7 @@ except ValueError as e:
 # sehingga program tidak berhenti eksekusinya ketika terjadi pembagian dengan nol.
 
 # jika anda ingin mengetahui tentang menangani kesalahan kunjungi folder_name: "python-exception"
+# jika anda ingin mengetahui tentang __name__=='__main__' kunjungi folder_name: "Bagian2-Modul"
 
 # Selanjutnya anda akan belajar di folder_name:
 # Bagian2-Modul
