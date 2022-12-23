@@ -1,0 +1,11 @@
++------------------------------------------------------------------------------
+|  Mode  |  Makna   |          Deskripsi
++--------+----------+----------------------------------------------------------
+|  'r'   |  read    |  untuk membaca isi file (default)
+|  'w'   |  write   |  untuk menulis data ke file
+|  'a'   |  append  |  untuk menambah data ke file
+|  't'   |  text    |  untuk membaca isi file dalam teks (default)
+|  'x'   | exlusive |  untuk membuat file baru (nama file tidak boleh sama)
+|  'b'   |  binary  |  untuk membaca isi file dalam biner (misalnya gambar)
+|  '+'   |  plus    |  untuk membaca, menulis dan memodifikasi file
++------------------------------------------------------------------------------
