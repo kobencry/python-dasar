@@ -1,11 +1,20 @@
-+------------------------------------------------------------------------------
-|  Mode  |  Makna   |          Deskripsi
-+--------+----------+----------------------------------------------------------
-|  'r'   |  read    |  untuk membaca isi file (default)
-|  'w'   |  write   |  untuk menulis data ke file
-|  'a'   |  append  |  untuk menambah data ke file
-|  't'   |  text    |  untuk membaca isi file dalam teks (default)
-|  'x'   | exlusive |  untuk membuat file baru (nama file tidak boleh sama)
-|  'b'   |  binary  |  untuk membaca isi file dalam biner (misalnya gambar)
-|  '+'   |  plus    |  untuk membaca, menulis dan memodifikasi file
-+------------------------------------------------------------------------------
++---------------------------------------------------------------------------------------------------
+|  Mode  |       Makna      |                 Deskripsi
++--------+------------------+-----------------------------------------------------------------------
+|  'r'   |      read        |  untuk membaca isi file (default)
+|  'w'   |      write       |  untuk menulis data ke file (menimpa/overwrite isi file jika file sudah ada)
+|  'a'   |      append      |  untuk menambah data ke file (membuat file baru jika tidak ada)
+|  't'   |      text        |  untuk membaca isi file dalam teks (default)
+|  'x'   |     exlusive     |  untuk membuat file baru (nama file tidak boleh sama)
+|  'b'   |      binary      |  untuk membaca isi file dalam biner (misalnya gambar)
+|  '+'   |      plus        |  untuk membaca, menulis dan memodifikasi file
+|  'rb'  |   read binary    |  untuk membaca file dalam format biner
+|  'r+'  |   read plus      |  untuk membaca dan menulis file (cursor file berada diawal)
+|  'rb+' |                  |  sama seperti mode 'rb' dan bisa menulis dalam format biner
+|  'wb'  |   write binary   |  untuk menulis data biner ke file
+|  'w+'  |   write plus     |  untuk menulis dan membaca file
+|  'wb+' |                  |  sama seperti mode 'wb' dan bisa membaca file biner
+|  'ab'  |  append binary   |  untuk menambahkan data dalam format biner (membuat file baru jika tidak ada)
+|  'a+'  |  append plus     |  untuk menambahkan dan membaca
+|  'ab+' |                  |  sama seperti mode 'ab' dan bisa membaca file biner
++----------------------------------------------------------------------------------------------------

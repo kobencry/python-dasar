@@ -1,6 +1,12 @@
 # Method close() adalah method yang digunakan untuk menutup file yang telah 
 # dibuka dengan menggunakan method open() di Python.
 
+# Syntax
+# file.close()
+
+# Nilai Parameter
+# tidak ada nilai parameter
+
 # Berikut ini adalah contoh penggunaan method close() pada penanganan file di Python:
 # membuka file dengan mode default ('r', atau 't')
 fileku = open('file.txt')
@@ -35,6 +41,5 @@ fileku.close()
 with open('file.txt', 'r') as fileku:
     # Mengolah file
     print(fileku.read())
-
 # File akan ditutup secara otomatis setelah selesai mengolah
 # dalam tutorial ini akan selalu menggunakan statement with
