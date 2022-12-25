@@ -1,0 +1,4 @@
+ini adalah output pertama
+ini adalah output kedua
+hello world
+...ini adalah file demo flush

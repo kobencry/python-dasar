@@ -17,4 +17,7 @@
 |  'ab'  |  append binary   |  untuk menambahkan data dalam format biner (membuat file baru jika tidak ada)
 |  'a+'  |  append plus     |  untuk menambahkan dan membaca
 |  'ab+' |                  |  sama seperti mode 'ab' dan bisa membaca file biner
+|  'xb'  | exlusive binary  |  untuk membaca dan menulis file dalam format biner (membuat file baru jika tidak ada)
+|  'x+'  | exlusive plus    |  untuk membaca dan menulis file (membuat file baru jika tidak ada)
+|  'xb+' |                  |  sama seperti mode 'xb' dan bisa membuat file baru
 +----------------------------------------------------------------------------------------------------
