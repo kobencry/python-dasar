@@ -1,0 +1,2 @@
+hello world
+ini adalah file demo read
