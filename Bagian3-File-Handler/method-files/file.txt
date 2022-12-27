@@ -1,3 +1,0 @@
-hello world
-===========
-ini adalah file.txt
