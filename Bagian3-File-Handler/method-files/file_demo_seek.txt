@@ -1,0 +1,5 @@
+hello world
+alice
+carl
+eliot
+ini adalah file demo seek
