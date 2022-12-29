@@ -17,52 +17,85 @@
 # 2 (mengacu pada akhir file).
 
 # Berikut ini adalah contoh penggunaan method seek() di Python:
+
 # membuka file dengan mode default 'r' (read/baca) atau 't' (text/teks)
 with open('file_demo_seek.txt') as fileku:
-    # membaca sebanyak 22 byte atau karakter dari file
-    isi_file = fileku.read(22)
-    print(isi_file)
+    # baca seluruh isi file
+    print(fileku.read())
     # Output:
     # hello world
     # alice
     # carl
-
-    # >>> posisi pointer saat ini berada di carl 
-
-    # membaca seluruh isi file
-    print(fileku.read())
-    # Output:
     # eliot
     # ini adalah file demo seek
+
+    # baca lagi seluruh isi file
+    print(fileku.read())
+    # Outputnya string kosong
     
-    # >>> posisi pointer saat ini berada diakhir
+    # menggunakan method repr()
+    # baca lagi seluruh isi file
+    print(repr(fileku.read()))
+    # Outputnya: ''
+    # ternyata posisi pointer berada diakhir baris
     
-    # mengatur posisi pointer keawal
+    # mengatur posisi pointer ke awal
     fileku.seek(0)
-    
-    # membaca sebanyak 11 byte atau karakter dari file
+    # baca sebanyak 11 byte dari file
     print(fileku.read(11))
     # Output:
     # hello world
-
-    # mengatur posisi pointer ke baris 19
-    fileku.seek(19)
-    print(fileku.read(5))
-    # Output:
-    # carl
 # File akan ditutup secara otomatis setelah selesai mengolah
 
-# menggunakan argument "whence"
+# membaca isi file dimulai dari karakter ke 6
+# membuka file dengan mode default 'r' (read/baca) atau 't' (text/teks)
 with open('file_demo_seek.txt') as fileku:
-    # membaca seluruh isi file
-    print(fileku.read())
-    
-    # >>> posisi pointer saat ini berada diakhir
     # mengatur posisi pointer
-    print(fileku.seek(0,0))
+    posisi = fileku.seek(6)
+    print("posisi pointer saat ini:", posisi)
+    # baca isi file
+    s = fileku.read(posisi)
+    print("posisi karakter saat ini:", s[posisi - posisi])
+    # Output:
+    # posisi pointer saat ini: 6
+    # posisi karakter saat ini: w
 
-    print(fileku.read(5))
+    # baca seluruh baris dari file
+    print(fileku.read())
+    # Output:
+    # alice
+    # carl
+    # eliot
+    # ini adalah file demo seek
+# File akan ditutup secara otomatis setelah selesai mengolah
+
+# menggunakan argumen "whence"
+# 0 (mengacu pada awal file),
+# 1 (mengacu pada posisi file pointer saat ini), atau 
+# 2 (mengacu pada akhir file).
+with open('file_demo_seek.txt') as fileku:
+    s = fileku.read(23)
+    print(s)
+    # Output:
+    # hello
+    # alice
+    # carl
     
+    # mengatur posisi pointer ke awal "hello world"
+    # argumen "offset" 1 dengan posisi karakter berada di "e"
+    # argumen "whence" 0 dengan posisi diawal file 
+    posisi = fileku.seek(1, 0)
+    print("posisi pointer saat ini:", posisi)
+    print("posisi karakter saat ini:", s[posisi])
+    print(fileku.read(16))
+    # Output:
+    # osisi pointer saat ini: 1
+    # posisi karakter saat ini: e
+    # ello world
+    # alice
 
 
-# Perlu diingat bahwa penggunaan method seek() hanya dapat dilakukan pada file yang terbuka dengan mode "read" atau "write+". Jika file tersebut dibuka dengan mode "write", maka method seek() akan menyebabkan error
+# Catatan:
+# Perlu diingat bahwa penggunaan method seek() hanya dapat dilakukan pada file yang terbuka 
+# dengan mode "read", "write+" atau yang mengandung mode "read".
+# Jika file tersebut dibuka dengan mode "write", maka method seek() akan menyebabkan error
