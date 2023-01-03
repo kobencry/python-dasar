@@ -19,7 +19,20 @@
 # errors            opsional. String yang menentukan method kesalahan. Nilai-nilai yang diperbolehkan adalah
 #                   backslashreplace, ignore, namereplace, strict, replace, xmlcharrefreplace
 
+# mengubah objek bytes menjadi string
+txt = b"hello world \xe2\x9c\xa8"
+print(txt)  # b'hello world \xe2\x9c\xa8'
+# decode objek bytes menjadi string
+print(txt.decode())
+# Output pada linux:
+# hello world ✨
+
+# Output pada windows:
+# hello world â¨ atau,
+# hello world �
+
 alphabet = "αβγδεζηθικλμνξοπρςστυφχψ"
+# menggunakan method encode() untuk mengubah objek string menjadi bytes
 alpha_utf_8 = alphabet.encode()
 print(alpha_utf_8)
 print(alpha_utf_8.decode())
@@ -35,8 +48,8 @@ print(alpha_utf_8.decode())
 # 'xmlcharrefreplace' : Mengganti karakter dengan karakter xml
 
 # ini hanyalah sebuah contoh sederhana untuk memahaminya, 
-# tutorial ini parameternya diubah menjadi 'ascii', bagaimana cara fungsi decode()
-# bekerja jika karakter string tidak tertangani.
+# dalam tutorial ini parameternya diubah menjadi 'ascii', 
+# bagaimana cara fungsi decode() bekerja jika karakter string tidak tertangani.
 
 txt = "ålice"
 var = txt.encode()
