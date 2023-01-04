@@ -41,4 +41,39 @@ with open("filedemo.txt") as f:
 # eliot
 # ini adalah file demo
 
-# Mode 'w+'  
+# Mode 'w+' untuk menulis dan membaca file
+# Saat menggunakan mode ini, kita dapat melakukan operasi baca dan tulis pada file tersebut.
+# Jika file yang dibuka dengan mode ini sudah ada, 
+# maka isi file tersebut akan ditimpa (overwritten) dengan data yang baru ditulis. 
+# Jika file belum ada, maka file tersebut akan dibuat dengan sendirinya.
+
+# Contoh penggunaan mode 'w+' pada objek file adalah sebagai berikut:
+dataku = ('alice', 'carl', 'eliot')
+with open("filedemo2.txt", mode="w+") as fileku:
+    # menulis string ke file
+    fileku.write("hello world\n")
+    # menulis string lain dari dataku ke file
+    for i in dataku:
+        fileku.write(i + '\n')
+    # menulis string lain lagi ke file
+    fileku.write("ini adalah file demo 2")
+
+    print("menulis data ke file selesai.")
+
+    # posisi pointer saat ini ada di akhir
+
+    # setelah data ditulis ke file berikutnya baca isi file tersebut
+    # untuk membaca file yang barusan ditulis ubah dulu posisi pointer file
+    # mengatur pointer file ke awal
+    fileku.seek(0)
+    # membaca seluruh isi file
+    print(fileku.read())
+
+# File akan ditutup secara otomatis setelah selesai mengolah
+# Output:
+# menulis data ke file selesai.
+# hello world
+# alice
+# carl
+# eliot
+# ini adalah file demo 2
