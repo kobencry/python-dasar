@@ -3,7 +3,19 @@
 # namun dapat menulis atau mengubah isi file tersebut. 
 # Jika file yang dibuka dengan mode ini sudah ada, 
 # maka isi file tersebut akan ditimpa (overwritten) dengan data yang baru ditulis. 
-# Jika file belum ada, maka file tersebut akan tercipta dengan sendirinya.
+# Jika file belum ada, maka file tersebut akan dibuat dengan sendirinya.
+
+# anda bisa menggunakan beberapa jenis file:
+# File gambar: JPG, PNG, GIF, BMP
+# File audio: MP3, WAV, MIDI
+# File video: MP4, AVI, MKV
+# File aplikasi: EXE, DLL, APK
+# File DOC (Microsoft Word)
+# File DOCX (Microsoft Word Open XML)
+# File ODT (OpenDocument Text)
+# File PDF (Portable Document Format)
+# File RTF (Rich Text Format)
+# dalam contoh ini menggunakan jenis file .png, .txt
 
 # Contoh penggunaan mode 'w' pada objek file adalah sebagai berikut:
 with open("filedemo.txt", mode="w") as fileku:
@@ -77,3 +89,8 @@ with open("filedemo2.txt", mode="w+") as fileku:
 # carl
 # eliot
 # ini adalah file demo 2
+
+# Perhatikan bahwa saat menggunakan mode 'w' atau 'w+', 
+# isi file akan ditimpa (overwritten) dengan data yang baru ditulis.
+# Jika ingin menambahkan data ke file tanpa menghapus isi file yang sebelumnya, 
+# dapat menggunakan mode 'a+' (append and read).

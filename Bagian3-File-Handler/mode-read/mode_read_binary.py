@@ -3,6 +3,18 @@
 # Jika file tidak ditemukan atau file tidak ada atau tidak bisa dibuka dengan mode 'rb',
 # maka akan terjadi exception FileNotFoundError atau PermissionError.
 
+# anda bisa menggunakan beberapa jenis file:
+# File gambar: JPG, PNG, GIF, BMP
+# File audio: MP3, WAV, MIDI
+# File video: MP4, AVI, MKV
+# File aplikasi: EXE, DLL, APK
+# File DOC (Microsoft Word)
+# File DOCX (Microsoft Word Open XML)
+# File ODT (OpenDocument Text)
+# File PDF (Portable Document Format)
+# File RTF (Rich Text Format)
+# dalam contoh ini menggunakan jenis file .png, .txt
+
 # Contoh penggunaan mode 'rb' pada objek file adalah sebagai berikut:
 with open("file_gambar.png", mode='rb') as fileku:
     # membaca seluruh isi file gambar

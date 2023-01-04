@@ -50,3 +50,26 @@ with open("filedemo2.txt", mode='r+') as fileku:
     # hello world
     # Ini adalah string yang ditulis menggunakan mode r+
 # File akan ditutup secara ototmatis setelah selesai mengolah
+
+# menyalin file dengan mode 'r+'
+with open("filedemo.txt", mode='r') as f:
+    with open("filedemo_copy.txt", mode='r+') as fileku:
+        # membaca isi file
+        isi_file = f.read()
+
+        # menulis string ke file
+        fileku.write(isi_file)
+
+        # posisi pointer saat ini berada di akhir file
+        # mengatur posisi pointer saat ini ke awal file
+        fileku.seek(0)
+
+        # membaca isi file
+        print(fileku.read())
+# File akan ditutup secara otomatis setelah selesai mengolah
+# Output:
+# hello world
+# alice
+# carl
+# eliot
+# ini adalah file demo 
