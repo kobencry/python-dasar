@@ -90,6 +90,31 @@ with open("filedemo2.txt", mode="w+") as fileku:
 # eliot
 # ini adalah file demo 2
 
+# membuat salinan dari file mode_write.py
+# with open("mode_write.py", mode='r') as fr:
+#     with open("mode_write.py2", mode='w+') as fwr:
+#         # membaca isi file
+#         isi_file = fr.read()
+#         # menulis isi file
+#         fwr.write(isi_file)
+#         # mengatur posisi pointer ke awal file
+#         fwr.seekable(0)
+#         # membaca isi file
+#         print(fwr.read())
+
+# kode ini setara dengan diatas
+# with open("mode_write.py", mode='r') as fr, open("mode_write2.py", mode='w+') as fwr:
+#     # membaca isi file
+#     isi_file = fr.read()
+#     # menulis isi file
+#     fwr.write(isi_file)
+#     # mengatur posisi pointer ke awal file
+#     fwr.seek(0)
+#     # membaca isi file
+#     print(fwr.read())
+# File akan ditutup secara otomatis setelah selesai mengolah
+
+
 # Perhatikan bahwa saat menggunakan mode 'w' atau 'w+', 
 # isi file akan ditimpa (overwritten) dengan data yang baru ditulis.
 # Jika ingin menambahkan data ke file tanpa menghapus isi file yang sebelumnya, 
