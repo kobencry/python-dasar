@@ -123,3 +123,7 @@ with open("filedemo2.txt", mode='a+') as far:
     # eliot
     # ini adalah file demo 2
 # File akan ditutup secara otomatis setelah selesai mengolah
+
+# Perhatikan bahwa saat menggunakan mode 'a+', 
+# posisi pointer(cursor) akan berada di akhir file setelah melakukan operasi menambahkan data.
+# Jika ingin membaca isi file dari awal, maka perlu dipindahkan terlebih dahulu menggunakan method seek().
