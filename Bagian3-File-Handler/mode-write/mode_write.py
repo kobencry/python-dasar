@@ -72,11 +72,11 @@ with open("filedemo2.txt", mode="w+") as fileku:
 
     print("menulis data ke file selesai.")
 
-    # posisi pointer saat ini ada di akhir
+    # posisi pointer saat ini ada di akhir file
 
     # setelah data ditulis ke file berikutnya baca isi file tersebut
     # untuk membaca file yang barusan ditulis ubah dulu posisi pointer file
-    # mengatur pointer file ke awal
+    # mengatur posisi pointer ke awal file
     fileku.seek(0)
     # membaca seluruh isi file
     print(fileku.read())
@@ -108,6 +108,9 @@ with open("filedemo2.txt", mode="w+") as fileku:
 #     isi_file = fr.read()
 #     # menulis isi file
 #     fwr.write(isi_file)
+#     # untuk membaca isi file yang sudah dibaca atau ditulis
+#     # kita harus pindahkan posisi pointer file ke awal
+#     # posisi pointer saat ini berada di akhir file
 #     # mengatur posisi pointer ke awal file
 #     fwr.seek(0)
 #     # membaca isi file

@@ -60,6 +60,8 @@ with open("filedemo.txt", mode='r') as f:
         # menulis string ke file
         fileku.write(isi_file)
 
+        # untuk membaca isi file yang sudah dibaca atau ditulis
+        # kita harus pindahkan posisi pointer file ke awal
         # posisi pointer saat ini berada di akhir file
         # mengatur posisi pointer saat ini ke awal file
         fileku.seek(0)

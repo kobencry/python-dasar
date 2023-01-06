@@ -46,6 +46,9 @@ with open("file_demo_write_bytes.txt", mode='rb+') as fileku:
     # atau menggunakan b""
     fileku.write(b"alice \xe2\x9c\xa8")
 
+    # untuk membaca isi file yang sudah dibaca atau ditulis
+    # kita harus pindahkan posisi pointer file ke awal
+    # posisi pointer saat ini berada di akhir file
     # mengatur posisi pointer ke awal file
     fileku.seek(0)
     # membaca isi file

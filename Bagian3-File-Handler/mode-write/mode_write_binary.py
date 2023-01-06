@@ -35,8 +35,6 @@ with open("file_gambar.png", mode='rb') as frb:
 # maka isi file tersebut akan ditimpa (overwritten) dengan data yang baru ditulis. 
 # Jika file belum ada, maka file tersebut akan dibuat dengan sendirinya.
 
-
-
 # Contoh penggunaan mode 'wb+' pada objek file adalah sebagai berikut:
 dataku = ("\x61\x6c\x69\x63\x65", "\x63\x61\x72\x6c", "\x65\x6c\x69\x6f\x74")
 with open("filedemo3.txt", mode='wb+') as fileku:
@@ -47,6 +45,8 @@ with open("filedemo3.txt", mode='wb+') as fileku:
         fileku.write(i.encode() + '\n'.encode())
     # menulis string ke file dalam bentuk biner (objek bytes)
     fileku.write("ini adalah file demo 3".encode())
+    # untuk membaca isi file yang sudah dibaca atau ditulis
+    # kita harus pindahkan posisi pointer ke awal file
     # posisi pointer saat ini berada diakhir file
     # mengatur posisi pointer ke awal
     fileku.seek(0)
