@@ -4,18 +4,6 @@
 # Jika file yang dibuka dengan mode ini sudah ada, maka data baru akan ditambahkan di akhir file.
 # Jika file belum ada, maka file tersebut akan dibuat dengan sendirinya.
 
-# anda bisa menggunakan beberapa jenis file:
-# File gambar: JPG, PNG, GIF, BMP
-# File audio: MP3, WAV, MIDI
-# File video: MP4, AVI, MKV
-# File aplikasi: EXE, DLL, APK
-# File DOC (Microsoft Word)
-# File DOCX (Microsoft Word Open XML)
-# File ODT (OpenDocument Text)
-# File PDF (Portable Document Format)
-# File RTF (Rich Text Format)
-# dalam contoh ini menggunakan jenis file .png, .txt
-
 # Contoh penggunaan mode 'a' pada objek file adalah sebagai berikut:
 # filedemo.txt hanya memiliki data "hello world"
 # membuka file dengan mode default 'r' (read/baca) atau 't' (text/teks)
