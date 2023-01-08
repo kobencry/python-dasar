@@ -29,12 +29,12 @@ print(b'\xc3\xa5lice'.decode()) # ålice
 # Contoh-contoh ini menggunakan ascii encoding ,  dan karakter yang tidak dapat dikodekan, 
 # menunjukkan hasil dengan kesalahan yang berbeda:
 
-# 'backslashreplace'  : Menggunakan backslash bukan karakter yang tidak bisa dikodekan 
-# 'ignore'            : Mengabaikan karakter yang tidak dapat dikodekan
-# 'namereplace'       : Mengganti karakter dengan teks yang menjelaskan karakter
-# 'strict'            : Default, memunculkan kesalahan runtime pada kegagalan
-# 'replace'           : Mengganti karakter dengan tanda tanya
-# 'xmlcharrefreplace' : Mengganti karakter dengan karakter xml
+# strict (default)      : menimbulkan pengecualian UnicodeError pada kegagalan
+# backslashreplace      : karakter yang tidak dapat dikodekan diganti dengan garis miring terbalik
+# ignore                : karakter yang tidak dapat dikodekan diabaikan
+# namereplace           : karakter yang tidak dapat dikodekan diganti dengan namanya
+# replace               : karakter yang tidak dapat dikodekan diganti dengan tanda tanya
+# xmlcharrefreplace     : karakter yang tidak dapat dikodekan diganti dengan karakter xml
 
 txt = "ålice"
 
