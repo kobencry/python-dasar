@@ -35,12 +35,28 @@ print(b'\xc3\xa5lice'.decode()) # ålice
 # namereplace           : karakter yang tidak dapat dikodekan diganti dengan namanya
 # replace               : karakter yang tidak dapat dikodekan diganti dengan tanda tanya
 # xmlcharrefreplace     : karakter yang tidak dapat dikodekan diganti dengan karakter xml
+# surrogateescape       : karakter yang tidak dapat diwakili dalam encoding yang digunakan saat ini. 
 
-txt = "ålice"
+txt1 = "ålice"
+print(txt1.encode(encoding="ascii",errors="backslashreplace"))   # b'\\xe5lice'
 
-print(txt.encode(encoding="ascii",errors="backslashreplace"))   # b'\\xe5lice'
-print(txt.encode(encoding="ascii",errors="ignore"))             # b'lice'
-print(txt.encode(encoding="ascii",errors="namereplace"))        # b'\\N{LATIN SMALL LETTER A WITH RING ABOVE}lice'
-print(txt.encode(encoding="ascii",errors="replace"))            # b'?lice'
-print(txt.encode(encoding="ascii",errors="xmlcharrefreplace"))  # b'&#229;lice'
-print(txt.encode(encoding="ascii",errors="strict"))             # kesalahan runtime Traceback UnicodeEncodeError
+txt2 = "ålice"
+print(txt2.encode(encoding="ascii",errors="ignore"))             # b'lice'
+
+txt3 = "ålice"
+print(txt3.encode(encoding="ascii",errors="namereplace"))        # b'\\N{LATIN SMALL LETTER A WITH RING ABOVE}lice'
+
+txt4 = "ålice"
+print(txt4.encode(encoding="ascii",errors="replace"))            # b'?lice'
+
+txt5 = "ålice"
+print(txt5.encode(encoding="ascii",errors="xmlcharrefreplace"))  # b'&#229;lice'
+
+print(txt1.encode(encoding="utf-8",errors="surrogateescape"))   # b'\xc3\xa5lice'
+print(txt2.encode(encoding="utf-8",errors="surrogateescape"))   # b'\xc3\xa5lice'
+print(txt3.encode(encoding="utf-8",errors="surrogateescape"))   # b'\xc3\xa5lice'
+print(txt4.encode(encoding="utf-8",errors="surrogateescape"))   # b'\xc3\xa5lice'
+print(txt5.encode(encoding="utf-8",errors="surrogateescape"))   # b'\xc3\xa5lice'
+
+txt7 = "ålice"
+print(txt7.encode(encoding="ascii",errors="strict"))             # kesalahan runtime Traceback UnicodeEncodeError

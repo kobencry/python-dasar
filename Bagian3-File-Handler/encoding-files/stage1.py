@@ -6,8 +6,8 @@
 # Contoh penggunaan argumen encoding pada method open() adalah sebagai berikut:
 
 # menggunakan encoding 'utf-8' (standar global)
-# with open("example.txt", mode='r', encoding='utf-8') as fileku:
-    # print(fileku.read())
+with open("example.txt", mode='r', encoding='utf-8') as fileku:
+    print(fileku.read())
 # File akan ditutup secara otomatis setelah selesai mengolah
 # Output:
 # hello world ✨
@@ -17,8 +17,8 @@
 # ini adalah file example ♞
 
 # menggunakan encoding 'latin-1' (os windows)
-# with open("example.txt", mode='r', encoding='latin-1') as fileku:
-    # print(fileku.read())
+with open("example.txt", mode='r', encoding='latin-1') as fileku:
+    print(fileku.read())
 # File akan ditutup secara otomatis setelah selesai mengolah
 # Output:
 # hello world â¨
@@ -26,8 +26,3 @@
 # carl ð
 # eliot ð
 # ini adalah file example â
-
-# menggunakan encoding 'ascii'
-with open("example.txt", mode='r', encoding='ascii', errors='surrogateescape') as f:
-    print(f.read())
-
