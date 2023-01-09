@@ -32,13 +32,13 @@ with open('file_demo_seek.txt') as fileku:
     # baca lagi seluruh isi file
     print(fileku.read())
     # Outputnya string kosong
-    
+
     # menggunakan method repr()
     # baca lagi seluruh isi file
     print(repr(fileku.read()))
     # Outputnya: ''
     # ternyata posisi pointer berada diakhir baris
-    
+
     # mengatur posisi pointer ke awal
     fileku.seek(0)
     # baca sebanyak 11 byte dari file
@@ -80,7 +80,7 @@ with open('file_demo_seek.txt') as fileku:
     # hello
     # alice
     # carl
-    
+
     # mengatur posisi pointer ke awal "hello world"
     # argumen "offset" 1 dengan posisi karakter berada di "e"
     # argumen "whence" 0 dengan posisi diawal file 

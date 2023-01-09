@@ -3,6 +3,8 @@
 # Encoding merupakan suatu metode penyimpanan karakter di dalam file yang menentukan bagaimana 
 # setiap karakter dari suatu teks akan disimpan dalam bentuk biner (binary).
 
+# https://docs.python.org/3/library/codecs.html#standard-encodings
+
 # Contoh penggunaan argumen encoding pada method open() adalah sebagai berikut:
 
 # menggunakan encoding 'utf-8' (standar global)

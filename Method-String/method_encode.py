@@ -2,6 +2,8 @@
 
 # https://docs.python.org/3/library/stdtypes.html?highlight=encode#str.encode
 
+# https://docs.python.org/3/library/codecs.html#standard-encodings
+
 # Catatan: 
 # Semua method/metode/fungsi string mengembalikan nilai baru. 
 # Mereka tidak mengubah string asli.
