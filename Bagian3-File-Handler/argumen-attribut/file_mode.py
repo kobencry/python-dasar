@@ -9,6 +9,13 @@
 # membuka file dengan mode default 'r' (read/baca) atau 't' (text/teks)
 with open("example.txt") as fileku:
     print("file mode:", fileku.mode)
-# File akan ditutup secara ototmatis setelah selesai mengolah
+# File akan ditutup secara otomatis setelah selesai mengolah
 # Output:
 # file mode: r
+
+# membuka file dengan mode 'rb' (read/baca, binary/biner)
+with open("example.txt", mode='rb') as fileku:
+    print("file mode:", fileku.mode)
+# File akan ditutup secara otomatis setelah selesai mengolah
+# Output:
+# file mode: rb
