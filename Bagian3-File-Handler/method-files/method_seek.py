@@ -1,19 +1,19 @@
 # Method seek() adalah method yang terdapat pada objek file di Python yang 
-# digunakan untuk mengatur posisi file pointer pada file yang terbuka saat ini.
+# digunakan untuk mengatur posisi file pointer(cursor) pada file yang terbuka saat ini.
 # Method ini memiliki dua argument yaitu "offset" dan "whence".
 
 # Syntax
 # file.seek(offset, whence)
 
 # Argument "offset" menentukan jumlah byte yang akan ditambahkan atau dikurangi
-# dari posisi file pointer saat ini. 
-# Jika "offset" bernilai positif, maka file pointer akan berpindah ke depan sebanyak "offset" byte. 
-# Sebaliknya, jika "offset" bernilai negatif, maka file pointer akan berpindah ke belakang sebanyak "offset" byte.
+# dari posisi file pointer(cursor) saat ini. 
+# Jika "offset" bernilai positif, maka file pointer(cursor) akan berpindah ke depan sebanyak "offset" byte. 
+# Sebaliknya, jika "offset" bernilai negatif, maka file pointer(cursor) akan berpindah ke belakang sebanyak "offset" byte.
 
 # Argument "whence" menentukan dari mana offset akan ditambahkan atau dikurangi.
 # Nilai "whence" dapat bernilai:
 # 0 (mengacu pada awal file)
-# 1 (mengacu pada posisi file pointer saat ini) atau 
+# 1 (mengacu pada posisi file pointer(cursor) saat ini) atau 
 # 2 (mengacu pada akhir file).
 
 # Berikut ini adalah contoh penggunaan method seek() di Python:
@@ -37,9 +37,9 @@ with open('file_demo_seek.txt') as fileku:
     # baca lagi seluruh isi file
     print(repr(fileku.read()))
     # Outputnya: ''
-    # ternyata posisi pointer berada diakhir baris
+    # ternyata posisi pointer(cursor) berada diakhir baris
 
-    # mengatur posisi pointer ke awal
+    # mengatur posisi pointer(cursor) ke awal
     fileku.seek(0)
     # baca sebanyak 11 byte dari file
     print(fileku.read(11))
@@ -71,7 +71,7 @@ with open('file_demo_seek.txt') as fileku:
 
 # menggunakan argumen "whence"
 # 0 (mengacu pada awal file),
-# 1 (mengacu pada posisi file pointer saat ini), atau 
+# 1 (mengacu pada posisi file pointer(cursor) saat ini), atau 
 # 2 (mengacu pada akhir file).
 with open('file_demo_seek.txt') as fileku:
     s = fileku.read(23)
@@ -93,6 +93,47 @@ with open('file_demo_seek.txt') as fileku:
     # posisi karakter saat ini: e
     # ello world
     # alice
+
+# whence yang bernilai 1 dan 2 hanya untuk menangani file biner (bytes)
+# membuka file dengan mode 'rb' (read/baca, binnary/biner)
+with open("file_demo_seek.bin", mode='rb') as fb:
+    # membaca isi file biner
+    # print(fb.read())
+    # Output:
+    # b'ABCDEFGHIJKLMNOPQRSTUVWXYZ\r\n'
+    # jika ingin Outputnya dalam format string
+    print(fb.read().decode())
+    # Output:
+    # ABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+    # untuk membaca isi file yang sudah dibaca atau ditulis
+    # kita harus pindahkan posisi pointer file ke awal
+    # posisi pointer(cursor) saat ini berada di akhir file
+    # mengatur posisi pointer(cursor) saat ini ke awal file
+    # fb.seek(0)
+
+    # mengatur posisi pointer(cursor) saat ini ke baris 3
+    fb.seek(3)
+    print(fb.read(1).decode())
+    # Output:
+    # D
+
+    # 'whence' bernilai 1 (mengacu pada posisi file pointer(cursor) saat ini) 
+    fb.seek(3, 1)
+    print(fb.read(1).decode())
+    # Output:
+    # H
+
+    # 'whence' bernilai 2 (mengacu pada akhir file)
+    fb.seek(-5, 2)
+    # print(fb.read().decode())
+    # Output:
+    # b'XYZ\r\n'
+    print(fb.read().decode())
+    # Output:
+    # XYZ
+
+# File akan ditutup secara ototatis setelah selesai mengolah
 
 
 # Catatan:
