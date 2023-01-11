@@ -61,8 +61,16 @@ with open("demo.txt", encoding='ascii', errors='ignore') as fr:
 
 # menggunakan jenis errors default
 # membuka file dengan mode default 'r' (read/baca) atau 't' (text/teks)
-with open("demo.txt") as f:
-    print("jenis penanganan error:", f.errors)
+with open("demo.txt") as fr:
+    print(fr.read())
+    print("jenis penanganan error:", fr.errors)
 # File akan ditutup secara otomatis setelah selesai mengolah
 # Output:
+# jenis penanganan error: ignore
+# hello world ✨
+# ålice
+# carl 😀
+# eliot 😉
+# ini adalah file example ♞
+# jenis penanganan error: strict
 # jenis penanganan error: strict
