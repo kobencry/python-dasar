@@ -24,7 +24,7 @@
 # Nilai Parameter
 # tidak ada nilai parameter
 
-# menggunakan argumen newliine='' (default)
+# menggunakan argumen newline='' (default)
 # membuka file dengan mode default 'r' (read/baca) atau 't' (text/teks)
 with open("demo.txt", mode='r', encoding='utf-8') as fileku:
     # membaca isi file dalam bentuk list
