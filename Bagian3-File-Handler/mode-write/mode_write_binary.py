@@ -46,9 +46,9 @@ with open("filedemo3.txt", mode='wb+') as fileku:
     # menulis string ke file dalam bentuk biner (objek bytes)
     fileku.write("ini adalah file demo 3".encode())
     # untuk membaca isi file yang sudah dibaca atau ditulis
-    # kita harus pindahkan posisi pointer ke awal file
-    # posisi pointer saat ini berada diakhir file
-    # mengatur posisi pointer ke awal
+    # kita harus pindahkan posisi pointer(cursor) ke awal file
+    # posisi pointer(cursor) saat ini berada diakhir file
+    # mengatur posisi pointer(cursor) ke awal file
     fileku.seek(0)
 
     # membaca bytes atau karakter dari file
