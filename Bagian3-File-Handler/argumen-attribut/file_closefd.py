@@ -8,6 +8,7 @@
 # Contoh penggunaan argumen closefd pada method open() adalah sebagai berikut:
 
 # membuka file dengan mode 'r+' (read/baca, write/tulis)
+# dengan argumen closefd=True (nilai default) 
 with open("example2.txt", mode='r+') as fr:
     # mengembalikan nilai file deskriptor
     file_deskriptor = fr.fileno()
