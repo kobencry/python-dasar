@@ -17,7 +17,7 @@ import io
 import time
 
 # membuka file dengan mode 'rb'(read binary/baca binary)
-# mengatur buffering = 0, maka buffering otomatis di non-aktifkan dan data 
+# mengatur buffering=0, maka buffering otomatis di non-aktifkan dan data 
 # akan langsung ditulis atau dibaca ke/dari file tanpa menunggu buffer penuh.
 with open("demo.txt", mode='rb', buffering=0) as frb:
     for i in frb:
@@ -25,15 +25,22 @@ with open("demo.txt", mode='rb', buffering=0) as frb:
         time.sleep(1)
 # File akan ditutup secara otomatis setelah selesai mengolah
 
+# membuka file dengan mode 'r'(read/baca)
+# mengatur buffering=1, maka buffering otomatis diaktifkan dan data
+# akan mengeluarkan satu per satu setiap kali program membaca atau menulis 1 baris dari file
+# itu akan ditampung dalam buffer sebelum dikembalikan sebagai output. 
+# (intinya jika ketemu karakter baris baru '\n'(newline))
 with open("demo.txt", mode='r', buffering=1) as fr:
     for i in fr:
         print(i, end='')
         time.sleep(1)
 # File akan ditutup secara otomatis setelah selesai mengolah
-# Pada contoh kode yang saya berikan sebelumnya, buffer akan diisi sebesar 1 baris sebelum dibaca dari file.
-# Ini berarti bahwa setiap kali program membaca 1 baris dari file, itu akan ditampung dalam buffer sebelum dikembalikan sebagai output. Hal ini dapat membantu meningkatkan performa program karena program tidak perlu membaca data dari file satu baris per satu. Namun, jika buffer harus diisi dan dikosongkan secara terus-menerus, ini dapat membuat program menjadi lebih lambat.
 
-# menggunakan ukuran buffer default (8192) di python
+# membuka file dengan mode 'r'(read/baca)
+# mengatur buffering=8192, maka buffering otomatis diaktifkan dan data
+# akan mengeluarkan satu per satu setiap kali program membaca atau menulis 8192 byte dari file
+# itu akan ditampung dalam buffer sebelum dikembalikan sebagai output. 
+# (intinya jika ketemu karakter baris baru '\n'(newline))
 ukuran_buffer = io.DEFAULT_BUFFER_SIZE # 8192
 with open("demo.txt", mode='r', buffering=ukuran_buffer) as fr:
     for i in fr:
@@ -41,12 +48,18 @@ with open("demo.txt", mode='r', buffering=ukuran_buffer) as fr:
         time.sleep(1)
 # File akan ditutup secara otomatis setelah selesai mengolah
 
-# Pada contoh kode yang saya berikan sebelumnya, buffer akan diisi sebesar 8192 byte sebelum ditulis ke dalam file. 
-# Hal ini dapat membantu meningkatkan performa program karena data akan ditulis ke file
-# dalam blok besar (8192 byte) daripada ditulis satu per satu.
-# Namun, ingat bahwa buffering juga dapat membuat program menjadi lebih lambat jika buffer terus-menerus harus diisi dan dikosongkan.
-        
-# Jika buffering diaktifkan, Anda akan mendapatkan output sekaligus di layar setelah menunggu selama 13 detik.
+# Buffering yang dapat membuat program menjadi lebih lambat jika buffer terus-menerus harus diisi 
+# dan dikosongkan, tidak ditentukan oleh nilai tertentu.
+# Hal ini tergantung pada konteks dan jenis aplikasi yang digunakan. Beberapa aplikasi memerlukan
+# buffering yang tepat untuk memastikan performa yang baik, sementara yang lain mungkin lebih baik tanpa buffering.
+# Buffering yang terlalu kecil dapat menyebabkan I/O disk yang berlebihan dan menurunkan performa, 
+# sementara buffering yang terlalu besar dapat menyebabkan memori yang berlebihan dan juga menurunkan performa. 
+# Oleh karena itu, penting untuk menentukan buffering yang sesuai dengan aplikasi dan konteks yang digunakan.
+
+# Jika Anda tidak yakin tentang buffering yang sesuai, Anda dapat mencoba beberapa nilai yang berbeda
+# dan mengukur performa program untuk menemukan nilai yang paling sesuai. 
+# Namun, jika anda tidak ingin repot, python secara default tidak menggunakan buffering, 
+# jadi anda bisa menggunakannya tanpa harus mengatur buffering.
 
 # Perlu diingat bahwa buffering tidak selalu bermanfaat, tergantung pada konteks dan jenis aplikasi yang digunakan.
 # Beberapa aplikasi memerlukan buffering yang tepat untuk memastikan performa yang baik, 
