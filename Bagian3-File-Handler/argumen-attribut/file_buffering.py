@@ -7,53 +7,70 @@
 # Di Python, buffering secara default dinon-aktifkan ketika kita membuka file menggunakan built-in function open().
 # Jika kita tidak menentukan argumen buffering ketika memanggil open(), maka buffering tidak akan digunakan 
 # dan data akan langsung ditulis atau dibaca dari file tanpa menunggu buffer penuh.
+
 # Argumen buffering dapat diatur menjadi tiga nilai:
-# 0 : tidak ada buffering, data ditulis atau dibaca langsung ke file (buffering=0 khusus untuk mode binary)
-# 1 : buffering baris, data di buffer sampai karakter baris baru ditemukan (hanya dapat digunakan dalam mode teks)
-# n : buffer data dengan ukuran n byte (n=jumlah nilai).
+# 0 (atau None) : buffering tidak digunakan dan data dibaca atau ditulis dari file satu per satu. 
+# Ini dapat digunakan jika Anda ingin membaca atau menulis data dari file secara real-time dan tidak ingin menunggu buffer penuh.
+# (hanya dapat digunakan dalam mode binary/biner)
+
+# 1 : buffering digunakan dan setiap kali program membaca atau menulis satu baris dari file, 
+# itu akan ditampung dalam buffer sebelum ditulis atau dikembalikan sebagai output. 
+# Ini dapat digunakan jika Anda ingin membaca atau menulis data dari file per baris dan tidak ingin menunggu buffer penuh.
+# (hanya dapat digunakan dalam mode teks)
+
+# 8192 (atau jumlah byte lainnya) : buffering digunakan dan setiap kali program membaca atau menulis jumlah byte tertentu dari file,
+# itu akan ditampung dalam buffer sebelum ditulis atau dikembalikan sebagai output. 
+# Ini dapat digunakan jika Anda ingin membaca atau menulis data dari file dalam jumlah besar dan tidak ingin menunggu buffer penuh.
+# (untuk digunakan dalam mode binary atau teks)
 
 # Contoh penggunaan argumen buffering pada method open():
-import io
-import time
 
-# membuka file dengan mode 'rb'(read binary/baca binary)
-# mengatur buffering=0, maka buffering otomatis di non-aktifkan dan data 
-# akan langsung ditulis atau dibaca ke/dari file tanpa menunggu buffer penuh.
-with open("demo.txt", mode='rb', buffering=0) as frb:
-    for i in frb:
-        print(i, end='')
-        time.sleep(1)
-# File akan ditutup secara otomatis setelah selesai mengolah
+# menggunakan buffering=0 (None)
+# membuka file dengan mode 'rb' (read binary/baca biner)
+with open("demo.txt", mode='rb', buffering=0) as fb:
+    print(fb.read())
+# File akan ditutup secara otomatis setelah selesai mengolah.
 
-# membuka file dengan mode 'r'(read/baca)
-# mengatur buffering=1, maka buffering otomatis diaktifkan dan data
-# akan mengeluarkan satu per satu setiap kali program membaca atau menulis 1 baris dari file
-# itu akan ditampung dalam buffer sebelum dikembalikan sebagai output. 
-# (intinya jika ketemu karakter baris baru '\n'(newline))
+# menggunakan buffering=1
+# membuka file dengan mode 'r' (read/baca)
 with open("demo.txt", mode='r', buffering=1) as fr:
-    for i in fr:
-        print(i, end='')
-        time.sleep(1)
-# File akan ditutup secara otomatis setelah selesai mengolah
+    print(fr.read())
+# File akan ditutup secara otomatis setelah selesai mengolah.
+# Jika Anda menggunakan buffering 1 dalam mode binary, 
+# maka program akan membaca atau menulis satu byte data biner dari file sekaligus dan menyimpannya dalam buffer.
+# Setelah buffer penuh, data akan ditulis atau dikembalikan sebagai output. 
+# Namun, ini tidak digunakan dalam mode binary karena dalam mode binary, 
+# data yang dibaca atau ditulis biasanya dalam jumlah yang besar, 
+# sehingga buffering 1 tidak akan efektif dalam meningkatkan performa program. 
+# Jadi, buffering 1 digunakan dalam mode teks yang membaca atau menulis data per baris.
 
-# membuka file dengan mode 'r'(read/baca)
-# mengatur buffering=8192, maka buffering otomatis diaktifkan dan data
-# akan mengeluarkan satu per satu setiap kali program membaca atau menulis 8192 byte dari file
-# itu akan ditampung dalam buffer sebelum dikembalikan sebagai output. 
-# (intinya jika ketemu karakter baris baru '\n'(newline)).
-# Pada banyak sistem, panjang buffer biasanya 4096 atau 8192 byte.
-ukuran_buffer = io.DEFAULT_BUFFER_SIZE # 8192
+# menggunakan buffering=(lebih besar dari 1)
+import io
+ukuran_buffer = io.DEFAULT_BUFFER_SIZE
 print("Default ukuran buffer:", ukuran_buffer)
+
+# membuka file dengan mode 'r' (read/baca)
 with open("demo.txt", mode='r', buffering=ukuran_buffer) as fr:
-    for i in fr:
-        print(i, end='')
-        time.sleep(1)
+    print(fr.read())
 # File akan ditutup secara otomatis setelah selesai mengolah
 
-# Buffering yang dapat membuat program menjadi lebih lambat jika buffer terus-menerus harus diisi 
+# membuka file dengan mode 'r' (read/baca)
+with open("demo.txt", mode='r', buffering=5) as fr:
+    print(fr.read())
+# File akan ditutup secara otomatis setelah selesai mengolah.
+
+# Jadi, dalam menentukan nilai buffering yang digunakan dalam program, 
+# Anda harus mempertimbangkan konteks dan kebutuhan aplikasi Anda. 
+# Jika Anda membutuhkan akses data real-time, Anda dapat menggunakan buffering 0 atau None.
+# Namun, jika Anda ingin meningkatkan performa program dengan menyimpan data dalam buffer, 
+# Anda dapat menggunakan buffering 1 atau 8192 atau jumlah byte lainnya yang sesuai dengan kebutuhan aplikasi Anda.
+
+# Buffering bisa juga dapat membuat program menjadi lebih lambat jika buffer terus-menerus harus diisi 
 # dan dikosongkan, tidak ditentukan oleh nilai tertentu.
-# Hal ini tergantung pada konteks dan jenis aplikasi yang digunakan. Beberapa aplikasi memerlukan
-# buffering yang tepat untuk memastikan performa yang baik, sementara yang lain mungkin lebih baik tanpa buffering.
+# Hal ini tergantung pada konteks dan jenis aplikasi yang digunakan.
+# Beberapa aplikasi memerlukan buffering yang tepat untuk memastikan performa yang baik, 
+# sementara yang lain mungkin lebih baik tanpa buffering.
+
 # Buffering yang terlalu kecil dapat menyebabkan I/O disk yang berlebihan dan menurunkan performa, 
 # sementara buffering yang terlalu besar dapat menyebabkan memori yang berlebihan dan juga menurunkan performa. 
 # Oleh karena itu, penting untuk menentukan buffering yang sesuai dengan aplikasi dan konteks yang digunakan.
