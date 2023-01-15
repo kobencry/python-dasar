@@ -4,12 +4,8 @@
 # yang pada gilirannya dapat mempengaruhi performa program.
 # Ini dapat meningkatkan kinerja operasi file dengan mengurangi jumlah panggilan sistem yang dilakukan ke sistem operasi.
 
-# Di Python, buffering secara default dinon-aktifkan ketika kita membuka file menggunakan built-in function open().
-# Jika kita tidak menentukan argumen buffering ketika memanggil open(), maka buffering tidak akan digunakan 
-# dan data akan langsung ditulis atau dibaca dari file tanpa menunggu buffer penuh.
-
 # Argumen buffering dapat diatur menjadi tiga nilai:
-# 0 (atau None) : buffering tidak digunakan dan data dibaca atau ditulis dari file satu per satu. 
+# 0 (atau None) : buffering tidak digunakan(dinon-aktifkan) dan data dibaca atau ditulis dari file satu per satu. 
 # Ini dapat digunakan jika Anda ingin membaca atau menulis data dari file secara real-time dan tidak ingin menunggu buffer penuh.
 # (hanya dapat digunakan dalam mode binary/biner)
 
