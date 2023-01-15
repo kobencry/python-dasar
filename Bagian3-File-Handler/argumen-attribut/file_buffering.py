@@ -21,7 +21,7 @@
 
 # Contoh penggunaan argumen buffering pada method open():
 
-# menggunakan buffering=0 (None)
+# menggunakan buffering=0 (None) 
 # membuka file dengan mode 'rb' (read binary/baca biner)
 with open("demo.txt", mode='rb', buffering=0) as fb:
     print(fb.read())
