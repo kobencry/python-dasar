@@ -9,7 +9,7 @@
 # dan data akan langsung ditulis atau dibaca dari file tanpa menunggu buffer penuh.
 # Argumen buffering dapat diatur menjadi tiga nilai:
 # 0 : tidak ada buffering, data ditulis atau dibaca langsung ke file (buffering=0 khusus untuk mode binary)
-# 1 : buffering baris, data di buffer sampai karakter baris baru ditemukan
+# 1 : buffering baris, data di buffer sampai karakter baris baru ditemukan (hanya dapat digunakan dalam mode teks)
 # n : buffer data dengan ukuran n byte (n=jumlah nilai).
 
 # Contoh penggunaan argumen buffering pada method open():
@@ -40,8 +40,10 @@ with open("demo.txt", mode='r', buffering=1) as fr:
 # mengatur buffering=8192, maka buffering otomatis diaktifkan dan data
 # akan mengeluarkan satu per satu setiap kali program membaca atau menulis 8192 byte dari file
 # itu akan ditampung dalam buffer sebelum dikembalikan sebagai output. 
-# (intinya jika ketemu karakter baris baru '\n'(newline))
+# (intinya jika ketemu karakter baris baru '\n'(newline)).
+# Pada banyak sistem, panjang buffer biasanya 4096 atau 8192 byte.
 ukuran_buffer = io.DEFAULT_BUFFER_SIZE # 8192
+print("Default ukuran buffer:", ukuran_buffer)
 with open("demo.txt", mode='r', buffering=ukuran_buffer) as fr:
     for i in fr:
         print(i, end='')
