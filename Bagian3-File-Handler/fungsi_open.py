@@ -16,6 +16,9 @@
 # closefd             Opsional             Menjaga deskriptor file yang mendasari tetap terbuka saat file ditutup
 # opener              Opsional             Pembuka khusus yang digunakan untuk operasi I/O tingkat rendah
 
+# nilai default dari fungsi bawaan open() di python
+# open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closfd=True, opener=None)
+
 # Contoh 1
 # membuka file dengan mode default 'r'(read/baca) atau 't'(text/teks)
 f = open("mode_file.txt") # jalur file saat ini 
@@ -25,6 +28,15 @@ print(f.read())
 f.close()
 
 # Contoh 2
+try:
+    # membuka file dengan mode default 'r'(read/baca) atau 't'(text/teks)
+    f = open("mode_file.txt")
+    print(f.read())
+finally:
+    # menutup file
+    f.close()
+    
+# Contoh 3
 # membuka file dengan mode default 'r'(read/baca) atau 't'(text/teks)
 with open("mode_file.txt") as f:
     # membaca isi file
