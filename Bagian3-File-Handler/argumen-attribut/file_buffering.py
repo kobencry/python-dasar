@@ -29,7 +29,7 @@ with open("demo.txt", mode='rb', buffering=0) as fb:
 
 # menggunakan buffering=1
 # membuka file dengan mode 'r' (read/baca)
-with open("demo.txt", mode='r', buffering=1) as fr:
+with open("demo.txt", mode='r', buffering=1, encoding='utf-8') as fr:
     print(fr.read())
 # File akan ditutup secara otomatis setelah selesai mengolah.
 # Jika Anda menggunakan buffering 1 dalam mode binary, 
@@ -46,14 +46,27 @@ ukuran_buffer = io.DEFAULT_BUFFER_SIZE
 print("Default ukuran buffer:", ukuran_buffer)
 
 # membuka file dengan mode 'r' (read/baca)
-with open("demo.txt", mode='r', buffering=ukuran_buffer) as fr:
+with open("demo.txt", mode='r', buffering=ukuran_buffer, encoding='utf-8') as fr:
     print(fr.read())
 # File akan ditutup secara otomatis setelah selesai mengolah
 
 # membuka file dengan mode 'r' (read/baca)
-with open("demo.txt", mode='r', buffering=5) as fr:
+with open("demo.txt", mode='r', buffering=5, encoding='utf-8') as fr:
     print(fr.read())
 # File akan ditutup secara otomatis setelah selesai mengolah.
+
+# Attribut buffer pada objek file Python adalah properti yang menyimpan 
+# informasi tentang buffer yang digunakan oleh objek file. 
+# Attribut buffer dapat digunakan untuk mendapatkan atau mengubah
+# buffer yang digunakan oleh objek file, seperti posisi pointer saat ini dalam buffer,
+# data yang disimpan dalam buffer.
+# Anda dapat mengakses buffer pada objek file dengan menggunakan buffer atribut, misalnya :
+with open("demo.txt", mode='r', encoding='utf-8') as fr:
+    obj_buffer = fr.buffer
+    # menampilkan data dalam format bytes
+    # print(obj_buffer.read())
+    # menampilkan data dalam format string
+    print(obj_buffer.read().decode())
 
 # Jadi, dalam menentukan nilai buffering yang digunakan dalam program, 
 # Anda harus mempertimbangkan konteks dan kebutuhan aplikasi Anda. 
