@@ -28,17 +28,50 @@ with open("demo.txt", mode='rb', buffering=0) as fb:
 # File akan ditutup secara otomatis setelah selesai mengolah.
 
 # menggunakan buffering=1
-# membuka file dengan mode 'r' (read/baca)
-with open("demo.txt", mode='r', buffering=1, encoding='utf-8') as fr:
+# 1 : buffering baris, data di buffer sampai karakter baris baru ditemukan (hanya dapat digunakan dalam mode teks)
+# membuka file dengan mode 'r'(read/baca) dan 'a'(write/tulis)
+with open("buffer_line.txt", mode='r') as fr, open("buffer_line.txt", mode='a', buffering=1) as fa:
+    # menggunakan karakter \n(newline) "baris baru"
+    # berarti kita menyelesaikan satu baris, jadi baris ini ditulis ke hard disk
+    fa.write("hello world\n") 
     print(fr.read())
+    # Output:
+    # hello world
+
+    # untuk membaca isi file yang sudah dibaca atau ditulis
+    # kita harus pindahkan posisi pointer(cursor) file ke awal
+    # posisi pointer(cursor) saat ini berada di akhir file
+    # mengatur posisi pointer(cursor) saat ini ke awal file
+    fr.seek(0)
+
+    # tidak menggunakan karakter \n(newline) "baris baru"
+    # sehingga data tidak akan ditulis ke hard disk
+    fa.write("alice carl eliot") 
+    print(fr.read())
+    # Output:
+    # hello world
+
+    # untuk membaca isi file yang sudah dibaca atau ditulis
+    # kita harus pindahkan posisi pointer(cursor) file ke awal
+    # posisi pointer(cursor) saat ini berada di akhir file
+    # mengatur posisi pointer(cursor) saat ini ke awal file
+    fr.seek(0)
+
+    # buffer menemukan karakter baris baru "\n(newline)"
+    # menulis data alice carl eliot ke hard disk
+    fa.write("\n") # menggunakan karakter \n(newline) "baris baru"
+    print(fr.read())
+    # Output:
+    # hello world
+    # alice carl eliot
 # File akan ditutup secara otomatis setelah selesai mengolah.
-# Jika Anda menggunakan buffering 1 dalam mode binary, 
+# Jika Anda menggunakan buffering=1 dalam mode binary, 
 # maka program akan membaca atau menulis satu byte data biner dari file sekaligus dan menyimpannya dalam buffer.
 # Setelah buffer penuh, data akan ditulis atau dikembalikan sebagai output. 
 # Namun, ini tidak digunakan dalam mode binary karena dalam mode binary, 
 # data yang dibaca atau ditulis biasanya dalam jumlah yang besar, 
-# sehingga buffering 1 tidak akan efektif dalam meningkatkan performa program. 
-# Jadi, buffering 1 digunakan dalam mode teks yang membaca atau menulis data per baris.
+# sehingga buffering=1 tidak akan efektif dalam meningkatkan performa program. 
+# Jadi, buffering=1 digunakan dalam mode teks yang membaca atau menulis data per baris.
 
 # menggunakan buffering=(lebih besar dari 1)
 import io
