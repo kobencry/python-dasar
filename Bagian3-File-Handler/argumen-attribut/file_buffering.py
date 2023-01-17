@@ -29,7 +29,7 @@ with open("demo.txt", mode='rb', buffering=0) as fb:
 
 # menggunakan buffering=1
 # 1 : buffering baris, data di buffer sampai karakter baris baru ditemukan (hanya dapat digunakan dalam mode teks)
-# membuka file dengan mode 'r'(read/baca) dan 'a'(write/tulis)
+# membuka file dengan mode 'r'(read/baca) dan 'a'(append/tambah)
 with open("buffer_line.txt", mode='r') as fr, open("buffer_line.txt", mode='a', buffering=1) as fa:
     # menggunakan karakter \n(newline) "baris baru"
     # berarti kita menyelesaikan satu baris, jadi baris ini ditulis ke hard disk
