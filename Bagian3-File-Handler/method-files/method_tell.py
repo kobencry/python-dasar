@@ -1,4 +1,4 @@
-# Method tell() digunakan untuk mengetahui posisi file pointer pada file yang terbuka saat ini.
+# Method tell() digunakan untuk mengetahui posisi pointer(cursor) pada file yang terbuka saat ini.
 # Method ini tidak memiliki argument dan selalu mengembalikan nilai integer yang menunjukkan posisi file pointer dalam byte.
 
 # Syntax
@@ -11,12 +11,12 @@
 
 # membuka file dengan mode default 'r' (read/baca) atau 't' (text\teks)
 with open('file_demo_tell.txt') as fileku:
-    # mengetahui posisi pointer saat ini
+    # mengetahui posisi pointer(cursor) saat ini
     print("posisi pointer saat ini:", fileku.tell())
     # membaca sebanyak 6 byte atau karakter dari file
     s = fileku.read(6)
     print(s)
-    # mengetahui posisi pointer saat ini
+    # mengetahui posisi pointer(cursor) saat ini
     posisi = fileku.tell()
     print("posisi pointer saat ini:", posisi)
     # tampilkan dengan method repr() dan slice string
@@ -30,7 +30,7 @@ with open('file_demo_tell.txt') as fileku:
 
 # membuka file dengan mode 'w' (write/tulis)
 with open('file_demo_tell2.txt', 'w') as fileku:
-    # mengetahui posisi pointer saat ini
+    # mengetahui posisi pointer(cursor) saat ini
     print("posisi pointer saat ini:", fileku.tell())
     fileku.write("hello world")
     print("posisi pointer saat ini:", fileku.tell())
