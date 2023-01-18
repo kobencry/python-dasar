@@ -22,9 +22,42 @@
 # Contoh penggunaan argumen buffering pada method open():
 
 # menggunakan buffering=0 (None) 
-# membuka file dengan mode 'rb' (read binary/baca biner)
-with open("demo.txt", mode='rb', buffering=0) as fb:
-    print(fb.read())
+# 0 : tidak ada buffering, data ditulis atau dibaca langsung ke file (buffering=0 khusus untuk mode binary)
+# membuka file dengan mode 'rb'(read binary/baca biner) dan 'ab'(append binary/tambah biner)
+with open("demo_unbuffer.txt", mode='rb') as frb, open("demo_unbuffer.txt", mode='ab', buffering=0) as fab:
+    # data akan ditulis ke hard disk tidak peduli ukurannya
+    # menulis string ke file dalam bentuk biner/objek bytes
+    fab.write("hello".encode())
+
+    # untuk membaca isi file yang sudah dibaca atau ditulis
+    # kita harus pindahkan posisi pointer file ke awal
+    # posisi pointer(cursor) saat ini berada di akhir file
+    # mengatur posisi pointer(cursor) saat ini ke awal file
+    frb.seek(0)
+
+    # membaca isi file dalam bentuk biner/objek bytes
+    # print(frb.read())
+    # membaca isi file dalam bentuk string
+    print(frb.read().decode())  # menggunakan method-string .encode()
+    # Output:
+    # hello
+
+    # data akan ditulis ke hard disk tidak peduli ukurannya
+    # menulis string ke file dalam bentuk biner/objek bytes
+    fab.write(b" world")    # menggunakan b""
+
+    # untuk membaca isi file yang sudah dibaca atau ditulis
+    # kita harus pindahkan posisi pointer file ke awal
+    # posisi pointer(cursor) saat ini berada di akhir file
+    # mengatur posisi pointer(cursor) saat ini ke awal file 
+    frb.seek(0)
+
+    # membaca isi file dalam bentuk biner/objek bytes
+    # print(frb.read())
+    # membaca isi file dalam bentuk string
+    print(frb.read().decode())
+    # Output:
+    # hello world
 # File akan ditutup secara otomatis setelah selesai mengolah.
 
 # menggunakan buffering=1
