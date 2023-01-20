@@ -19,6 +19,21 @@
 # Ini dapat digunakan jika Anda ingin membaca atau menulis data dari file dalam jumlah besar dan tidak ingin menunggu buffer penuh.
 # (untuk digunakan dalam mode binary atau teks)
 
+# Gambaran buffering output python
+#       ------------------
+#      |      Memory      |
+#       ------------------  
+#               |
+#               V
+#       ------------------
+#      |      Buffer      |
+#       ------------------  
+#               |
+#               V
+#       ------------------
+#      |    Hard disk     |
+#       ------------------  
+
 # Contoh penggunaan argumen buffering pada method open():
 
 # menggunakan buffering=0 (None) 
@@ -59,6 +74,10 @@ with open("demo_unbuffer.txt", mode='rb') as frb, open("demo_unbuffer.txt", mode
     # Output:
     # hello world
 # File akan ditutup secara otomatis setelah selesai mengolah.
+#--------------------------------------------------------------------------------------------------
+# [!] jika anda masih kurang paham dengan contoh diatas hapus seluruh isi file "demo_unbuffer.txt"
+# dan jalankan kode program berulang-ulang sampai anda memahaminya
+#--------------------------------------------------------------------------------------------------
 
 # menggunakan buffering=1
 # 1 : buffering baris, data di buffer sampai karakter baris baru ditemukan (hanya dapat digunakan dalam mode teks)
@@ -105,34 +124,115 @@ with open("buffer_line.txt", mode='r') as fr, open("buffer_line.txt", mode='a', 
 # data yang dibaca atau ditulis biasanya dalam jumlah yang besar, 
 # sehingga buffering=1 tidak akan efektif dalam meningkatkan performa program. 
 # Jadi, buffering=1 digunakan dalam mode teks yang membaca atau menulis data per baris.
+#------------------------------------------------------------------------------------------------
+# [!] jika anda masih kurang paham dengan contoh diatas hapus seluruh isi file "buffer_line.txt"
+# dan jalankan kode program berulang-ulang sampai anda memahaminya
+#------------------------------------------------------------------------------------------------
 
-# menggunakan buffering=(lebih besar dari 1)
+# menggunakan buffering > 1(lebih besar dari 1)
+
+# Jika anda menggunakan nilai buffering=2
+# membuka file dengan mode 'r'(read/baca)
+with open("buffer_size2.txt", mode='r') as fr:
+    # membuka file dengan mode 'ab'(append binary/tambah biner)
+    with open(f"{fr.name}", mode='ab', buffering=2) as fab:
+
+        # print(len(b"hello world\n")) # 12 bytes
+        # menulis 12 byte data
+        fab.write(b"hello world\n")
+
+        # untuk membaca isi file yang sudah dibaca atau ditulis
+        # kita harus pindahkan posisi pointer(cursor) file ke awal
+        # posisi pointer(cursor) saat ini berada di akhir file
+        # mengatur posisi pointer(cursor) saat ini ke awal file 
+        fr.seek(0)
+
+        # buffer penuh, menulis data ke hard disk
+        print(fr.read())
+        # Output:
+        # hello world
+# File akan ditutup secara otomatis setelah selesai mengolah.
+#------------------------------------------------------------------------------------------------
+# [!] jika anda masih kurang paham dengan contoh diatas hapus seluruh isi file "buffer_size2.txt"
+# dan jalankan kode program berulang-ulang sampai anda memahaminya
+#------------------------------------------------------------------------------------------------
+
+# jika anda menggunakan nilai buffering=13
+with open("buffer_size13.txt", mode='r') as fr:
+    # membuka file dengan mode 'ab'(append binary/tambah biner)
+    with open(f"{fr.name}", mode='ab', buffering=13) as fab:
+
+        # print(len(b"hello world\n")) # 12 bytes
+        # menulis 12 byte data
+        fab.write(b"hello world\n")
+
+        # untuk membaca isi file yang sudah dibaca atau ditulis
+        # kita harus pindahkan posisi pointer file ke awal
+        # posisi pointer(cursor) saat ini berada di akhir file
+        # mengatur posisi pointer(cursor) saat ini ke awal file 
+        fr.seek(0)
+
+        # buffer tidak penuh, data akan ditampung dibuffer.
+        # data tidak ditampilkan di Output menunggu buffer penuh
+        print(fr.read())
+        # Output tidak ada:
+# File akan ditutup secara otomatis setelah selesai mengolah.
+#------------------------------------------------------------------------------------------------
+# [!] jika anda masih kurang paham dengan contoh diatas hapus seluruh isi file "buffer_size13.txt"
+# dan jalankan kode program berulang-ulang sampai anda memahaminya
+#------------------------------------------------------------------------------------------------
+
 import io
+# jika anda menggunakan buffering=8192 nilai default yang digunakan oleh Python dari method open()
+
+# nilai default buffering pada python
 ukuran_buffer = io.DEFAULT_BUFFER_SIZE
 print("Default ukuran buffer:", ukuran_buffer)
 
-# membuka file dengan mode 'r' (read/baca)
-with open("demo.txt", mode='r', buffering=ukuran_buffer, encoding='utf-8') as fr:
-    print(fr.read())
-# File akan ditutup secara otomatis setelah selesai mengolah
+# membuka file dengan mode 'r'(read/baca)
+with open("buffer_default.txt", mode='r') as fr:
+    # membuka file dengan mode 'ab'(append binary/tambah biner)
+    with open(f"{fr.name}", mode='ab', buffering=ukuran_buffer) as fab:
+        #print(len(b"hello world\n")) # 12
+        # menulis 12 bytes data
+        fab.write(b"hello world\n")
+        # menulis lebih banyak data bytes
+        fab.write(b"hello world\n")
+        fab.write(b"hello world\n")
+        # fab.write...dst(dan seterusnya) sampai buffer penuh
 
-# membuka file dengan mode 'r' (read/baca)
-with open("demo.txt", mode='r', buffering=5, encoding='utf-8') as fr:
-    print(fr.read())
+        # untuk membaca isi file yang sudah dibaca atau ditulis
+        # kita harus pindahkan posisi pointer(cursor) file ke awal
+        # posisi pointer(cursor) saat ini berada di akhir file
+        # mengatur posisi pointer(cursor) saat ini ke awal file 
+        fr.seek(0)
+
+        # jika data bytes kurang dari buffering=8192, buffer tidak penuh, data akan ditampung dibuffer.
+        # data tidak ditampilkan di Output menunggu buffer penuh
+        print(fr.read())
+        # Output tidak ada:
 # File akan ditutup secara otomatis setelah selesai mengolah.
+#------------------------------------------------------------------------------------------------
+# [!] jika anda masih kurang paham dengan contoh diatas hapus seluruh isi file "buffer_default.txt"
+# dan jalankan kode program berulang-ulang sampai anda memahaminya
+#------------------------------------------------------------------------------------------------
+
 
 # Attribut buffer pada objek file Python adalah properti yang menyimpan 
 # informasi tentang buffer yang digunakan oleh objek file. 
 # Attribut buffer dapat digunakan untuk mendapatkan atau mengubah
-# buffer yang digunakan oleh objek file, seperti posisi pointer saat ini dalam buffer,
+# buffer yang digunakan oleh objek file, seperti posisi pointer(cursor) saat ini dalam buffer,
 # data yang disimpan dalam buffer.
 # Anda dapat mengakses buffer pada objek file dengan menggunakan buffer atribut, misalnya :
 with open("demo.txt", mode='r', encoding='utf-8') as fr:
     obj_buffer = fr.buffer
     # menampilkan data dalam format bytes
     # print(obj_buffer.read())
+
     # menampilkan data dalam format string
     print(obj_buffer.read().decode())
+# File akan ditutup secara otomatis setelah selesai mengolah.
+
 
 # Jadi, dalam menentukan nilai buffering yang digunakan dalam program, 
 # Anda harus mempertimbangkan konteks dan kebutuhan aplikasi Anda. 
