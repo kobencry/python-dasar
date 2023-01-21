@@ -19,6 +19,17 @@
 # nilai default dari fungsi bawaan open() di python
 # open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closfd=True, opener=None)
 
+# file: nama file yang akan dibuka atau path file.
+# mode: mode pembukaan file, yaitu 'r' untuk read, 'w' untuk write, dan 'a' untuk append.
+# buffering: jumlah byte yang digunakan untuk buffer. Nilai default adalah -1, yang mengaktifkan buffering sistem. Nilai 0 menonaktifkan buffering, dan nilai 1 atau lebih mengaktifkan buffering dengan jumlah byte yang ditentukan.
+# encoding: encoding yang digunakan saat membuka file teks. Nilai default adalah 'UTF-8'.
+# errors: tindakan yang diambil jika terjadi error saat membuka file. Nilai default adalah 'strict'.
+# newline: karakter baris baru yang digunakan. Nilai default adalah None.
+# closefd : jika di set True, file descriptor tidak ditutup saat file ditutup.
+# opener : fungsi yang digunakan untuk membuka file.
+# Semua parameter ini digunakan untuk mengkonfigurasi cara file dibuka dan diolah.
+# Namun tidak semua parameter harus digunakan dalam setiap kasus.
+
 # Contoh 1
 # membuka file dengan mode default 'r'(read/baca) atau 't'(text/teks)
 f = open("mode_file.txt") # jalur file saat ini 

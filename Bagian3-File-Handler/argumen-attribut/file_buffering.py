@@ -83,6 +83,10 @@ with open("demo_unbuffer.txt", mode='rb') as frb, open("demo_unbuffer.txt", mode
 # 1 : buffering baris, data di buffer sampai karakter baris baru ditemukan (hanya dapat digunakan dalam mode teks)
 # membuka file dengan mode 'r'(read/baca) dan 'a'(append/tambah)
 with open("buffer_line.txt", mode='r') as fr, open("buffer_line.txt", mode='a', buffering=1) as fa:
+    # attribut line_buffering mengembalikan nilai boolean True jika parameter buffering=1
+    # jika tidak, maka akan mengembalikan nilai boolean False
+    # print("buffering baris baru:", fa.line_buffering)
+
     # menggunakan karakter \n(newline) "baris baru"
     # berarti kita menyelesaikan satu baris, jadi baris ini ditulis ke hard disk
     fa.write("hello world\n") 
