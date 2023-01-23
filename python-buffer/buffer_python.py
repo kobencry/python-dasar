@@ -1,5 +1,3 @@
-# Tiga cara menutup buffer untuk stdout, stdin, stderr dengan Python
-
 # Apa itu buffer
 # Buffer adalah area penyimpanan sementara yang digunakan untuk menyimpan data sementara 
 # sebelum diteruskan ke proses selanjutnya atau disimpan dalam media penyimpanan permanen.
@@ -25,19 +23,19 @@
 # apa yang telah ditunjukkan oleh program kepada kita, dan kebijakan buffer memutuskan apa yang dapat kita lihat.
 # Gambaran output buffer python:
 
-#   ------------------
+#  .------------------.
 #  | program executed |
-#   ------------------  
+#  '------------------'  
 #           |
 #           V
-#   ------------------
+#  .------------------.
 #  |      Buffer      |
-#   ------------------
+#  '------------------'
 #           | buffer policy/kebijakan buffer
 #           V
-#   ------------------
+#  .------------------.
 #  |  program output  |
-#   ------------------ 
+#  '------------------'
 
 # Setelah program dijalankan, hasil dari program akan disimpan dalam buffer sebelum diteruskan ke output.
 
