@@ -33,13 +33,13 @@
 #                   b = s.encode("utf-8")
 #           .-----------------------------------.
 #           |                                   |
-#           |                                   |
+#           |                                  \|/
 #           |                                   V
 #  .---------------------.         .----------------------------.
 #  | s = "hello world✨" |        |  b'hello world\xe2\x9c\xa8' |
 #  '---------------------'         '----------------------------'
-#           A                                   |
-#           |                                   |
+#           ^                                   |
+#          /|\                                  |
 #           |                                   |
 #           '-----------------------------------'
 #                   s = b.decode("utf-8") 
@@ -62,3 +62,11 @@ print(s)    # hello world✨
 # Jika kode poin < 128, itu diwakili oleh nilai byte yang sesuai.
 # Jika kode poin >= 128, itu diubah menjadi urutan dua, tiga, atau empat byte, 
 # di mana setiap byte urutannya antara 128 dan 255.
+
+# Apa itu kode point?
+# Kode point adalah sebuah angka unik yang digunakan untuk mengidentifikasi sebuah karakter dalam sistem encoding seperti Unicode.
+# Setiap karakter Unicode memiliki kode point yang unik, yang digunakan untuk menentukan posisi karakter tersebut dalam tabel karakter Unicode. 
+# Kode point dapat dinyatakan dalam bentuk hexadecimal atau decimal, dan dapat digunakan dalam berbagai aplikasi seperti pemrograman dan markup. 
+# Contoh kode point dalam Unicode adalah "U+0041" yang menyatakan karakter "A" dalam tabel karakter Unicode.
+# kunjungi tabel ascii di file "tabel_ascii.txt"
+
