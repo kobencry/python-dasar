@@ -1,4 +1,5 @@
-Kode poin	    (Nama karakter)
+Kode poin	  Nama karakter
+-----------------------------------------
 0             NUL(Null)
 1             SOH(Awal Judul)
 2             STX(Awal Teks)
