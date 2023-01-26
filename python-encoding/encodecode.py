@@ -1,4 +1,12 @@
-# Karakter encoding adalah representasi unik dari setiap karakter dalam sebuah sistem komputer.
+# Unicode adalah standar internasional untuk menentukan set karakter yang digunakan dalam komputer dan jaringan.
+# Unicode menyediakan ruang nomor untuk setiap karakter dari setiap jenis bahasa yang digunakan di dunia. 
+# Setiap karakter dalam Unicode memiliki nomor unik yang disebut "kode poin". 
+# Unicode memungkinkan kita untuk membuat aplikasi yang dapat menangani berbagai jenis bahasa dan karakter tanpa kesulitan. 
+# Unicode digunakan dalam berbagai aplikasi seperti teks editor, browser web, dan aplikasi jaringan.
+# Unicode menyediakan beberapa encoding utama yang digunakan seperti UTF-8, UTF-16, UTF-32 
+# yang digunakan untuk mengubah karakter Unicode ke dalam format yang dapat dibaca dan ditulis oleh sistem komputer dan jaringan.
+
+# Encoding karakter adalah representasi unik dari setiap karakter dalam sebuah sistem komputer.
 # Karakter encoding digunakan untuk mengubah karakter fisik seperti 
 # huruf, angka, dan simbol menjadi representasi numerik yang dapat diterima oleh komputer.
 # Beberapa contoh dari karakter encoding yang umum digunakan adalah ASCII, UTF-8, UTF-16, dan ISO-8859.
@@ -28,7 +36,7 @@
 #           |                                   |
 #           |                                   V
 #  .---------------------.         .----------------------------.
-#  | s = "hello world✨" |         | b'hello world\xe2\x9c\xa8' |
+#  | s = "hello world✨" |        |  b'hello world\xe2\x9c\xa8' |
 #  '---------------------'         '----------------------------'
 #           A                                   |
 #           |                                   |
@@ -43,9 +51,14 @@ print(b)    # b'hello world\xe2\x9c\xa8'
 s = b.decode("utf-8")
 print(s)    # hello world✨
 
-s = "😀"
-b = s.encode("utf-8")
-print(b)    # b'\xf0\x9f\x98\x80'
-s = b.decode("utf-8")
-print(s)    # 😀
-# secara default encoding decoding di os windows menggunakan "cp1252"
+# kita harus berhati-hati saat encoding/decoding. 
+# Jika kita menggunakan format yang salah, maka akan menghasilkan keluaran yang salah dan dapat menimbulkan kesalahan.
+# secara default encoding decoding di python menggunakan "utf-8"
+
+# UTF-8 adalah salah satu pengkodean yang paling umum digunakan, dan secara default python menggunakannya. 
+# UTF adalah singkatan dari "Unicode Transformation Format", dan '8' berarti bahwa nilai 8-bit digunakan dalam pengkodean. 
+# (Ada juga pengkodean UTF-16 dan UTF-32, tetapi lebih jarang digunakan daripada UTF-8.)
+# aturan menggunakan UTF-8  sebagai berikut:
+# Jika kode poin < 128, itu diwakili oleh nilai byte yang sesuai.
+# Jika kode poin >= 128, itu diubah menjadi urutan dua, tiga, atau empat byte, 
+# di mana setiap byte urutannya antara 128 dan 255.
