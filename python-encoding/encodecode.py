@@ -1,3 +1,20 @@
+# ASCII (American Standard Code for Information Interchange) adalah standar yang digunakan untuk menentukan set karakter yang digunakan dalam komputer.
+# ASCII hanya mencakup 128 karakter yang hanya meliputi karakter yang digunakan dalam bahasa Inggris saja. 
+# ASCII menentukan kode point untuk setiap karakter, yang merupakan nomor unik yang digunakan untuk mengidentifikasi karakter tersebut.
+
+# Apa itu kode point?
+# Kode point adalah sebuah angka unik yang digunakan untuk mengidentifikasi sebuah karakter dalam sistem encoding seperti Unicode.
+# Setiap karakter Unicode memiliki kode point yang unik, yang digunakan untuk menentukan posisi karakter tersebut dalam tabel karakter Unicode. 
+# Kode point dapat dinyatakan dalam bentuk hexadecimal atau decimal, dan dapat digunakan dalam berbagai aplikasi seperti pemrograman dan markup. 
+# Contoh kode point dalam Unicode adalah "U+0041" atau "\u0041" yang menyatakan karakter "A" dalam tabel karakter Unicode.
+
+# mengembalikan kode point dan karakter ascii
+def char_ascii(kode_point: int) -> str:
+    for i in range(kode_point):
+      print(f"{i:<4} {chr(i)}")
+char_ascii(128)
+# kunjungi tabel ascii di file "tabel_ascii.txt"
+
 # Unicode adalah standar internasional untuk menentukan set karakter yang digunakan dalam komputer dan jaringan.
 # Unicode menyediakan ruang nomor untuk setiap karakter dari setiap jenis bahasa yang digunakan di dunia. 
 # Setiap karakter dalam Unicode memiliki nomor unik yang disebut "kode poin". 
@@ -5,6 +22,15 @@
 # Unicode digunakan dalam berbagai aplikasi seperti teks editor, browser web, dan aplikasi jaringan.
 # Unicode menyediakan beberapa encoding utama yang digunakan seperti UTF-8, UTF-16, UTF-32 
 # yang digunakan untuk mengubah karakter Unicode ke dalam format yang dapat dibaca dan ditulis oleh sistem komputer dan jaringan.
+# kunjungi tabel unicode di "https://en.wikipedia.org/wiki/List_of_Unicode_characters"
+
+# mengembalikan karakter yang sesuai dari kode point karakter unicode
+def char_unicode(kode_point: str) -> str:
+   return chr(int(kode_point.lstrip("u+").zfill(8), 16)) 
+print(char_unicode("u+0041"))  # A
+print(char_unicode("u+2728"))  # ✨
+print(char_unicode("u+1F600")) # 😀
+# jika anda menggunakan os windows �😀 atau 😀
 
 # Encoding karakter adalah representasi unik dari setiap karakter dalam sebuah sistem komputer.
 # Karakter encoding digunakan untuk mengubah karakter fisik seperti 
@@ -51,38 +77,43 @@ print(b)    # b'hello world\xe2\x9c\xa8'
 s = b.decode("utf-8")
 print(s)    # hello world✨
 
-# kita harus berhati-hati saat encoding/decoding. 
-# Jika kita menggunakan format yang salah, maka akan menghasilkan keluaran yang salah dan dapat menimbulkan kesalahan.
-# secara default encoding decoding di python menggunakan "utf-8"
-# secara default encoding decoding di os(operasi sistem)
-import locale
-print(locale.getpreferredencoding())
-# jika os macos dan linux "utf-8"
-# jika os windows "cp1252" atau build Windows lainnya mungkin menggunakan "utf-16"
+# Beberapa format yang paling umum digunakan adalah UTF-8, UTF-16, dan UTF-32.
+#-----------------------------------------------------------------------------
+# UTF-8 adalah salah satu standar encoding yang digunakan untuk mewakili karakter Unicode. 
+# UTF-8 adalah varian dari UTF (Unicode Transformation Format) yang menggunakan satu hingga empat byte untuk mewakili sebuah karakter. 
+# UTF-8 sangat populer karena menghemat ruang penyimpanan dan dapat digunakan dengan baik dalam lingkungan yang menggunakan ASCII.
+# Keuntungan lain dari UTF-8 adalah mudah diterjemahkan ke dalam kode ASCII yang dapat dibaca oleh komputer yang tidak mendukung Unicode.
+# Karena itu, UTF-8 sering digunakan dalam jaringan internet dan sistem file.
+# Ini adalah format yang variable-length, yang berarti bahwa setiap karakter Unicode dapat dinyatakan dengan jumlah byte yang berbeda. 
+# UTF-8 cocok untuk digunakan dalam situasi di mana karakter yang digunakan cenderung lebih banyak dari karakter yang digunakan dalam ASCII.
 
-# UTF-8 adalah salah satu pengkodean yang paling umum digunakan, dan secara default python menggunakannya. 
-# UTF adalah singkatan dari "Unicode Transformation Format", dan '8' berarti bahwa nilai 8-bit digunakan dalam pengkodean. 
-# (Ada juga pengkodean UTF-16 dan UTF-32, tetapi lebih jarang digunakan daripada UTF-8.)
-# aturan menggunakan UTF-8  sebagai berikut:
-# Jika kode poin < 128, itu diwakili oleh nilai byte yang sesuai.
-# Jika kode poin >= 128, itu diubah menjadi urutan dua, tiga, atau empat byte, 
-# di mana setiap byte urutannya antara 128 dan 255.
+s = "hello world✨"
+# Hasil s.encode() adalah objek byte. 
+# Baik aslinya byte (seperti b'hello world\xe2\x9c\xa8') dan representasi byte hanya mengizinkan karakter ASCII.
+# saat memanggil "hello world✨".encode("utf-8"), "hello world" yang kompatibel dengan ASCII diizinkan untuk direpresentasikan apa adanya,
+# tetapi dengan karakter unicode "✨(Sparkles/Berkilau)" diloloskan ke "\xe2\x9c\xa8" . 
+# Urutan yang tampak berantakan itu mewakili tiga byte, 0xe2 0x9c dan 0xa8 dalam hexa
+# Artinya, karakter ✨ membutuhkan tiga byte untuk representasi binernya di bawah UTF-8.
+print(" ".join(f"{i:08b}" for i in (0xe2, 0x9c, 0xa8))) # 11100010 10011100 10101000
+# UTF-8 adalah format yang paling populer dari UTF.
+# Keuntungan utama dari UTF-8 adalah bahwa ini lebih efisien dalam penyimpanan dan transmisi dibandingkan dengan UTF-16 dan UTF-32.
 
-# Apa itu kode point?
-# Kode point adalah sebuah angka unik yang digunakan untuk mengidentifikasi sebuah karakter dalam sistem encoding seperti Unicode.
-# Setiap karakter Unicode memiliki kode point yang unik, yang digunakan untuk menentukan posisi karakter tersebut dalam tabel karakter Unicode. 
-# Kode point dapat dinyatakan dalam bentuk hexadecimal atau decimal, dan dapat digunakan dalam berbagai aplikasi seperti pemrograman dan markup. 
-# Contoh kode point dalam Unicode adalah "U+0041" yang menyatakan karakter "A" dalam tabel karakter Unicode.
-# kunjungi tabel unicode di "https://en.wikipedia.org/wiki/List_of_Unicode_characters"
+# UTF-16 adalah format yang fixed-length, yang berarti bahwa setiap karakter Unicode dinyatakan dengan 2 byte.
+# Ini cocok untuk digunakan dalam situasi di mana karakter yang digunakan cenderung lebih sedikit dari karakter yang digunakan dalam ASCII.
+# Keuntungan utama dari UTF-16 adalah bahwa ini lebih mudah digunakan dibandingkan dengan UTF-8 dan UTF-32.
 
-# Contoh kode point dalam ASCII(American Standard Code for Information Interchange), 
-# setiap karakter memiliki kode point unik yang menentukan posisinya dalam tabel ASCII.
-#  Contohnya, karakter "A" memiliki kode point 65, karakter "a" memiliki kode point 97, dan karakter "1" memiliki kode point 49. Ini berarti bahwa jika kita memasukkan kode point 65 ke dalam program, program akan mencetak "A" ke layar. 
-# Kode point ASCII hanya dapat menangani 128 karakter yang berbeda (0-127).
-# kunjungi tabel ascii di file "tabel_ascii.txt"
+# UTF-32 adalah format yang fixed-length, yang berarti bahwa setiap karakter Unicode dinyatakan dengan 4 byte. 
+# Ini cocok untuk digunakan dalam situasi di mana karakter yang digunakan cenderung lebih sedikit dari karakter yang digunakan dalam ASCII.
+# Keuntungan utama dari UTF-32 adalah bahwa ini memungkinkan karakter untuk ditampilkan dengan baik dibandingkan dengan UTF-8 dan UTF-16.
 
-# mengembalikan kode point dan karakter ascii
-def char_ascii() -> str:
-    for i in range(128):
-        print(f"{i:<4} {chr(i)}")
-char_ascii()
+
+# Selain itu, bytes dalam Python dapat juga dinyatakan dalam format hexadecimal dan octal. 
+# Format hexadecimal menggunakan 16 simbol (0-9 dan A-F) untuk menyatakan setiap byte, 
+# sementara format octal menggunakan 8 simbol (0-7) untuk menyatakan setiap byte. 
+# Anda dapat menggunakan fungsi hex() dan oct() untuk mengubah bytes ke format hexadecimal dan octal 
+# dan fungsi int() dengan basis 16 atau 8 untuk mengubah kembali ke format byte.
+# kunjungi folder_name: "Fungsi-Bawaan/fungsi_int.py" 
+
+# Secara keseluruhan, Unicode, UTF-8, UTF-16, dan UTF-32 adalah berbagai jenis encoding yang digunakan untuk menyimpan dan mentransmisikan teks. 
+# Masing-masing memiliki kelebihan dan kekurangan, dan digunakan dalam situasi yang berbeda. 
+# Encoding dan decoding adalah proses untuk mentransformasikan teks dari satu format ke format lain, dan bytes dapat dinyatakan dalam format hexadecimal dan octal.
