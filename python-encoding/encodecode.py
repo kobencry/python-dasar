@@ -54,6 +54,11 @@ print(s)    # hello world✨
 # kita harus berhati-hati saat encoding/decoding. 
 # Jika kita menggunakan format yang salah, maka akan menghasilkan keluaran yang salah dan dapat menimbulkan kesalahan.
 # secara default encoding decoding di python menggunakan "utf-8"
+# secara default encoding decoding di os(operasi sistem)
+import locale
+print(locale.getpreferredencoding())
+# jika os macos dan linux "utf-8"
+# jika os windows "cp1252" atau build Windows lainnya mungkin menggunakan "utf-16"
 
 # UTF-8 adalah salah satu pengkodean yang paling umum digunakan, dan secara default python menggunakannya. 
 # UTF adalah singkatan dari "Unicode Transformation Format", dan '8' berarti bahwa nilai 8-bit digunakan dalam pengkodean. 
@@ -68,5 +73,16 @@ print(s)    # hello world✨
 # Setiap karakter Unicode memiliki kode point yang unik, yang digunakan untuk menentukan posisi karakter tersebut dalam tabel karakter Unicode. 
 # Kode point dapat dinyatakan dalam bentuk hexadecimal atau decimal, dan dapat digunakan dalam berbagai aplikasi seperti pemrograman dan markup. 
 # Contoh kode point dalam Unicode adalah "U+0041" yang menyatakan karakter "A" dalam tabel karakter Unicode.
+# kunjungi tabel unicode di "https://en.wikipedia.org/wiki/List_of_Unicode_characters"
+
+# Contoh kode point dalam ASCII(American Standard Code for Information Interchange), 
+# setiap karakter memiliki kode point unik yang menentukan posisinya dalam tabel ASCII.
+#  Contohnya, karakter "A" memiliki kode point 65, karakter "a" memiliki kode point 97, dan karakter "1" memiliki kode point 49. Ini berarti bahwa jika kita memasukkan kode point 65 ke dalam program, program akan mencetak "A" ke layar. 
+# Kode point ASCII hanya dapat menangani 128 karakter yang berbeda (0-127).
 # kunjungi tabel ascii di file "tabel_ascii.txt"
 
+# mengembalikan kode point dan karakter ascii
+def char_ascii() -> str:
+    for i in range(128):
+        print(f"{i:<4} {chr(i)}")
+char_ascii()
