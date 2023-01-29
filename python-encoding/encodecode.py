@@ -1,3 +1,12 @@
+# Semua data di komputer disimpan sebagai bit-bit biner (0 dan 1). 
+# Angka seperti "0-9" atau karakter seperti "a-z" sendiri tidak memiliki representasi fisik di dalam komputer,
+# tetapi hanya merupakan representasi simbolis dari nilai-nilai biner yang disimpan dalam memori.
+# Character encoding memiliki peran penting dalam menentukan bagaimana karakter simbolis tersebut dikodekan menjadi nilai-nilai biner.
+# ASCII adalah salah satu contoh dari encoding karakter yang menentukan bagaimana 127 karakter
+# yang berbeda dapat dikodekan sebagai nilai-nilai biner unik.
+# UTF-8, UTF-16, dan UTF-32 adalah varian dari Unicode, sebuah standar yang menentukan bagaimana karakter 
+# dari berbagai bahasa dapat dikodekan sebagai nilai-nilai biner.
+
 # ASCII (American Standard Code for Information Interchange) adalah standar yang digunakan untuk menentukan set karakter yang digunakan dalam komputer.
 # ASCII hanya mencakup 128 karakter yang hanya meliputi karakter yang digunakan dalam bahasa Inggris saja. 
 # ASCII menentukan kode point untuk setiap karakter, yang merupakan nomor unik yang digunakan untuk mengidentifikasi karakter tersebut.
@@ -15,6 +24,24 @@ def char_ascii(kode_point: int) -> str:
 char_ascii(128)
 # kunjungi tabel ascii di file "tabel_ascii.txt"
 
+s = "hello world"
+print("point kode ascii:")
+for i in s:
+   print(f"{i}:{ord(i)}", end=' ')
+# point kode ascii:
+# h:104 e:101 l:108 l:108 o:111  :32 w:119 o:111 r:114 l:108 d:100
+print("\nbinary:")
+for i in s:
+   print(f"{i}:{ord(i):08b}", end=' ')
+# binary:
+# h:01101000 e:01100101 l:01101100 l:01101100 o:01101111  :00100000 w:01110111 o:01101111 r:01110010 l:01101100 d:01100100
+
+# ASCII hanya memiliki 128 karakter, yang terbatas hanya untuk karakter-karakter Latin yang biasa digunakan dalam bahasa Inggris. 
+# Oleh karena itu, ASCII tidak dapat digunakan untuk mengkodekan karakter-karakter non-Barat seperti China, Arab, Jepang, dan lainnya.
+# Untuk karakter-karakter non-Barat, encoding seperti Unicode, UTF-8, UTF-16, dan UTF-32 lebih sering digunakan,
+# yang menyediakan banyak "kode poin" untuk berbagai jenis karakter, termasuk karakter non-Barat. 
+# Oleh karena itu, encoding seperti Unicode dan UTF memberikan fleksibilitas dan dukungan yang lebih baik bagi bahasa dan skrip non-Barat.
+
 # Unicode adalah standar internasional untuk menentukan set karakter yang digunakan dalam komputer dan jaringan.
 # Unicode menyediakan ruang nomor untuk setiap karakter dari setiap jenis bahasa yang digunakan di dunia. 
 # Setiap karakter dalam Unicode memiliki nomor unik yang disebut "kode poin". 
@@ -26,7 +53,8 @@ char_ascii(128)
 
 # mengembalikan karakter yang sesuai dari kode point karakter unicode
 def char_unicode(kode_point: str) -> str:
-   return chr(int(kode_point.lstrip("u+").zfill(8), 16)) 
+   return chr(int(kode_point.lstrip("u+").zfill(8), 16))
+# argumen dibawah ini mengambil dari website di atas
 print(char_unicode("u+0041"))  # A
 print(char_unicode("u+2728"))  # ✨
 print(char_unicode("u+1F600")) # 😀
@@ -105,7 +133,6 @@ print(" ".join(f"{i:08b}" for i in (0xe2, 0x9c, 0xa8))) # 11100010 10011100 1010
 # UTF-32 adalah format yang fixed-length, yang berarti bahwa setiap karakter Unicode dinyatakan dengan 4 byte. 
 # Ini cocok untuk digunakan dalam situasi di mana karakter yang digunakan cenderung lebih sedikit dari karakter yang digunakan dalam ASCII.
 # Keuntungan utama dari UTF-32 adalah bahwa ini memungkinkan karakter untuk ditampilkan dengan baik dibandingkan dengan UTF-8 dan UTF-16.
-
 
 # Selain itu, bytes dalam Python dapat juga dinyatakan dalam format hexadecimal dan octal. 
 # Format hexadecimal menggunakan 16 simbol (0-9 dan A-F) untuk menyatakan setiap byte, 
