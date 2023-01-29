@@ -123,6 +123,16 @@ s = "hello world✨"
 # Urutan yang tampak berantakan itu mewakili tiga byte, 0xe2 0x9c dan 0xa8 dalam hexa
 # Artinya, karakter ✨ membutuhkan tiga byte untuk representasi binernya di bawah UTF-8.
 print(" ".join(f"{i:08b}" for i in (0xe2, 0x9c, 0xa8))) # 11100010 10011100 10101000
+# UTF-8 sangat berbeda. 
+# Karakter Unicode tertentu dapat menempati satu hingga tiga byte atau lebih.
+# Berikut adalah contoh satu karakter Unicode yang menggunakan tiga byte:
+s = "✨"
+print(len(s))   # 1
+print(s.encode('utf-8'))  # b'\xe2\x9c\xa8'
+print(len(s.encode('utf-8')))   # 3
+# Dalam contoh ini, ada sebuah karakter Unicode "✨" (berkilau) yang panjangnya sebagai objek str adalah 1.
+# Namun, setelah diencode dengan UTF-8, representasi byte-nya memiliki panjang 3. 
+# Ini menunjukkan bahwa setiap karakter Unicode dapat memakan 1 hingga 3 byte atau lebih saat diencode dengan UTF-8.
 # UTF-8 adalah format yang paling populer dari UTF.
 # Keuntungan utama dari UTF-8 adalah bahwa ini lebih efisien dalam penyimpanan dan transmisi dibandingkan dengan UTF-16 dan UTF-32.
 
