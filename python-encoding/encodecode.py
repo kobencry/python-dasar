@@ -134,15 +134,32 @@ print(len(s.encode('utf-8')))   # 3
 # Namun, setelah diencode dengan UTF-8, representasi byte-nya memiliki panjang 3. 
 # Ini menunjukkan bahwa setiap karakter Unicode dapat memakan 1 hingga 3 byte atau lebih saat diencode dengan UTF-8.
 # UTF-8 adalah format yang paling populer dari UTF.
-# Keuntungan utama dari UTF-8 adalah bahwa ini lebih efisien dalam penyimpanan dan transmisi dibandingkan dengan UTF-16 dan UTF-32.
+# kunjungi file "encoding_utf8.py"
 
 # UTF-16 adalah format yang fixed-length, yang berarti bahwa setiap karakter Unicode dinyatakan dengan 2 byte.
 # Ini cocok untuk digunakan dalam situasi di mana karakter yang digunakan cenderung lebih sedikit dari karakter yang digunakan dalam ASCII.
-# Keuntungan utama dari UTF-16 adalah bahwa ini lebih mudah digunakan dibandingkan dengan UTF-8 dan UTF-32.
+s = "hello world✨"
+b = s.encode("utf-16")
+print(b)    # b"\xff\xfeh\x00e\x00l\x00l\x00o\x00 \x00w\x00o\x00r\x00l\x00d\x00('"
+s = b.decode("utf-16")
+print(s)    # hello world✨
+# menunjukkan contoh bagaimana mengubah string "hello world✨" menjadi byte array dengan menggunakan encoding utf-16, 
+# kemudian mengubah byte array tersebut kembali menjadi string dengan menggunakan decoding utf-16. 
+# Kemudian hasil dari string yang di dapat sama dengan string yang awalnya.
+
+# contoh encode() decode() dengan utf yang berbeda
+s = "hello world✨"
+b = s.encode('utf-8')
+print(b)    # b'hello world\xe2\x9c\xa8'
+s = b.decode('utf-16')
+print(s)    # 敨汬⁯潷汲ꢜ
+# Dalam hal ini, encoding "hello world✨" dengan UTF-8 dan kemudian mendecoding kembali ke teks dalam
+# UTF-16 akan menghasilkan str teks dalam bahasa yang sama sekali berbeda (bahasa Korea).
+# Hasil yang sangat salah seperti ini mungkin terjadi jika pengkodean yang sama tidak digunakan secara dua arah.
+# Dua variasi decoding objek bytes yang sama dapat menghasilkan hasil yang bahkan tidak dalam bahasa yang sama.
 
 # UTF-32 adalah format yang fixed-length, yang berarti bahwa setiap karakter Unicode dinyatakan dengan 4 byte. 
 # Ini cocok untuk digunakan dalam situasi di mana karakter yang digunakan cenderung lebih sedikit dari karakter yang digunakan dalam ASCII.
-# Keuntungan utama dari UTF-32 adalah bahwa ini memungkinkan karakter untuk ditampilkan dengan baik dibandingkan dengan UTF-8 dan UTF-16.
 
 # Selain itu, bytes dalam Python dapat juga dinyatakan dalam format hexadecimal dan octal. 
 # Format hexadecimal menggunakan 16 simbol (0-9 dan A-F) untuk menyatakan setiap byte, 
