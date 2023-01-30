@@ -7,6 +7,10 @@
 # UTF-8, UTF-16, dan UTF-32 adalah varian dari Unicode, sebuah standar yang menentukan bagaimana karakter 
 # dari berbagai bahasa dapat dikodekan sebagai nilai-nilai biner.
 
+# Catatan:
+# Dalam tutorial ini saya menggunakan windows terminal, powershell dan terminal ubuntu bukan(cmd atau powershell bawaan dari windows)
+# saya sarankan anda harus install terlebih dahulu (windows terminal, powershell, atau ubuntu) di microsoft store
+
 # ASCII (American Standard Code for Information Interchange) adalah standar yang digunakan untuk menentukan set karakter yang digunakan dalam komputer.
 # ASCII hanya mencakup 128 karakter yang hanya meliputi karakter yang digunakan dalam bahasa Inggris saja. 
 # ASCII menentukan kode point untuk setiap karakter, yang merupakan nomor unik yang digunakan untuk mengidentifikasi karakter tersebut.
@@ -161,13 +165,49 @@ print(s)    # 敨汬⁯潷汲ꢜ
 # UTF-32 adalah format yang fixed-length, yang berarti bahwa setiap karakter Unicode dinyatakan dengan 4 byte. 
 # Ini cocok untuk digunakan dalam situasi di mana karakter yang digunakan cenderung lebih sedikit dari karakter yang digunakan dalam ASCII.
 
+s = "hello world"
+b = s.encode('utf-32')
+print(b)
+# b'\xff\xfe\x00\x00h\x00\x00\x00e\x00\x00\x00l\x00\x00\x00l\x00\x00\x00o\x00\x00\x00 \x00\x00\x00w\x00\x00\x00o\x00\x00\x00r\x00\x00\x00l\x00\x00\x00d\x00\x00\x00'
+s = b.decode('utf-32')
+print(s) # hello world
+# Perlu diingat bahwa UTF-32 membutuhkan 4 byte untuk mengencodingkan setiap karakter, 
+# sehingga membutuhkan banyak ruang dibandingkan UTF-8 atau UTF-16. 
+# Namun, karena memiliki fixed-length, UTF-32 memudahkan akses data karena setiap karakter
+# dapat ditemukan dengan membaca empat byte berturut-turut, tanpa perlu menentukan jumlah byte 
+# dalam urutan terlebih dahulu seperti yang dilakukan oleh UTF-8 atau melakukan dekode dua byte
+# seperti yang dilakukan oleh UTF-16.
+
+#-------------------------------------------------------------------------
+#   Encoding        byte per character(inclusive)       variabel-length
+#-------------------------------------------------------------------------
+#   utf-8            1 to 4                                 yes
+#   utf-16           2 to 4                                 yes
+#   utf-32              4                                   no
+#-------------------------------------------------------------------------
+
+s = "hello world✨"
+print(f"UTF-8: {len(s.encode('utf-8'))}")
+print(f"UTF-16: {len(s.encode('utf-16'))}")
+print(f"UTF-32: {len(s.encode('utf-32'))}")
+# Output:
+# UTF-8: 14
+# UTF-16: 26
+# UTF-32: 52
+
 # Selain itu, bytes dalam Python dapat juga dinyatakan dalam format hexadecimal dan octal. 
 # Format hexadecimal menggunakan 16 simbol (0-9 dan A-F) untuk menyatakan setiap byte, 
 # sementara format octal menggunakan 8 simbol (0-7) untuk menyatakan setiap byte. 
 # Anda dapat menggunakan fungsi hex() dan oct() untuk mengubah bytes ke format hexadecimal dan octal 
 # dan fungsi int() dengan basis 16 atau 8 untuk mengubah kembali ke format byte.
 # kunjungi folder_name: "Fungsi-Bawaan/fungsi_int.py" 
+# kunjungi folder_name: "Fungsi-Bawaan/fungsi_hex.py" 
+# kunjungi folder_name: "Fungsi-Bawaan/fungsi_oct.py" 
 
 # Secara keseluruhan, Unicode, UTF-8, UTF-16, dan UTF-32 adalah berbagai jenis encoding yang digunakan untuk menyimpan dan mentransmisikan teks. 
 # Masing-masing memiliki kelebihan dan kekurangan, dan digunakan dalam situasi yang berbeda. 
 # Encoding dan decoding adalah proses untuk mentransformasikan teks dari satu format ke format lain, dan bytes dapat dinyatakan dalam format hexadecimal dan octal.
+
+# tutuorial ini sangat terbatas karna ada BOM (bytes order mark) jadi dalam utf-16 dan utf-32 tidak ada saya mohon maaf
+# karna susah sekali untuk mencontohkan utf-16 dan utf-32 Yaitu karna ada BOM otuputnya akan berbeda-beda
+# untuk encoding jenis lain anda perlu mengunjungi dokumentasi python https://docs.python.org/3/library/codecs.html#standard-encodings
