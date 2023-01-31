@@ -18,11 +18,12 @@ print(convert_ascii("Hello world!"))
 # karakter 'e' memiliki representasi numerik 101 (dalam desimal), dan seterusnya.
 
 # program ini akan menampilkan pesan error
-print(convert_ascii('hello world✨'))
+#print(convert_ascii('hello world✨'))
+
 # Output:
 # Traceback (most recent call last):
-#   File ".\convert_asciindec.py", line 20, in <module>                                                                                             00d\x00\x00\x00'
+#   File ".\ascii_to_dec.py", line 21, in <module>
 #     print(convert_ascii('hello world✨'))
-#   File ".\convert_asciindec.py", line 8, in convert_ascii
-#     raise ValueError("bukan tabel ascii")
+#   File ".\ascii_to_dec.py", line 8, in convert_ascii
+#     raise ValueError("bukan karakter ascii")
 # ValueError: bukan karakter ascii
