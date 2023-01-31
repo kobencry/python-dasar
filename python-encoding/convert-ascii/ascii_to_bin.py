@@ -4,7 +4,7 @@ def convert_ascii(s:str) -> str:
     # menggunakan fungsi-string .isascii() untuk memastikan bahwa string input adalah ASCII.
     # buka folder python-string/metod_string file "metod_isascii.py"
     if not s.isascii():
-        # Jika string tidak ASCII, maka fungsi akan melemparkan error "ValueError" dengan pesan "bukan tabel ascii".
+        # Jika string bukan karakter ASCII, maka fungsi akan melemparkan error "ValueError" dengan pesan "bukan tabel ascii".
         raise ValueError("bukan tabel ascii")
     # Jika string input ASCII, maka fungsi akan menggunakan expression  generator bersama dengan metod join() 
     # untuk mengubah string menjadi representasi biner ASCII, 
@@ -15,3 +15,13 @@ def convert_ascii(s:str) -> str:
 print(convert_ascii("Hello world!"))
 # Output:
 # 01001000 01100101 01101100 01101100 01101111 00100000 01110111 01101111 01110010 01101100 01100100 00100001
+
+# program ini akan menampilkan pesan error
+print(convert_ascii('hello world✨'))
+# Output:
+# Traceback (most recent call last):
+#   File ".\ascii_to_bin.py", line 20, in <module>
+#     print(convert_ascii('hello world✨'))
+#   File ".\ascii_to_bin.py", line 8, in convert_ascii
+#     raise ValueError("bukan tabel ascii")
+# ValueError: bukan tabel ascii
