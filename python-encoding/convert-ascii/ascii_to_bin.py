@@ -1,5 +1,5 @@
 # mengubah karakter ascii ke bit(binary digits)
-def convert_ascii(s):
+def convert_ascii(s:str) -> str:
     # Metod ini baru diperkenalkan pada Python 3.7 dan mengembalikan True jika semua karakter dalam string adalah ASCII.
     # menggunakan fungsi-string .isascii() untuk memastikan bahwa string input adalah ASCII.
     # buka folder python-string/metod_string file "metod_isascii.py"
