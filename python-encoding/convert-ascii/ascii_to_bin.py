@@ -14,6 +14,8 @@ def convert_ascii(s:str) -> str:
 print(convert_ascii("Hello world!"))
 # Output:
 # 01001000 01100101 01101100 01101100 01101111 00100000 01110111 01101111 01110010 01101100 01100100 00100001
+# Ini menunjukkan bahwa karakter 'H' memiliki representasi 01001000 (dalam bit),
+# karakter 'e' memiliki representasi 01100101 (dalam bit), dan seterusnya.
 
 # program ini akan menampilkan pesan error
 print(convert_ascii('hello world✨'))
