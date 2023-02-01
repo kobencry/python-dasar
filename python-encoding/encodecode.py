@@ -195,6 +195,16 @@ print(f"UTF-32: {len(s.encode('utf-32'))}")
 # UTF-16: 26
 # UTF-32: 52
 
+# kita harus berhati-hati saat encoding/decoding. 
+# Jika kita menggunakan format yang salah, maka akan menghasilkan keluaran yang salah dan dapat menimbulkan kesalahan.
+# secara default encoding decoding di python menggunakan "utf-8"
+# secara default encoding decoding di os(operasi sistem)
+import locale
+print(locale.getpreferredencoding())
+# Output:
+# jika os macos dan linux "utf-8"
+# jika os windows "cp1252" atau build Windows lainnya mungkin menggunakan "utf-16"
+
 # Selain itu, bytes dalam Python dapat juga dinyatakan dalam format hexadecimal dan octal. 
 # Format hexadecimal menggunakan 16 simbol (0-9 dan A-F) untuk menyatakan setiap byte, 
 # sementara format octal menggunakan 8 simbol (0-7) untuk menyatakan setiap byte. 
