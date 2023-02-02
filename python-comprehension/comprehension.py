@@ -104,4 +104,20 @@ print(hasil)
 # Output:
 # {'alice': 'junior', 'carl': 'junior', 'eliot': 'junior', 'guido': 'senior', 'steve': 'senior'}
 
-# 
+#==================================================================================
+# Tuple Comprehension tidak ada di Python. 
+# Untuk meniru perilaku dan mendapatkan hasil yang mirip secara sintaksis, 
+# gunakan fungsi tuple() dengan ekspresi generator
+# jika anda ingin mengetahui tentang generator expresi python kunjungi folder_name: "python-generator"
+
+# Jangan Gunakan 'Tuple comprehension'
+# Kecuali jika Anda tidak peduli dengan performa, sebaiknya Anda tidak menggunakan tuple comprehension.
+# Jika Anda perlu membuat tuple dengan cara yang menyerupai pemahaman, cara terbaik adalah:
+# Lakukan list comprehension.
+# Ubah list menjadi tuple.
+# Ini memberikan hasil tercepat.
+
+listku = [1, 2, 3, 4, 5]
+hasil = [x**2 for x in listku]
+tupleku = tuple(hasil)
+print(tupleku)
