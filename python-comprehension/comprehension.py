@@ -121,3 +121,5 @@ listku = [1, 2, 3, 4, 5]
 hasil = [x**2 for x in listku]
 tupleku = tuple(hasil)
 print(tupleku)
+# Output:
+# (1, 4, 9, 16, 25)
