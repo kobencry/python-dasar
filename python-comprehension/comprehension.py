@@ -105,17 +105,12 @@ print(hasil)
 # {'alice': 'junior', 'carl': 'junior', 'eliot': 'junior', 'guido': 'senior', 'steve': 'senior'}
 
 #==================================================================================
-# Tuple Comprehension tidak ada di Python. 
-# Untuk meniru perilaku dan mendapatkan hasil yang mirip secara sintaksis, 
-# gunakan fungsi tuple() dengan ekspresi generator
-# jika anda ingin mengetahui tentang generator expresi python kunjungi folder_name: "python-generator"
 
-# Jangan Gunakan 'Tuple comprehension'
-# Kecuali jika Anda tidak peduli dengan performa, sebaiknya Anda tidak menggunakan tuple comprehension.
-# Jika Anda perlu membuat tuple dengan cara yang menyerupai pemahaman, cara terbaik adalah:
-# Lakukan list comprehension.
-# Ubah list menjadi tuple.
-# Ini memberikan hasil tercepat.
+# Tuple Comprehension tidak ada di Python. 
+# Jika Anda ingin membuat tuple yang mirip dengan comprehension, 
+# cara terbaik adalah dengan melakukan list comprehension terlebih dahulu, 
+# lalu mengubah list menjadi tuple. 
+# Ini memberikan hasil yang paling cepat dibandingkan dengan menggunakan tuple comprehensions secara langsung.
 
 listku = [1, 2, 3, 4, 5]
 hasil = [x**2 for x in listku]
@@ -123,3 +118,38 @@ tupleku = tuple(hasil)
 print(tupleku)
 # Output:
 # (1, 4, 9, 16, 25)
+
+# (!) peringatan: tidak direkomendasikan dengan cara ini untuk tuple comprehension.
+hasil = tuple(i**2 for i in listku)
+print(hasil)
+# Output:
+# (1, 4, 9, 16, 25)
+
+# =================================================================================
+
+# Generator comprehension adalah bentuk singkat dari generator expression, 
+# yang digunakan untuk membuat generator baru dalam satu baris kode. 
+# Ini bekerja dengan cara yang sama seperti list comprehension atau dictionary comprehension, 
+# dengan perbedaan bahwa hasil akhir adalah generator, bukan list atau dictionary. 
+# Generator comprehension memproses satu elemen pada satu waktu, 
+# sehingga lebih efisien dalam hal memori dan lebih cocok untuk menangani data besar.
+
+# Syntax
+# (expression for item in iterable (if conditional))
+
+angka = [1, 2, 3, 4, 5]
+generators = (i**2 for i in angka)
+print(generators)
+# Output:
+# <generator object <genexpr> at 0x000001C47A281F90>
+
+# menggunakan forloop untuk menampilkan objek generator 
+for i in generators:
+    print(i)
+# Output:
+# 1
+# 4
+# 9
+# 16
+# 25
+# jika anda ingin mengetahui tentang generator expresi python kunjungi folder_name: "python-generator"
