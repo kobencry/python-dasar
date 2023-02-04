@@ -185,6 +185,38 @@ print(list(obj_gen2))
 # Output:
 # [2, 4]
 
+# Anda dapat menggunakan syntax *(unpacking) untuk mengubah generator menjadi daftar elemen.
+obj_gen3 = *(i for i in range(1, 6)),
+print(obj_gen3)
+# Output:
+# (1, 2, 3, 4, 5)
+
+# Generator chaining adalah proses penggabungan beberapa generator menjadi satu 
+# untuk menghasilkan output yang lebih kompleks dan besar. 
+# Ini memungkinkan kita untuk mengolah data secara bertahap dan menghemat memori
+# komputer karena data hanya diambil saat dibutuhkan.
+
+# kelipatan 3
+def kelipatan3(n):
+    for i in range(n):
+        if i %3==0:
+            yield i
+# perpangkatan 2
+def perpangkatan(gen_angka):
+    for i in gen_angka:
+        yield i**2
+
+hasil_kelipatan = kelipatan3(10)
+hasil_pangkat = perpangkatan(hasil_kelipatan)
+for i in hasil_pangkat:
+    print(i)
+# Output:
+# 0
+# 9
+# 36
+# 81
+
 # kompleksitas waktu
+# jalankan perintah dibawah ini menggunakan terminal atau command prompt
 # python -m timeit 'listku = [i ** 2 for i in range(1_000_000)]'
 # python -m timeit 'tupleku = (i ** 2 for i in range(1_000_000))'
