@@ -65,5 +65,13 @@ for i in iter(lambda: karakter(s), '\n'):
 # Output:
 # hello world alice
 
-# membaca isi file sampai ketemu karakter 
-# 
+print()
+
+# membaca inputan dari user, sampai user memasukan 'exit'
+def user_input():
+    iterator = iter(lambda: input('>>> '), 'exit')
+    for i in iterator:
+        print(i)
+    else:
+        print('[!] iterator berhenti')
+user_input()
