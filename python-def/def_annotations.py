@@ -1,3 +1,8 @@
+#-------------------------------------------------------------------
+# (!) Peringatan:
+# Jika teks editor anda ada pesan error "PROBLEMS" diabaikan saja
+#-------------------------------------------------------------------
+
 # Fungsi annotations adalah informasi tambahan yang dapat ditambahkan ke fungsi dalam Python 
 # untuk menyediakan informasi tambahan tentang tipe data yang diharapkan dari fungsi tersebut. 
 # Annotations dapat memberikan informasi yang berguna bagi pengembang untuk memastikan 
@@ -29,8 +34,7 @@ tambah_data('alice', 23, 2.5)
 # lanjut tentang tipe data yang diharapkan oleh fungsi tersebut, sehingga memudahkan
 # pengembangan aplikasi dan memastikan bahwa fungsi tersebut dipanggil dengan benar.
 
-
-# contoh tidak variabel annotations tidak menggunakan tipe data
+# contoh bukan variabel annotations tidak menggunakan tipe data
 def main(x:'hello', y:'world') -> "Fungsi Main":
     print(x, y)
 print(main.__annotations__)

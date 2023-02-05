@@ -28,4 +28,42 @@ print(next(obj_iter))   # alice
 print(next(obj_iter))   # carl
 print(next(obj_iter))   # eliot
 
-# menggunakan parameter sentinel
+# Ada sedikit terminologi yang membingungkan untuk diluruskan: iterable tidak sama dengan iterator.
+# Objek iterator menyimpan keadaan iterasinya saat ini dan "yield" masing-masing anggotanya secara berurutan,
+# sesuai permintaan melalui berikutnya, hingga habis. 
+# Seperti yang telah kita lihat, generator adalah contoh dari iterator.
+# Kita sekarang harus memahami bahwa setiap iterator adalah iterable, tetapi tidak setiap iterable adalah iterator.
+# Iterable adalah objek yang dapat diulang tetapi tidak harus memiliki semua mesin iterator. 
+# Misalnya, urutan (list, tupel, dan string) dan wadah lain (dictionaty dan set)
+# tidak melacak status iterasinya sendiri. 
+# Dengan demikian Anda tidak dapat memanggil salah satu dari ini secara langsung
+
+# menggunakan argumen sentinel
+# menghitung berapa jumlah fungsi yang dipanggil
+def tambah() -> 0:
+    tambah.__annotations__['return'] += 1
+    return tambah.__annotations__['return']
+
+iterator = iter(lambda: tambah() * 1, 4)
+for i in iterator:
+    print(f"fungsi {tambah.__name__}() telah dipanggil {i} kali")
+# Output:
+# fungsi tambah() telah dipanggil 1 kali
+# fungsi tambah() telah dipanggil 2 kali
+# fungsi tambah() telah dipanggil 3 kali
+
+# membaca karakter string sampai ketemu 
+s = "hello world alice \ncarl eliot"
+mulai = 0
+akhir = 1
+def karakter(s):
+    return s[mulai: mulai + akhir]
+
+for i in iter(lambda: karakter(s), '\n'):
+    print(i, end='')
+    mulai += akhir
+# Output:
+# hello world alice
+
+# membaca isi file sampai ketemu karakter 
+# 
