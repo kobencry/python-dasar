@@ -15,29 +15,17 @@
 # atau dengan menambahkan kondisional di akhir ekspresi
 # new_list = [expression for item in iterable (if conditional)]
 
-# listku = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-# kode ini setara dengan variabel 'listku'
-listku = list(range(1, 11))
-hasil = [i for i in listku if i > 5]
+hasil = [i for i in range(1, 11) if i > 5]
 print(hasil)
 # Output:
 # [6, 7, 8, 9, 10]
 # yaitu sebuah list baru yang berisi angka yang lebih besar dari 10.
 
 # kode ini setara dengan yang diatas
-# listku = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-# kode ini setara dengan variabel 'listku'
-listku = list(range(1, 11))
 hasil = []
-for i in listku:
+for i in range(1, 11): # dimulai dari 1 sampai 10
     if i > 5:
         hasil.append(i)
-print(hasil)
-# Output:
-# [6, 7, 8, 9, 10]
-
-# kode ini setara dengan yang diatas
-hasil = [i for i in list(range(1,11)) if i > 5]
 print(hasil)
 # Output:
 # [6, 7, 8, 9, 10]
@@ -54,8 +42,7 @@ print(hasil)
 # atau dengan menambahkan kondisional di akhir ekspresi
 # new_set = {expression for item in iterable (if conditional)}
 
-listku = [1, 2, 3, 4, 5]
-setku = {i for i in listku}
+setku = {i for i in range(1, 6)}
 print(setku)
 # Output:
 # {1, 2, 3, 4, 5}
