@@ -1,3 +1,8 @@
+#-------------------------------------------------------------------
+# (!) Peringatan:
+# Jika teks editor anda ada pesan error "PROBLEMS" diabaikan saja
+#-------------------------------------------------------------------
+
 # Konstruksi try-except-else-finally adalah mekanisme yang disediakan oleh Python
 # untuk menangani error (exception) yang mungkin terjadi saat menjalankan program.
 # Konstruksi ini terdiri dari empat bagian, yaitu:
