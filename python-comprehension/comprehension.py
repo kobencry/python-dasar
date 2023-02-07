@@ -68,8 +68,8 @@ print(dictku)
 # {0: 'alice', 1: 'carl', 2: 'eliot', 3: 'geral'}
 # yaitu sebuah dictionary baru dari angka dan nama.
 
-# mengubah nilai IPK setiap mahasiswa dalam dictionary ipk_lama menjadi nilai yang lebih tinggi sebesar 0.2.
-# Nilai IPK baru ditemukan dengan menambahkan 0.2 pada setiap nilai IPK lama. 
+# mengubah nilai IPK setiap mahasiswa dalam dictionary ipk_lama menjadi nilai yang lebih tinggi sebesar 0,2.
+# Nilai IPK baru ditemukan dengan menambahkan 0,2 pada setiap nilai IPK lama. 
 # Hasilnya akan ditempatkan dalam dictionary baru bernama ipk_baru. 
 ipk_lama = {'alice':3.5, 'carl': 2.9, 'eliot':3.3}
 
