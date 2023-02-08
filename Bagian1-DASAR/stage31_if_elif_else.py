@@ -40,7 +40,7 @@ if x > y:
 # print(x > y)    # False
 
 # Catatan: pernyataan if jika hasil Boolean True, <expresi> akan di jalankan.
-if x:
+if x: # ini disebut dengan truthy
     print("passed") # passed
 print(bool(x))      # True
 
