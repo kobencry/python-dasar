@@ -40,9 +40,10 @@
 # Built-In Functions/fungsi bawaan python:
 #----------------------------------------- 
 # Ada beberapa built-in function yang juga mengembalikan objek generator, seperti range(), map(), dan filter().
-# Jika anda ingin mengetahui tentang fungsi-bawaan range() kunjungi folder_name: "Fungsi-Bawaan/fungsi_range.py"
-# Jika anda ingin mengetahui tentang fungsi-bawaan map() kunjungi folder_name: "Fungsi-Bawaan/fungsi_map.py"
-# Jika anda ingin mengetahui tentang fungsi-bawaan filter() kunjungi folder_name: "Fungsi-Bawaan/fungsi_filter.py"
+# jika ingin mempelajari lebih lanjut tentang fungsi-bawaan range() kunjungi folder_name: "Fungsi-Bawaan/fungsi_bool.py"
+# jika ingin mempelajari lebih lanjut tentang fungsi-bawaan map() kunjungi folder_name: "Fungsi-Bawaan/fungsi_map.py"
+# jika ingin mempelajari lebih lanjut tentang fungsi-bawaan filter() kunjungi folder_name: "Fungsi-Bawaan/fungsi_filter.py"
+
 # Contoh kode menggunakan fungsi range():
 obj_gen_range = range(5)
 print(obj_gen_range) # range(0, 5)
