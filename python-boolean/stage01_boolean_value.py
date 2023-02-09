@@ -25,8 +25,18 @@ print(True + 5 + (False / True))    # 6.0
 # Karena True setara dengan 1 dan False setara dengan 0, 
 # menambahkan Boolean bersama-sama adalah cara cepat untuk menghitung jumlah nilai True. 
 # Ini bisa sangat berguna saat Anda perlu menghitung jumlah item yang memenuhi suatu kondisi.
-# Sebagai contoh, jika Anda ingin menganalisis suatu halaman dalam sebuah buku untuk 
-# melihat bagian dari halaman yang berisi kata "the", fakta bahwa True setara dengan 1 dan False setara dengan 0 bisa sangat membantu.
+# Sebagai contoh, jika Anda ingin menganalisis suatu nama dalam sebuah data mahasiswa 
+# melihat bagian dari nama yang berisi kata "ali", fakta bahwa True setara dengan 1 dan False setara dengan 0 bisa sangat membantu.
 
-books = "Mastering the Basics of Python"
-print('the' in books)
+data_mahasiswa = """\
+nama, usia, alamat 
+ali, 23, jakarta
+boby, 20, bandung
+alice, 25, tangerang
+carl, 22, surabaya
+falic, 26, jakarta  
+""".splitlines()
+print(len(data_mahasiswa))
+
+total = sum("alice" in baris.lower() for baris in data_mahasiswa) / len(data_mahasiswa)
+print(total, f"{total:.3f}")
