@@ -41,4 +41,36 @@ print(len(data_mahasiswa))
 
 total = sum("alice" in baris.lower() for baris in data_mahasiswa) / len(data_mahasiswa)
 print(total, f"{total:.3f}")
+# Output:
+# 0.16666666666666666 0.167
 
+# jika anda masih bingung dengan kode diatas (menggunakan generator expresion atau generator comprehension)
+print()
+
+# Fungsi dapat Mengembalikan Boolean
+# Anda dapat membuat fungsi yang mengembalikan Nilai Boolean:
+def is_true():
+    return True
+print(is_true())
+# Output:
+# True
+
+# Anda dapat mengeksekusi kode berdasarkan jawaban Boolean dari suatu fungsi:
+def fungsiku():
+    if is_true:
+        print('passed')
+    else:
+        print('failed')
+fungsiku()
+# Output:
+# passed
+
+# Python juga memiliki banyak fungsi bawaan yang mengembalikan nilai boolean, 
+# seperti fungsi-bawaan isinstance(), yang dapat digunakan untuk menentukan apakah suatu objek
+# memiliki tipe data tertentu:
+
+x = 200
+print(isinstance(x, int))
+# Output:
+# True
+# jika ingin mempelajari lebih lanjut tentang fungsi-bawaan isinstance() kunjungi folder_name: "Fungsi-Bawaan/fungsi_isinstance.py"
