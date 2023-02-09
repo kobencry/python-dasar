@@ -9,6 +9,7 @@
 print(type(True))   # <class 'bool'>
 print(type(False))  # <class 'bool'>
 
+# Boolean sebagai angka:
 # Pada Python, Boolean dikategorikan sebagai tipe data numerik. 
 # Artinya, mereka diperlakukan seperti angka untuk semua tujuan. 
 # Dengan kata lain, Anda bisa mengaplikasikan operasi aritmatika pada Boolean,
@@ -40,3 +41,4 @@ print(len(data_mahasiswa))
 
 total = sum("alice" in baris.lower() for baris in data_mahasiswa) / len(data_mahasiswa)
 print(total, f"{total:.3f}")
+
