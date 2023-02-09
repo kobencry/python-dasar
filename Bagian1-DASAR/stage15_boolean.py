@@ -1,6 +1,6 @@
 # python nilai boolean
 # Dalam pemrograman, Anda sering perlu mengetahui apakah ekspresi itu True/Benar atau False/Salah.
-# Anda dapat mengevaluasi ekspresi apa pun dengan Python, dan mendapatkan salah satu dari dua jawaban,
+# Anda dapat mengevaluasi ekspresi apapun dengan Python, dan mendapatkan salah satu dari dua jawaban,
 # True/Benar atau False/Salah.
 # Saat Anda membandingkan dua nilai, ekspresi dievaluasi dan Python mengembalikan nilai Boolean:
 
