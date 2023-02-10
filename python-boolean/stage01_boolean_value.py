@@ -45,7 +45,11 @@ print(total, f"{total:.3f}")
 # 0.16666666666666666 0.167
 
 # jika anda masih bingung dengan kode diatas (menggunakan generator expresion atau generator comprehension)
-print()
+hasil = ['alice' in baris for baris in data_mahasiswa]
+print(hasil)    # [False, False, False, True, False, False]
+# False + False + False + True + False + False = 1
+print(len(hasil))   # 6
+print(1 / 6)    # 0.16666666666666666
 
 # Fungsi dapat Mengembalikan Boolean
 # Anda dapat membuat fungsi yang mengembalikan Nilai Boolean:
