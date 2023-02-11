@@ -2,6 +2,8 @@
 
 # https://docs.python.org/3/library/stdtypes.html?#dict.copy
 
+# fungsi copy() mengembalikan salinan dictionary yang ditentukan.
+
 # Syntax
 # dictionary.copy()
 
