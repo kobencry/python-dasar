@@ -58,5 +58,18 @@ print(hasil)
 # Output:
 # {'foo': 4, 'bar': 3, 'baz': 2}
 
+# fungsi map() setara dengan menulis ekspresi generator
+def fungsi_map(function, iterable):
+    return (function(i) for i in iterable)
+
+hasil = list(fungsi_map(str.lower, ['ALICE', 'CARL', 'ELIOT']))
+print(hasil)
+# Output:
+# ['alice', 'carl', 'eliot']
+
+# menerima inputan dari user
+uint = list(map(int, input("masukan angka: ").split()))
+print(uint)
+
 # jika ingin mempelajari lebih lanjut tentang modul-collection Counter() kunjungi folder_name: "modul-collections/collections-Counter"
 # jika ingin mempelajari lebih lanjut tentang fungsi lambda(anonymous functions) kunjungi folder_name: "python-def/def_lambda.py"
