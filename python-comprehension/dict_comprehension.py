@@ -54,3 +54,10 @@ for nama, usia in karyawan.items():
 print(dictku)
 # Output:
 # {'alice': 'junior', 'carl': 'junior', 'eliot': 'junior', 'guido': 'senior', 'steve': 'senior'}
+
+# menghitung jumlah nama elemen yang sama
+nama = ['apple', 'pizza', 'apple', 'coffe', 'pizza', 'apple']
+jumlah = {i: nama.count(i) for i in nama}
+print(jumlah)
+# Output:
+# {'apple': 3, 'pizza': 2, 'coffe': 1}
