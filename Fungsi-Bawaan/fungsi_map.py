@@ -41,6 +41,12 @@ print(hasil)
 # Output:
 # [1, 4, 9, 16, 25]
 
+# mengubah string huruf kecil menjadi huruf besar
+s = list(map(str.upper, ['alice', 'carl', 'eliot']))
+print(s)
+# Output:
+# ['ALICE', 'CARL', 'ELIOT']
+
 # menghitung jumlah nama elemen yang sama
 from collections import Counter
 

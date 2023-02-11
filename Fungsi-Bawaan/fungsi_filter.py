@@ -12,3 +12,4 @@
 # Parameter                 Deskripsi
 # function                  Fungsi yang akan dijalankan untuk setiap item di iterable.
 # iterable                  Iterable untuk difilter.
+
