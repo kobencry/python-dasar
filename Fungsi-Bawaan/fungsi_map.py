@@ -27,12 +27,18 @@ print(list(hasil))
 # Output:
 # [5, 4, 5]
 
+# jika anda tidak terbiasa dengan fungsi lambda(anonymous function)
 # kode ini setara dengan diatas
 def fungsiku(kata):
     return len(kata)
 hasil = list(map(fungsiku, ['alice', 'carl', 'eliot']))
 print(hasil)
 # Output:
+# [5, 4, 5]
+
+# atau bisa seperti ini menggunakan fungsi len()
+hasil = list(map(len, ['alice', 'carl', 'eliot']))
+print(hasil)
 # [5, 4, 5]
 
 # memangkatkan dua dari masing-masing elemen dalam list angka.
