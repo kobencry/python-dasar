@@ -4,18 +4,19 @@ def fungsi_map(function, iterable):
 
 # mengubah string huruf kecil menjadi huruf besar
 listku = ['alice', 'carl', 'eliot']
-generator = fungsi_map(str.upper, listku)
-print(generator)
+x = fungsi_map(str.upper, listku)
+print(x)
 # Output:
 # <generator object fungsi_map.<locals>.<genexpr> at 0x0000012974971E40>
 
-print(list(generator))
+# mengubah fungsi_map menjadi list, agar mudah dibaca
+print(list(x))
 # Output:
 # ['ALICE', 'CARL', 'ELIOT']
 
-# mengubah string huruf kecil menjadi huruf besar menggunakan fungsi map()
-generator = list(map(str.upper, listku))
-print(generator)
+# menggunakan fungsi map()
+y = list(map(str.upper, listku))
+print(y)
 # Output:
 # ['ALICE', 'CARL', 'ELIOT']
 

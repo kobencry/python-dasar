@@ -15,8 +15,13 @@
 
 # mencari nilai bilangan genap
 listku = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-bilangan_genap = list(filter(lambda x: x %2==0, listku))
+bilangan_genap = filter(lambda x: x %2==0, listku)
 print(bilangan_genap)
+# Output:
+# <filter object at 0x000001BC22EE3250>
+
+# mengubah filter menjadi list, agar mudah dibaca
+print(list(bilangan_genap))
 # Output:
 # [2, 4, 6, 8, 10]
 

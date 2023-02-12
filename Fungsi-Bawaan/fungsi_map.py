@@ -22,7 +22,7 @@ print(hasil)
 # Output:
 # <map object at 0x0000027ED6083310>
 
-# ubah map menjadi list, agar mudah dibaca:
+# mengubah map menjadi list, agar mudah dibaca
 print(list(hasil))
 # Output:
 # [5, 4, 5]
