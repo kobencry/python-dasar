@@ -24,3 +24,9 @@ generator = list(fungsi_map(len, listku))
 print(generator)
 # Output:
 # [5, 4, 5]
+
+# kode ini setara dengan diatas karena fungsi map() setara dengan menulis ekspresi generator
+generator = list(len(i) for i in listku)
+print(generator)
+# Output:
+# [5, 4, 5]
