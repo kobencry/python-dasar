@@ -21,13 +21,17 @@ print(y)
 # ['ALICE', 'CARL', 'ELIOT']
 
 # menghitung panjang setiap kata dalam list
-generator = list(fungsi_map(len, listku))
+generator = list(map(len, listku))
 print(generator)
 # Output:
 # [5, 4, 5]
 
 # kode ini setara dengan diatas karena fungsi map() setara dengan menulis ekspresi generator
-generator = list(len(i) for i in listku)
+generator = (len(i) for i in listku)
 print(generator)
+# Output:
+# <generator object <genexpr> at 0x0000022811371E40>
+
+print(list(generator))
 # Output:
 # [5, 4, 5]

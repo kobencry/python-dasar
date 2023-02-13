@@ -38,6 +38,8 @@ print(bilangan_genap)
 listku = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 bilangan_ganjil = list(filter(lambda x: x %2!=0, listku))
 print(bilangan_ganjil)
+# Output:
+# [1, 3, 5, 7, 9]
 
 # mencari nama yang memiliki panjang lebi dari 4 karakter
 nama_list = ['alice', 'bob', 'carl', 'done', 'eliot', 'for', 'gerald']
