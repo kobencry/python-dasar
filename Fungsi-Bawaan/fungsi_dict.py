@@ -3,7 +3,7 @@
 # https://docs.python.org/3/library/stdtypes.html#dict
 
 # fungsi dict() membuat dictionary/kamus.
-# dictionary adalah koleksi yang tidak terurut, dapat diubah, dan diindeks.
+# Objek dictionary adalah koleksi yang tidak terurut, dapat diubah, dan diindeks.
 
 # Syntax
 # dict(keyword=argumen)
@@ -14,7 +14,7 @@
 #                           dipisahkan dengan koma: key=value, key = value 
 #                           atau menggunakan list dan tuple: [(key=value), (key=value)]
 
-# membuat dictionary menggunakan konstruktor dict()
+# membuat dictionary dengan konstruktor dict()
 dictku = dict(nama='alice', usia=23, alamat='jakarta')
 print(dictku)
 # Output:
@@ -25,7 +25,7 @@ print(dictku)
 # Output:
 # {'nama': 'carl', 'usia': 20, 'alamat': 'bandung'} 
 
-# membuat dictionary menggunakan bracket {} kurawal
+# membuat dictionary dengan bracket {} kurawal
 dictku = {'nama':'eliot', 'usia':25, 'alamat':'surabaya'}
 print(dictku)
 # Output:
