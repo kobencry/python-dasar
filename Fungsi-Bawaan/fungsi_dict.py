@@ -31,4 +31,11 @@ print(dictku)
 # Output:
 # {'nama': 'eliot', 'usia': 25, 'alamat': 'surabaya'}
 
+# menggunakan dict comprehension
+dictku = dict((key, val) for key, val in enumerate(['alice', 'carl', 'eliot'], start=1))
+print(dictku)
+# Output:
+# {1: 'alice', 2: 'carl', 3: 'eliot'}
+
 # jika ingin mempelajari lebih lanjut tentang koleksi-dictionary  kunjungi folder_name: "Method-Dict"
+# jika ingin mempelajari lebih lanjut tentang comprehension  kunjungi folder_name: "python-comprehension"

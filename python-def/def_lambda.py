@@ -12,7 +12,7 @@
 #     return x
 # print(fungsiku('hello world'))
 
-# jika anda memiliki fungsi dengan satu statement/expression gunakanlah fungsi lambda (anonim)
+# jika anda memiliki fungsi dengan satu statement/expression gunakanlah fungsi lambda(anonymous functions)
 # kode ini setara dengan diatas
 fungsiku = lambda x: x
 print(fungsiku('hello world'))
