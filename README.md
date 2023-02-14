@@ -1,4 +1,4 @@
-# python-dasar ![](https://api.visitorbadge.io/api/VisitorHit?user=kobencry&repo=python-dasar&countColor=green&style=flat-square)
+# Mastering the Basics of Python ![](https://api.visitorbadge.io/api/VisitorHit?user=kobencry&repo=python-dasar&countColor=green&style=flat-square)
 
 [![MIT License](https://img.shields.io/github/license/eghysut/python-dasar?color=red&label=License&logo=GNU&style=flat-square)](https://github.com/eghysut/python-dasar/blob/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/eghysut/python-dasar?color=brightgreen&style=flat-square&logo=git&logoColor=fff)](https://github.com/eghysut/python-dasar/issues)
