@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------
 # (!) Peringatan:
-# Jika teks editor anda ada pesan error "PROBLEMS" diabaikan saja
+# Jika teks editor anda ada pesan error "PROBLEMS" atau baris kode berwarna "MERAH atau KUNING" diabaikan saja
 #-------------------------------------------------------------------
 
 # Konstruksi try-except-else-finally adalah mekanisme yang disediakan oleh Python

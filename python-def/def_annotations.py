@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------
 # (!) Peringatan:
-# Jika teks editor anda ada pesan error "PROBLEMS" diabaikan saja
+# Jika teks editor anda ada pesan error "PROBLEMS" atau baris kode berwarna "MERAH atau KUNING" diabaikan saja
 #-------------------------------------------------------------------
 
 # Fungsi annotations adalah informasi tambahan yang dapat ditambahkan ke fungsi dalam Python 
