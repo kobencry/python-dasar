@@ -2,7 +2,7 @@
 
 #-------------------------------------------------------------------
 # (!) Peringatan:
-# Jika teks editor anda ada pesan error "PROBLEMS" atau baris kode berwarna "MERAH" diabaikan saja
+# Jika teks editor anda ada pesan error "PROBLEMS" atau baris kode berwarna "MERAH atau KUNING" diabaikan saja
 #-------------------------------------------------------------------
 
 # https://docs.python.org/3/library/exceptions.html
