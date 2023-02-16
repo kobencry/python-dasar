@@ -40,6 +40,3 @@ print("\110\145\154\154\157\40\167\157\162\154\144")    # Hello world
 print("\x48\x65\x6c\x6f\x20\x77\x6f\x72\x6c\x64")   # Hello world
 
 # jika ingin mempelajari lebih lanjut tentang encoding kunjungi folder_name:"python-encoding"
-
-
-
