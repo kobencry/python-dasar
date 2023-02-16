@@ -10,7 +10,7 @@
 def bagi(x, y):
     assert y != 0, "Tidak dapat membagi dengan nol"
 
-    # menghasilkan angakfloat
+    # menghasilkan angka float
     # return x / y
     # menghasilkan int
     return x // y
