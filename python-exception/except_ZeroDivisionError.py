@@ -22,4 +22,4 @@ try:
 except ZeroDivisionError:
     print("tidak bisa dibagi dengan angka nol.")
 # Output:
-# 
+# tidak bisa dibagi dengan angka nol.
