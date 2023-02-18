@@ -14,8 +14,8 @@
 # yang dicoba diimpor itu sendiri.
 
 try:
-    import sys
-    import time
+    import sys         # modul bawaan python
+    import time        # modul bawaan python
     import hello_world # mencoba mengimpor modul yang tidak ada
 except ModuleNotFoundError as err:
     print("Nama Class Error:", err.__class__)
