@@ -10,6 +10,12 @@ def convert_ascii(s:str) -> str:
     # akan mengembalikan string hasil konversi karakter ASCII menjadi angka hexadecimal, 
     # dengan masing-masing karakter dipisahkan oleh spasi.
     return " ".join(f"{ord(i):0x}" for i in s)
+    # Output:
+    # 48 65 6c 6c 6f 20 77 6f 72 6c 64 21
+    
+    # return [hex(ord(i)) for i in s]   
+    # Output: 
+    # ['0x48', '0x65', '0x6c', '0x6c', '0x6f', '0x20', '0x77', '0x6f', '0x72', '0x6c', '0x64', '0x21']
 
 print(convert_ascii('Hello world!'))
 # Output:
