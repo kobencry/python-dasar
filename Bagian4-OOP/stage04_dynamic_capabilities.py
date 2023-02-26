@@ -50,6 +50,9 @@ Mahasiswa.obj_fungsi = display_info
 
 # memanggil method Instance baru
 mhs.obj_fungsi()
+# Output:
+# Info Mahasiswa
+# nama: alice usia: 23 alamat: jakarta
 
 # Pada contoh di atas, kita menambahkan method instance baru "display_info()" secara dinamis ke kelas "Mahasiswa". 
 # Kemudian kita memanggil method instance baru tersebut menggunakan "mhs.display_info()". 
