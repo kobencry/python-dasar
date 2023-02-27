@@ -53,8 +53,8 @@ except UnicodeError as err:
 
 try:
     # karakter string "ålice" di-decode
-    txt = "ålice"
-    var = txt.encode()
+    text = "ålice"
+    var = text.encode()
     print(var.decode(encoding="ascii", errors="strict"))
 except UnicodeError as err:
     print("Nama Class Error:", err.__class__)
