@@ -1,5 +1,7 @@
 # -- python exception --
 
+# https://docs.python.org/3/library/exceptions.html#ZeroDivisionError
+
 # ZeroDivisionError adalah jenis exception yang terjadi ketika kita mencoba membagi angka dengan nol.
 # Exception ini umumnya terjadi ketika kita melakukan operasi pembagian dan denominator atau pembagi yang digunakan adalah nol.
 

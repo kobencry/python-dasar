@@ -1,3 +1,7 @@
+# -- python exception --
+
+# https://docs.python.org/3/library/exceptions.html#ValueError
+
 # ValueError merupakan salah satu jenis exception/error pada Python yang terjadi 
 # ketika suatu fungsi atau operasi menerima argumen dengan tipe data yang benar, 
 # tetapi nilainya tidak valid atau tidak dapat diinterpretasikan. 
