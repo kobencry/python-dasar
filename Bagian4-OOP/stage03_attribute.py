@@ -133,4 +133,49 @@ print(f"universitas: {objeku.nama_universitas}")
 
 # Dalam Python, kelas menggunakan kata kunci class,
 # dan objek dibuat menggunakan method konstruktor __init__() yang dipanggil saat objek dibuat.
-# Setelah objek dibuat, attribut dapat diakses dan dimodifikasi menggunakan notasi titik.
+# Setelah objek dibuat, attribut dapat diakses dan dimodifikasi menggunakan notasi titik (.)
+
+# Menambahkan Attribute
+# Menambahkan atribut mengacu pada proses penambahan Instance baru atau atribut Class ke objek dengan Python.
+# Di Python, atribut dapat ditambahkan ke objek hanya dengan memberikan nilai ke nama atribut baru 
+# menggunakan notasi titik(.) Sebagai contoh berikut:
+
+# membuat object 
+mhs = Mahasiswa("eliot", 23, "surabaya")
+
+# menambahkan atribut ke "Instance Attribute"
+# syntax
+# <object>.<attribute> = <value>
+
+# menambahkan atribut baru "var_email" ke Instance kelas Mahasiswa
+mhs.var_email = "carl@gmail.com"
+print(f"nama:{mhs.var_nama} usia:{mhs.var_usia} alamat:{mhs.var_alamat} email:{mhs.var_email}")
+# Output:
+# nama:carl usia:26 alamat:bandung email:carl@gmail.com
+
+# Pada contoh diatas, atribut "var_email" tidak ditentukan di kelas Mahasiswa, 
+# tetapi ditambahkan ke turunan "mhs" dari kelas tersebut.
+
+# menambahkan atribut ke "Class Attribute" 
+# Syntax
+# <ClassName>.<attribute> = <value>
+
+# menambahkan atribut baru "jumlah" ke "Class" Mahasiswa
+Mahasiswa.jumlah = 100
+print(Mahasiswa.jumlah)     # akses dari kelas Mahasiswa
+print(mhs.jumlah)           # akses dari Instance 
+# Output:
+# 100
+# 100
+
+# Pada contoh diatas atribut "jumlah" tidak ditentukan di dalam kelas Mahasiswa, 
+# melainkan ditambahkan ke dalam kelas Mahasiswa setelah kelas tersebut didefinisikan
+# menggunakan "Mahasiswa.jumlah = 100". 
+# Dalam hal ini, atribut "jumlah" menjadi atribut kelas yang dapat diakses 
+# dari kelas itu sendiri maupun dari instance-nya.
+
+# Catatan:
+# Penting untuk diperhatikan bahwa menambahkan atribut secara dinamis ke instance atau kelas 
+# dapat berguna dalam beberapa kasus, tetapi juga dapat membuat kode lebih sulit untuk 
+# dipertahankan dan di-debug, terutama saat berhadapan dengan basis kode yang besar dan kompleks. 
+# Oleh karena itu, disarankan untuk mendefinisikan semua atribut dalam definisi kelas jika memungkinkan.
