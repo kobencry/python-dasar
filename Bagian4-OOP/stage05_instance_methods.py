@@ -1,11 +1,13 @@
-# Method adalah sebuah fungsi yang terdapat dalam sebuah class, 
-# dan digunakan untuk melakukan suatu operasi pada object yang terkait dengan class tersebut.
-# Method dapat mengakses dan memanipulasi atribut (properties) dari objek, 
-# atau mengembalikan nilai yang dihasilkan dari proses tersebut. 
-# Method pada dasarnya adalah perilaku atau tindakan yang dapat dilakukan oleh objek dari sebuah class.
+# Instance method adalah metode yang didefinisikan dalam kelas dan 
+# dioperasikan pada instance atau objek dari kelas tersebut. 
+# Instance method biasanya memiliki satu parameter "self", yang merujuk pada instance saat ini. 
+# Instance method dapat mengakses atribut dan method dari instance tersebut dan 
+# dapat digunakan untuk memodifikasi nilai atribut instance atau melakukan operasi lain pada instance tersebut. 
+# Instance Method pada dasarnya adalah perilaku atau tindakan yang dapat dilakukan oleh objek dari sebuah kelas.
 
-# kita akan membuat beberapa contoh method, Dalam kasus kelas 'Mahasiswa':
-# display_info: Method ini dapat digunakan untuk menampilkan informasi mahasiswa seperti nama, usia, dan alamat.
+# Contoh instance method pada kelas "Mahasiswa" adalah sebagai berikut:
+# display_info: Method ini dapat digunakan untuk menampilkan informasi mahasiswa 
+# seperti nama, usia, dan alamat.
 # total_info: Method ini dapat digunakan untuk menghitung jumlah mahasiswa.
 
 # membuat class Mahasiswa
@@ -23,22 +25,26 @@ class Mahasiswa:
         # setiap kali objek Mahasiswa dibuat, tambahkan nilai 1 ke variabel Class Attribute: "jumlah"
         Mahasiswa.jumlah += 1
     
+    # instance methods
     # Method untuk menampilkan informasi mahasiswa
     def display_info(self):
         return f"nama: {self.var_nama} \nusia: {self.var_usia} \nalamat: {self.var_alamat}"
     
+    # instance methods
     # Method untuk menghitung jumlah mahasiswa
     def total_info(self):
         return f"jumlah mahasiswa: {Mahasiswa.jumlah}"
 
 # membuat object 1
 alice = Mahasiswa("alice tale", 22, "jakarta")
-# menggunakan method display_info()
+# menggunakan instance method display_info()
 print(alice.display_info())
 # Output:
 # nama: alice tale
 # usia: 22
 # alamat: jakarta
+
+# menggunakan instance methods total_info()
 print(alice.total_info())
 # Output:
 # jumlah mahasiswa: 1
