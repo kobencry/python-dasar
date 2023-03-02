@@ -19,15 +19,23 @@
 
 s = "hello"
 print(s.isalnum())
+# Output:
+# True
 
 s = "hello123"
 print(s.isalnum())
+# Output:
+# True
 
 s = "hello world"
 print(s.isalnum())
+# Output:
+# False
 
 s = "hello!"
 print(s.isalnum())
+# Output:
+# False
 
 username = input("masukan alphanumerik: ")
 # pelajari lebih lanjut tentang fungsi-bawaan input() folder_name: "Fungsi-Bawaan/fungsi_input.py"

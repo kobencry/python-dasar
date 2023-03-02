@@ -15,11 +15,18 @@
 # Nilai Parameter
 # tidak ada nilai parameter
 
-print("helloworld".isalpha())   # True
-print("hello world".isalpha())  # False
+print("helloworld".isalpha())   
+# Output:
+# True
+
+print("hello world".isalpha())  
+# Output:
+# False
 
 x = "alice123"
-print(x.isalpha())  # False
+print(x.isalpha())  
+# Output:
+# False
 
 user = input("masukan alphabet (a-zA-Z): ")
 # apakah variabel user memasukan huruf alphabet (a-zA-Z)?
