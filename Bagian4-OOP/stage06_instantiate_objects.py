@@ -33,6 +33,8 @@ mhs = Mahasiswa("alice", 23)
 # Contoh memanggil method instance
 # nama:alice usia:23
 
+#=======================================================================
+
 # Membuat variabel "Class attribute":
 # membuat class mahasiswa
 class Mahasiswa:
@@ -69,6 +71,8 @@ print(eliot.total_info())
 # Output:
 # Jumlah Mahasiswa: 3
 
+#=======================================================================
+
 # Menginisialisasi variabel "Instance attribute" dengan nilai default:
 class Mahasiswa:
     # menginisialisasi
@@ -103,6 +107,8 @@ print(carl.display_info())
 # Output:
 # nama:carl usia:24 alamat:tidak ada
 
+#=======================================================================
+
 # Melakukan pengecekan atau validasi input:
 # membuat class Lingkaran
 class Lingkaran:
@@ -134,9 +140,50 @@ print(y.hasil())
 # Output:
 # Luas lingkaran adalah: 314.0
 
+#=======================================================================
+
+# Membuat object dari class lain "disebut sebagai Komposisi"
+# Komposisi pada OOP Python adalah suatu konsep dimana sebuah objek 
+# dibuat terdiri dari satu atau lebih objek lainnya. 
+# Dalam konsep ini, objek yang dibuat terdiri dari beberapa objek yang di dalamnya masing-masing 
+# objek memiliki fungsi dan tujuan tersendiri.
+# Objek-objek tersebut saling berinteraksi dan bekerja sama untuk mencapai tujuan tertentu.
+
+# membuat class Matematika
+class Matematika:
+    def __init__(self, x, y):
+        self.var_x = x
+        self.var_y = y
+    
+    # instance method tambah
+    def tambah(self):
+        return self.var_x + self.var_y
+    
+    # instance method kurang
+    def kurang(self):
+        return self.var_x - self.var_y
+
+# membuat class Hasil
+class Hasil:
+    def __init__(self, x, y):
+        # buat object dari class "Lingkaran"
+        self.mtk = Matematika(x, y)
+
+    # magic method __str__ digunakan untuk memberikan representasi string 
+    # yang mudah dibaca oleh manusia dari objek.
+    def __str__(self):
+        return f"tambah: {self.mtk.tambah()} \nkurang: {self.mtk.kurang()}"
+
+x = Hasil(10, 5)
+print(x)
+# Output:
+# tambah: 15
+# kurang: 5
+
 # Kode program yang ditulis di dalam block constructor __init__ 
 # selain membuat variabel instance attribute disebut sebagai inisialisasi objek. 
 # Pada dasarnya, ini adalah proses untuk mengatur nilai awal dari objek,
 # ketika objek dibuat dengan menggunakan class. 
 # Inisialisasi objek dapat dilakukan dengan menetapkan nilai awal untuk variabel instance attribute,
-# atau dengan melakukan operasi lain pada objek seperti memanggil method atau mengakses variabel class.
+# atau dengan melakukan operasi lain pada objek seperti memanggil method, atau mengakses variabel class,
+# atau membuat obejct dari class lain.
