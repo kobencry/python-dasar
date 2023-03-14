@@ -74,14 +74,7 @@ print(Matematika.kali(3, 3))
 # bukan oleh instance dari kelas tersebut.
 
 # Berikut adalah contoh penggunaan staticmethod pada Python:
-# membuat class Matematika
-class Matematika:
-    def tambah(cls, x, y):
-        return cls.x + cls.y
-
-print(Matematika.tambah(5, 5))
-
-
+# membuat class Mahasiswa
 class Mahasiswa:
     # variabel class
     jumlah = 0
@@ -92,48 +85,101 @@ class Mahasiswa:
         self.nama = nama
 
         # setiap object dibuat variabel class "jumlah" ditambahkan 1
-        __class__.jumlah += 1
+        Mahasiswa.jumlah += 1
 
     # classmethod
     def total(cls):
         print(cls.jumlah)
 
 Mahasiswa("alice").total()
-Mahasiswa("carl").total()
-Mahasiswa("eliot").total()
+# Output:
+# 1
+
+x = Mahasiswa('carl')
+x.total()
+# Output:
+# 2
 
 
+# Menggunakan Dekorator @classmethod
+# Dekorator @classmethod adalah sebuah (penanda) dalam bahasa pemrograman Python 
+# yang digunakan untuk mendefinisikan sebuah method kelas (class method).
 
-# classmethod adalah method dalam sebuah kelas yang menerima 
-# kelas itu sendiri sebagai argumen pertama. 
-# Dalam implementasinya, method ini sering digunakan untuk mengatur atau 
-# memodifikasi variabel kelas atau untuk membuat instance baru dari kelas itu sendiri. 
-# Salah satu kegunaan umum dari classmethod adalah untuk membuat alternatif konstruktor,
-# yang memungkinkan pembuatan instance kelas dengan cara yang berbeda dari konstruktor utama.
+# Sebuah classmethod adalah method yang terikat dengan kelas dan 
+# bukan dengan objek yang dihasilkan dari kelas tersebut. 
+# Oleh karena itu, classmethod dapat diakses dan dipanggil langsung dari kelas 
+# tanpa perlu membuat instance dari kelas tersebut terlebih dahulu.
+
+# Untuk mendefinisikan sebuah classmethod dalam Python, 
+# kita menggunakan @classmethod sebelum mendefinisikan method tersebut.
+
+# Contoh penggunaan decorator @staticmethod:
+# membuat class Matematika
+class Matematika:
+    
+    # class method menggunakan decorator
+    @classmethod
+    def tambah(cls, x, y):
+        hasil = x + y
+        return hasil
+
+print(Matematika.tambah(5, 5))
+# Output:
+# 10
+
+print(Matematika.tambah(100, 200))
+# Output:
+# 300
 
 # Berikut adalah contoh penggunaan staticmethod dan classmethod dalam Python:
 
-# # membuat class
-# class Mahasiswa:
-#     # variabel class
-#     class_variabel = "Harvard"
+# membuat class
+class Mahasiswa:
+    # variabel class
+    class_variabel = "Harvard"
     
-#     # menginisialisasi objek
-#     def __init__(self, nama):
-#         # variabel instance
-#         self.instance_variabel = nama
+    # menginisialisasi objek
+    def __init__(self, nama):
+        # variabel instance
+        self.instance_variabel = nama
     
-#     # instance method
-#     def instance_method(self):
-#         print("Method instance dipanggil")
+    # instance method
+    def instance_method(self):
+        print("Method instance dipanggil")
+    
+    # static method tanpa decorator
+    def static_method():
+        print("Method static dipanggil")
+    
+    # static method dengan decorator
+    @staticmethod
+    def static_method2():
+        print("Method static 2 dipanggil")
+    
+    # class method dengan decorator
+    @classmethod
+    def class_method(cls, nama, usia):
+        return f"{nama}, {usia}"
 
-    
-#     def static_method():
-#         print("Method static dipanggil")
-    
-#     @staticmethod
-#     def static_method2():
-#         print("Method static dipanggil")
+# method "static_method" dapat dipanggil langsung melalui nama kelas "Mahasiswa" 
+# tanpa harus membuat instance kelas terlebih dahulu.
+Mahasiswa.static_method()
+# Output:
+# Method static dipanggil
 
-# mhs = Mahasiswa("alice")
-# mhs.static_method()
+# menggunakan staticmethod
+x = Mahasiswa("alice")
+x.static_method2()
+# Output:
+# Method static 2 dipanggil
+
+# menggunakan classmethod
+y = Mahasiswa.class_method("carl", 23)
+print(y)
+# Output:
+# carl, 23
+
+# method "class_method" dapat dipanggil dengan instance kelas
+print(x.class_method('eliot', 20))
+# Output:
+# eliot, 20
