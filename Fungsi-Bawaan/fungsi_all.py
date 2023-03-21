@@ -14,11 +14,16 @@
 # iterable                  Objek yang dapat diubah (list, tuple, dict)
 
 list_x = [1, 2, 3]
-list_y = [0, 1, 5]
 x = all(list_x)
+print(x)    
+# Output:
+# True
+
+list_y = [0, 1, 5]
 y = all(list_y)
-print(x)    # True
-print(y)    # False
+print(y)    
+# Output:
+# False
 
 tuple_x = ("hello", "world")
 tuple_y = (0.5, 1.5, 2)
