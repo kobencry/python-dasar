@@ -18,19 +18,29 @@
 # n                     Dibutuhkan. sebuah angka
 
 x = abs(-3.25)  # float minus
-print(x)    # 3.25
+print(x)
+# Output:
+# 3.25
 
 x = abs(3+5j)   # imajiner
 print(x)    # 5.830951894845301
 
 x = abs(-3+5j)  # imajiner minus
-print(x)    # 5.830951894845301
+print(x)    
+# Output:
+# 5.830951894845301
 
 x = abs(0xff)   # hexadecimal
-print(x)        # 255
+print(x)        
+# Output:
+# 255
 
 x = abs(0b11111111) # biner
-print(x)        # 255
+print(x)        
+# Output:
+# 255
 
 x = abs(0o400)  # octal
-print(x)        # 256
+print(x)        
+# Output:
+# 256
