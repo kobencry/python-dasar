@@ -26,11 +26,16 @@ print(y)
 # False
 
 tuple_x = ("hello", "world")
-tuple_y = (0.5, 1.5, 2)
 x = all(tuple_x)
+print(x)    
+# Output:
+# True
+
+tuple_y = (0.5, 1.5, 2)
 y = all(tuple_y)
-print(x)    # True
-print(y)    # True
+print(y)    
+# Output:
+# True
 
 tuple_x = ("")
 tuple_y = (0.0, 0.1)
@@ -42,9 +47,14 @@ print(all(tuple_z))     # False
 # Catatan: Saat menggunakan dict pada, fungsi all() memeriksa key=kunci apakah semua Benar/True, bukan value=nilainya.
 
 dict_x = {1:'hello', 2:'world'}
+print(all(dict_x))
+# Output:
+# True
+
 dict_y = {0:'hello', 1:'world'}
-print(all(dict_x)) # True
-print(all(dict_y)) # False
+print(all(dict_y)) 
+# Output:
+# False
 
 # Ingat: Jika objek yang dapat diubah kosong, fungsi all() juga mengembalikan True.
 
