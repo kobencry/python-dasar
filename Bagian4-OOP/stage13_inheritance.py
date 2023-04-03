@@ -1,1 +1,4 @@
-#coming son 
+# Inheritance (pewarisan atau sifat pewarisan) pada Python adalah konsep di mana sebuah kelas baru dibuat dengan memperluas fungsionalitas kelas yang sudah ada. Dalam pewarisan, kelas baru didefinisikan dengan menggunakan kelas yang sudah ada sebagai landasan atau superclass, sehingga kelas baru dapat mewarisi atribut dan metode dari superclass.
+# Dengan menggunakan inheritance, kita dapat membuat hierarki kelas yang lebih mudah dikelola dan memungkinkan kita untuk menghindari duplikasi kode dan meningkatkan modularitas dan fleksibilitas kode. Di Python, pewarisan dilakukan dengan menempatkan nama kelas induk dalam kurung setelah nama kelas turunan.
+
+# Berikut adalah contoh sederhana inheritance pada Python:
