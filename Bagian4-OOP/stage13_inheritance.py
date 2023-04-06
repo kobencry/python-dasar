@@ -42,7 +42,7 @@ print(b.info())
 # Output:
 # carl, 25, jakarta
 
-# Dalam hal ini kelas A dan B memiliki atribut dan method yang sama.
+# Dalam hal ini kelas A dan B memiliki atribut dan method.
 # atribut nama, usia, dan memiliki method "display(), info()" yang fungsinya sama-sama menampilkan data
 # lalu kita membuat instance variabel di class B yang sudah ada di class A, 
 # artinya kita menulis ulang kode yang sudah ada.
@@ -69,13 +69,14 @@ class B(A): # class child(anak) atau disebut subclass
 
         # jika menggunakan inheritance(pewarisan) dari kelas A
         A.__init__(self, nama, usia)
+
         self.__alamat = alamat
     
     # method instance "jika tidak menggunakan inheritance(pewarisan) dari kelas A"
     # def info(self):
     #     return f"{self.__nama}, {self.usia}, {self.__alamat}"
     
-    # method instance dari kelas A atau parent(induk) 
+    # method instance "jika menggunakan inheritance(pewarisan) dari kelas A atau parent(induk)"
     def info(self):
         return f"{A.display(self)}, {self.__alamat}"
 # membuat object
