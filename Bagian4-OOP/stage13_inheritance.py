@@ -46,7 +46,7 @@ print(b.display())
 # atribut nama, usia, dan method display()
 # lalu kita membuat instance variabel di class B yang sudah ada di class A, 
 # artinya kita menulis ulang kode yang sudah ada.
-# di Pemograman “Don't Repeat Yourself” 
+# di Pemrograman “Don't Repeat Yourself” 
 # (atau lebih mudahnya disingkat DRY) 
 # adalah satu kalimat istilah yang sering diperbincangkan di kalangan teknis pemrograman yaitu 
 # untuk tidak mengulangi proses yang sama berulang kali,
@@ -102,3 +102,49 @@ print(b.display())
 
 # Ketika method display() dipanggil pada objek b, terlebih dahulu method display() 
 # dari superclass dipanggil dengan nama_kelas.display(self), kemudian informasi alamat ditambahkan.
+
+#---------------------------------------------------
+# Inheritance dengan Magic method super()
+
+# Magic method super() adalah sebuah built-in function di Python yang memungkinkan kita untuk
+# memanggil method atau atribut dari parent class atau superclass saat kita membuat subclass. 
+# method super() biasanya digunakan dalam method __init__() dari subclass untuk mengakses 
+# constructor atau method parent class.
+
+# Dalam penggunaannya, method super() menerima dua argumen, 
+# yaitu nama class saat ini (dalam hal ini subclass) dan instance objek saat ini.
+# Dengan menggunakan method super(), kita bisa memanggil method dari parent class dan 
+# menggunakan variabel atau atribut dari parent class.
+
+# Contoh penggunaan method super() pada subclass yang meng-inheritance(mewarisi) dari parent class:
+class A: # parent class atau disebut superclass
+    def __init__(self, nama, usia):
+        self.__nama = nama
+        self.__usia = usia
+    
+    def display(self):
+        return f"{self.__nama}, {self.__usia}"
+
+class B(A): # child class atau disebut subclass
+    def __init__(self, nama, usia, alamat):
+        # contoh dengan memanggil nama classnya
+        #A.__init__(self, nama, usia)
+
+        # contoh dengan magic method super()
+        super().__init__(nama, usia)
+        self.__alamat = alamat
+
+    def display(self):
+        # contoh dengan memanggil nama classnya
+        #return f"{A.display()}, {self.__alamat}"
+        return f"{super().display()}, {self.__alamat}"
+
+a = A("alice", 23)
+print(a.display())
+# Output:
+# alice, 23
+
+b = B("carl", 22, "jakarta")
+print(b.display())
+# Output:
+# carl, 22, jakarta
