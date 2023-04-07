@@ -133,3 +133,47 @@ b = B("carl", 25, "jakarta")
 print(b.info())
 # Output:
 # carl, 25, None, jakarta
+
+#------------------------------------------
+# Contoh tambahan:
+# Junior: Saya tidak ingin outputnya ada None bagaimana caranya?
+# Senior: Karna outputnya bertipe "string" ada 4 metode cara menghapus string: strip(), translate(), regex, forloop
+
+# menggunakan method string strip() kunjungi folder: "Method-String/method_strip.py"
+# yang 3 metode diatas "PR" buat anda
+
+class A: # superclass
+    def __init__(self, nama, usia, email):
+        # variabel instance
+        self.__nama = nama
+        self.__usia = usia
+        self.__email = email
+    
+    # method instance
+    def display(self):
+        return f"{self.__nama}, {self.__usia}, {self.__email}"
+
+class B(A): # subclass
+    def __init__(self, nama, usia, alamat):
+        # variabel instance
+        super().__init__(nama, usia, None)
+        self.__alamat = alamat
+    
+    # method instance
+    def info(self):
+        # print(type(super().display()))  #output: <class 'str'>
+        # Perlu diingat bahwa string di Python bersifat immutable, 
+        # sehingga ketika melakukan penghapusan karakter pada string 
+        # akan menghasilkan string baru yang harus disimpan ke dalam variabel baru 
+        # atau mengganti variabel lama dengan variabel yang baru.
+        hasil = super().display().strip("None ,")
+        return f"{hasil}, {self.__alamat}"
+a = A("alice", 20, "alice@gmail.com")
+print(a.display())
+# Output:
+# alice, 20, alice@gmail.com
+
+b = B("carl", 25, "jakarta")
+print(b.info())
+# Output:
+# carl, 25, jakarta
