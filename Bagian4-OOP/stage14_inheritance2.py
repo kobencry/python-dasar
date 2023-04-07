@@ -93,3 +93,43 @@ print(b.info())
 # Output:
 # None, carl, 25
 # Anda bisa menyesuaikan posisi parameter dari superclass yang tidak ada di subclass.
+
+#------------------------------------------
+# contoh superclass memiliki 3 parameter dan subclass memiliki 3 parameter
+# dengan nama parameter yang berbeda
+# parameter superclass: nama, usia, email
+# parameter subclass: nama, usia, alamat
+#------------------------------------------
+# sebenarnya contoh ini sama dengan diatas
+
+# menggunakan parameter default "nilainya bisa (string, int, boolean, list, tuple, dictionary, dll.)"
+class A: # superclass
+    def __init__(self, nama, usia, email=None):
+        # variabel instance
+        self.__nama = nama
+        self.__usia = usia
+        self.__email = email
+    
+    # method instance
+    def display(self):
+        return f"{self.__nama}, {self.__usia}, {self.__email}"
+
+class B(A): # subclass
+    def __init__(self, nama, usia, alamat):
+        # variabel instance
+        super().__init__(nama, usia)
+        self.__alamat = alamat
+    
+    # method instance
+    def info(self):
+        return f"{super().display()}, {self.__alamat}"
+
+a = A("alice", 20, "alice@gmail.com")
+print(a.display())
+# Output:
+# alice, 20, alice@gmail.com
+
+b = B("carl", 25, "jakarta")
+print(b.info())
+# Output:
+# carl, 25, None, jakarta
