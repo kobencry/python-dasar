@@ -181,7 +181,7 @@ print(b.info())
 # menggunakan regex kunjungi folde_name: "modul-re"
 import re # library bawaan python
 
-class A:
+class A: # superclass
     def __init__(self, nama, usia, email):
         # variabel instance
         self.__nama = nama
