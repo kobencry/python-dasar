@@ -166,7 +166,7 @@ class B(A): # subclass
         # sehingga ketika melakukan penghapusan karakter pada string 
         # akan menghasilkan string baru yang harus disimpan ke dalam variabel baru 
         # atau mengganti variabel lama dengan variabel yang baru.
-        hasil = super().display().strip("None ,")
+        hasil = super().display().strip("None, ")
         return f"{hasil}, {self.__alamat}"
 a = A("alice", 20, "alice@gmail.com")
 print(a.display())
@@ -177,3 +177,35 @@ b = B("carl", 25, "jakarta")
 print(b.info())
 # Output:
 # carl, 25, jakarta
+
+# menggunakan regex kunjungi folde_name: "modul-re"
+import re # library bawaan python
+
+class A:
+    def __init__(self, nama, usia, email):
+        # variabel instance
+        self.__nama = nama
+        self.__usia = usia
+        self.__email = email
+    
+    # method instance
+    def display(self):
+        return f"{self.__nama}, {self.__usia}, {self.__email}"
+
+class B(A): # subclass
+    def __init__(self, nama, usia, alamat):
+        # variabel instance
+        super().__init__(nama, usia, None)
+        self.__alamat = alamat
+    
+    # method instance
+    def info(self):
+        stringku = f"{super().display()}, {self.__alamat}"
+        regex = "None, "
+        hasil = re.sub(regex, "", stringku)
+        return hasil
+
+b = B("eliot", 30, "bandung")
+print(b.info())
+# Output:
+# eliot, 30, bandung
