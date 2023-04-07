@@ -140,7 +140,6 @@ print(b.info())
 # Senior: Karna outputnya bertipe "string" ada 4 metode cara menghapus string: strip(), translate(), regex, forloop
 
 # menggunakan method string strip() kunjungi folder: "Method-String/method_strip.py"
-# yang 3 metode diatas "PR" buat anda
 
 class A: # superclass
     def __init__(self, nama, usia, email):
