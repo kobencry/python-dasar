@@ -16,3 +16,7 @@ b = B()
 print(b.display())
 # Output:
 # hello world
+
+class A:
+    def __init__(self) -> None:
+        pass
