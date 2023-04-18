@@ -16,4 +16,3 @@ b = B()
 print(b.display())
 # Output:
 # hello world
-
