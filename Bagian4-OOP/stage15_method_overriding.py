@@ -31,6 +31,14 @@ print(b.display())
 # Output
 # hello carl 
 
+# penjelasan:
+# Pada contoh di atas, "class B" mewarisi(inheritance) "class A". 
+# Kemudian, "class B" mendefinisikan ulang method display() dengan implementasi yang berbeda.
+# Ketika method display() dipanggil pada objek a, 
+# Python akan menemukan method yang ada di "class A" dan menjalankannya.
+# Sedangkan ketika method display() dipanggil pada objek b, 
+# Python akan menemukan method yang ada di "class B" dan menjalankannya, sehingga outputnya berbeda.
+
 # Berikut adalah contoh kedua sederhana overriding di Python:
 class A: #superclass
     # method instance
