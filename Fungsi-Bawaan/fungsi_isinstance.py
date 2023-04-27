@@ -11,9 +11,9 @@
 # isinstance(object, type)
 
 # Nilai Parameter
-# Parameter                    Deskripsi
-# objek                        Dibutuhkan. Sebuah Objek.
-# type                         Sebuah tipe atau kelas, atau kumpulan tipe dan/atau kelas
+# Parameter                Deskripsi
+# objek                    Dibutuhkan. Sebuah Objek.
+# type                     Sebuah tipe atau kelas, atau kumpulan tipe dan/atau kelas
 
 x = 5
 print(isinstance(x, int))
