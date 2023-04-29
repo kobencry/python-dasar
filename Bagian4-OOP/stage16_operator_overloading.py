@@ -86,4 +86,43 @@ print(obj1 == obj2)
 # Output:
 # True
 
+# contoh implementasi operator overloading pada kelas Mahasiswa untuk menambahkan nilai bonus IPK pada objek Mahasiswa:
+class Mahasiswa:
+    # menginisialisasi
+    def __init__(self, nama, jurusan, ipk):
+        # variabel instance
+        self.nama = nama
+        self.jurusan = jurusan
+        self.ipk = ipk
+    
+    # method instance
+    def display(self):
+        return f"Nama:{self.nama}, Jurusan:{self.jurusan}, IPK:{self.ipk}"
+    
+    # method operator overloading +
+    def __add__(self, bonus):
+        ipk_baru = self.ipk + bonus
+        return Mahasiswa(self.nama, self.jurusan, ipk_baru)
+
+# membuat objek mahasiswa
+alice = Mahasiswa("alice", "Teknik Informatika", 2.7)
+carl = Mahasiswa("carl", "Teknik Informatika", 2.6)
+print("-- sebelum --")
+print(alice.display())
+print(carl.display())
+# Output:
+# -- sebelum --
+# Nama:alice, Jurusan:Teknik Informatika, IPK:2.7
+# Nama:carl, Jurusan:Teknik Informatika, IPK:2.6
+
+print("-- setelah --")
+alice = alice + 0.5
+print(alice.display())
+carl = carl + 0.4
+print(carl.display())
+# Output:
+# -- setelah --
+# Nama:alice, Jurusan:Teknik Informatika, IPK:3.2
+# Nama:carl, Jurusan:Teknik Informatika, IPK:3.0
+
 # jika ingin mempelajari lebih lanjut tentang "magic methods" folder_name: magic-method
