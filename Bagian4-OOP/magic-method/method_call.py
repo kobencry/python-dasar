@@ -33,3 +33,27 @@ print(y())
 # Output:
 # hello world
 # hello world
+
+# menjumlahkan dari setiap bilangan 
+class Tambah:
+    def __init__(self):
+        self.total = 0
+    
+    def __call__(self, *args):
+        for i in args:
+            self.total += i
+        return self.total
+
+# membuat objek dan memanggilnya
+tambah = Tambah()
+print(tambah(1, 2)) # 1 + 2 = 3
+# Output:
+# 3
+
+print(tambah(5, 5)) # 3 + 5 + 5 = 13
+# Output:
+# 13
+
+print(tambah(10, 20, 30))   # 13 + 10 + 20 + 30 = 73
+# Output:
+# 73
