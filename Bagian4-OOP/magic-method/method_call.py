@@ -20,3 +20,16 @@
 # Dalam method __call__(), kita dapat menentukan logika atau kode yang 
 # ingin dijalankan ketika objek tersebut dipanggil seperti fungsi. 
 # Kode yang dituliskan pada method __call__() akan dieksekusi saat objek dipanggil seperti fungsi.
+
+# Berikut ini adalah contoh sederhana penggunaan metode __call__()
+class A:
+    def __call__(self):
+        return "hello world"
+
+x = A()
+y = A()
+print(x())
+print(y())
+# Output:
+# hello world
+# hello world
