@@ -57,3 +57,18 @@ print(tambah(5, 5)) # 3 + 5 + 5 = 13
 print(tambah(10, 20, 30))   # 13 + 10 + 20 + 30 = 73
 # Output:
 # 73
+
+# contoh menggunakan argumen *args dan **kwargs
+class A:
+    def __init__(self):
+        print('Objek dibuat')
+    
+    def __call__(self, *args, **kwargs):
+        print('Objek dipanggil dengan argumen:', args, kwargs)
+
+# Membuat objek dan memanggilnya
+obj = A()
+obj(1, 2, a=3, b=4)
+# Output:
+# Objek dibuat
+# Objek dipanggil dengan argumen: (1, 2) {'a': 3, 'b': 4}
