@@ -15,7 +15,7 @@
 # Polymorphism juga dapat meningkatkan reusabilitas kode, 
 # karena objek yang sama dapat memiliki perilaku yang berbeda dalam konteks yang berbeda.
 
-# Berikut adalah contoh sederhana penggunaan polymorphism di Python pada kelas Hewan
+# Berikut adalah contoh sederhana penggunaan polymorphism di Python pada kelas Hewan:
 class Hewan:
     def suara(self):
         pass
@@ -89,3 +89,36 @@ mhs1.keterangan()
 mhs2.keterangan()
 # Output:
 # Mahasiswa S2 Carl dengan Nim 445566 program studi Sistem Informasi
+
+# Berikut adalah contoh sederhana penggunaan Polymorphism di Python pada kelas Product:
+class Product:
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+
+    def calculate_discount(self, discount):
+        pass
+
+class DigitalProduct(Product):
+    def __init__(self, name, price, size):
+        super().__init__(name, price)
+        self.size = size
+
+    def calculate_discount(self, discount):
+        self.price -= (self.price * discount/100)
+
+class PhysicalProduct(Product):
+    def __init__(self, name, price, weight):
+        super().__init__(name, price)
+        self.weight = weight
+
+    def calculate_discount(self, discount):
+        self.price -= (self.price * discount/100) + (self.weight * 0.1)
+
+# objek dari masing-masing kelas
+digital_product = DigitalProduct("Ebook", 100, 20)
+physical_product = PhysicalProduct("Buku", 50, 0.5)
+
+# memanggil metode calculate_discount dari masing-masing objek
+digital_product.calculate_discount(10)
+physical_product.calculate_discount(10) 
