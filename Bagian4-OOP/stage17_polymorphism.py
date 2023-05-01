@@ -43,3 +43,49 @@ for x in (anjing, kucing, ayam):
 # guk guk
 # meow
 # kukuruyuk
+
+# Berikut adalah contoh sederhana penggunaan polymorphism di Python pada kelas Mahasiswa:
+class Mahasiswa: #superclass
+    # inisalisasi
+    def __init__(self, nama, nim):
+        # variabel instance
+        self.nama = nama
+        self.nim = nim
+    
+    # method instance
+    def keterangan(self):
+        print(f"Nama:{self.nama}, Nim:{self.nim}")
+    
+class MahasiswaS1(Mahasiswa): #subclass
+    # inisialisasi
+    def __init__(self, nama, nim, jurusan):
+        # variabel instance
+        super().__init__(nama, nim)
+        self.jurusan = jurusan
+    
+    # method instance
+    def keterangan(self):
+        print(f"Mahasiswa S1 {self.nama} dengan Nim {self.nim} jurusan {self.jurusan}")
+
+class MahasiswaS2(Mahasiswa): #subclass
+    # inisialisasi
+    def __init__(self, nama, nim, program_studi):
+        # variabel instance
+        super().__init__(nama, nim)
+        self.program_studi = program_studi
+    
+    # method instance
+    def keterangan(self):
+        print(f"Mahasiswa S2 {self.nama} dengan Nim {self.nim} program studi {self.program_studi}")
+
+# membuat objek dari masing2  kelas
+mhs1 = MahasiswaS1("Alice", "112233", "Informatika")
+mhs2 = MahasiswaS2("Carl", "445566", "Sistem Informasi")
+
+mhs1.keterangan()
+# Output:
+# Mahasiswa S1 Alice dengan Nim 112233 jurusan Informatika
+
+mhs2.keterangan()
+# Output:
+# Mahasiswa S2 Carl dengan Nim 445566 program studi Sistem Informasi
