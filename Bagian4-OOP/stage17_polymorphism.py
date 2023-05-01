@@ -14,3 +14,32 @@
 # untuk membuat kode yang lebih efisien dan mudah di-maintain. 
 # Polymorphism juga dapat meningkatkan reusabilitas kode, 
 # karena objek yang sama dapat memiliki perilaku yang berbeda dalam konteks yang berbeda.
+
+# Berikut adalah contoh sederhana penggunaan polymorphism di Python pada kelas Hewan
+class Hewan:
+    def suara(self):
+        pass
+
+class Anjing(Hewan):
+    def suara(self):
+        print("guk guk")
+
+class Kucing(Hewan):
+    def suara(self):
+        print("meow")
+
+class Ayam(Hewan):
+    def suara(self):
+        print("kukuruyuk")
+
+anjing = Anjing()
+kucing = Kucing()
+ayam = Ayam()
+
+for x in (anjing, kucing, ayam):
+    # memanggil metode suara dari masing-masing objek
+    x.suara()
+# Output:
+# guk guk
+# meow
+# kukuruyuk
