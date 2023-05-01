@@ -91,34 +91,62 @@ mhs2.keterangan()
 # Mahasiswa S2 Carl dengan Nim 445566 program studi Sistem Informasi
 
 # Berikut adalah contoh sederhana penggunaan Polymorphism di Python pada kelas Product:
-class Product:
+class Product: #superclass
+    # inisialisasi
     def __init__(self, name, price):
+        # variabel instance
         self.name = name
         self.price = price
-
+    
+    # method instance
     def calculate_discount(self, discount):
         pass
 
-class DigitalProduct(Product):
+    # method instance
+    def info(self):
+        print(f"name: {self.name} price: {self.price}")
+
+class DigitalProduct(Product): #subclass
+    # inisialisasi
     def __init__(self, name, price, size):
+        # variabel instance
         super().__init__(name, price)
         self.size = size
-
+    
+    # methdo instance
     def calculate_discount(self, discount):
         self.price -= (self.price * discount/100)
+    
+    # method instance
+    def info(self):
+        print(f"Harga {self.name} menjadi Rp{self.price:,}")
 
-class PhysicalProduct(Product):
+class PhysicalProduct(Product): #subclass
+    # inisialisasi
     def __init__(self, name, price, weight):
+        # variabel instance
         super().__init__(name, price)
         self.weight = weight
-
+    
+    # method instance
     def calculate_discount(self, discount):
         self.price -= (self.price * discount/100) + (self.weight * 0.1)
+    
+    # method instance
+    def info(self):
+        print(f"Harga {self.name} menjadi Rp{self.price:,}")
 
 # objek dari masing-masing kelas
-digital_product = DigitalProduct("Ebook", 100, 20)
-physical_product = PhysicalProduct("Buku", 50, 0.5)
+digital_product = DigitalProduct("Ebook", 100_000, 20)
+physical_product = PhysicalProduct("Buku", 50_000, 0.5)
 
 # memanggil metode calculate_discount dari masing-masing objek
 digital_product.calculate_discount(10)
-physical_product.calculate_discount(10) 
+digital_product.info()
+# Output:
+# Harga Ebook menjadi Rp90,000.0
+
+physical_product.calculate_discount(10)
+physical_product.info()
+# Output:
+# Harga Buku menjadi Rp44,999.95
