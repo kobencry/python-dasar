@@ -8,3 +8,29 @@
 # kita dapat menggunakan modul abc dan mendefinisikan abstract method menggunakan decorator @abstractmethod. 
 # Abstract method adalah sebuah method dalam kelas yang hanya dideklarasikan namun tidak diimplementasikan, 
 # sehingga harus diimplementasikan di kelas turunannya.
+
+# Berikut adalah contoh implementasi sebuah abstract class pada Python:
+from abc import ABC, abstractmethod
+
+class Kendaraan(ABC):
+    @abstractmethod
+    def jumlah_roda(self):
+        pass
+
+class Mobil(Kendaraan):
+    def jumlah_roda(self):
+        print("Mobil memiliki 4 roda")
+
+class Motor(Kendaraan):
+    def jumlah_roda(self):
+        print("Motor memiliki 2 roda")
+
+mobil = Mobil()
+mobil.jumlah_roda()
+# Output:
+# Mobil memiliki 4 roda
+
+motor = Motor()
+motor.jumlah_roda()
+# Output:
+# Motor memiliki 2 roda
