@@ -1,4 +1,4 @@
-# method khusus __abs__ adalah method khusus dalam Python 
+# Magic method __abs__ adalah method khusus dalam Python 
 # yang digunakan untuk mengimplementasikan fungsi bawaan abs() untuk sebuah objek dari sebuah kelas. 
 # method ini memungkinkan Anda mendefinisikan perilaku dari fungsi abs() 
 # ketika diterapkan pada instance kelas yang Anda buat.
