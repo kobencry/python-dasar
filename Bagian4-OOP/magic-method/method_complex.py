@@ -24,12 +24,12 @@ print(complex(x))
 # Output:
 # (2+3j)
 
-y = Nilai(-5, 2)
+y = Nilai(-5, 2+3j)
 print(y.__complex__())
 # Output:
-# (-5+2j)
+# (-8+2j)
 
 # menggunakan fungsi complex()
 print(complex(y))
 # Output:
-# (-5+2j)
+# (-8+2j)
