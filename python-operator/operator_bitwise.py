@@ -70,9 +70,11 @@ print(x ^ y)            # 2
 x = 5
 y = 7
 print(f"x = {x:08b}")    # x = 00000101
-print(f"y = {y:08b}")    # y = 00000111
 print('-'*12, 'NOT')     # ------------ NOT
 print(f"x = {~x:08b}")   # x = -0000110
+
+print(f"y = {y:08b}")    # y = 00000111
+print('-'*12, 'NOT')     # ------------ NOT
 print(f"y = {~y:08b}")   # y = -0001000
 print('x = ', int('-0000110', base=2))   # x = -6
 print('y = ', int('-0001000', base=2))   # y = -8
