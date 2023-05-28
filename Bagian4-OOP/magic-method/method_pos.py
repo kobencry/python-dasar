@@ -20,3 +20,7 @@ x = Positif({'coffe': 20, 'drink': 0, 'salt': -5})
 print(+x)
 # Output:
 # Counter({'coffe': 20})
+
+# Perlu dicatat bahwa implementasi __pos__ pada kelas dapat bervariasi 
+# tergantung pada kebutuhan dan logika yang ingin Anda terapkan pada objek Anda.
+# Contoh di atas hanya merupakan salah satu contoh sederhana dari penggunaan method __pos__.
