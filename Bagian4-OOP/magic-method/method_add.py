@@ -37,6 +37,7 @@ print(hasil.nilai)
 # ['alice', 'carl', 'eliot', 'geral', 'hello world']
 
 
+# Contoh menggunakan 2 attribute
 class Tambah:
     def __init__(self, x, y):
         self.x = x
