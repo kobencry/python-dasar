@@ -16,6 +16,7 @@ class Kurang:
     def __sub__(self, other):
         return Kurang(self.nilai - other.nilai)
 
+# membuat objek Kurang
 obj1 = Kurang(50)
 obj2 = Kurang(30)
 
@@ -24,7 +25,7 @@ print(hasil.nilai)
 # Output:
 # 20
 
-# menggunakan tipe data string dan set
+# membuat objek Kurang menggunakan tipe data string dan set
 obj1 = Kurang({'alice', 'carl', 'eliot'})
 obj2 = Kurang({'carl'})
 
@@ -42,6 +43,7 @@ class Kurang:
     def __sub__(self, other):
         return Kurang(self.x - other.x, self.y - other.y)
 
+# membuat objek Kurang
 obj1 = Kurang(50, 20)
 obj2 = Kurang(5, 2)
 

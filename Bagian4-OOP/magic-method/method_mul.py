@@ -14,4 +14,17 @@ class Kali:
         self.nilai = nilai
 
     def __mul__(self, other):
-        return 
+        return Kali(self.nilai * other.nilai)
+
+# membuat objek Kali
+obj1 = Kali(2)
+obj2 = Kali(3)
+
+# melakukan operasi perkalian menggunakan operator *
+hasil = obj1 * obj2
+print(hasil.nilai)
+# Output:
+# 6
+
+
+
