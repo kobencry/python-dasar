@@ -16,9 +16,11 @@ class Tambah:
     def __add__(self, other):
         return Tambah(self.nilai + other.nilai)
 
+# membuat objek Tambah
 x = Tambah(10)
 y = Tambah(20)
 
+# menjumlahkan dari kedua objek
 hasil = x + y
 
 print(hasil.nilai)
@@ -43,6 +45,7 @@ class Tambah:
     def __add__(self, other):
         return Tambah(self.x + other.x, self.y + other.y)
 
+# membuat objek Tambah
 obj1 = Tambah(1, 2)
 obj2 = Tambah(40, 60)
 
