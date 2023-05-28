@@ -49,4 +49,8 @@ print(hasil)
 hasil = obj1 * obj2
 print(hasil.x)
 # Output:
+# 10
 
+print(hasil.y)
+# Output:
+# 18
