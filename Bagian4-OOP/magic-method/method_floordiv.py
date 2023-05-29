@@ -20,7 +20,30 @@ class Floordiv:
 obj1 = Floordiv(10)
 obj2 = Floordiv(2)
 
+# pembagian bulat antara dua objek obj1 dengan obj2
+hasil = obj1 // obj2
+print(hasil.nilai)
+# Output:
+# 5
+
+class Fraction:
+    def __init__(self, nilai):
+        self.nilai = nilai
+
+    def __floordiv__(self, other):
+        if type(self.nilai) == list:
+            hasil = []
+            for i, j in zip(self.nilai, other.nilai):
+                hasil.append(i // j)
+            return hasil
+        else:
+            return Fraction(self.nilai // other.nilai)
+
+# membuat objek Fraction
+obj1 = Fraction([10, 20, 30])
+obj2 = Fraction([2, 5, 6])
+
 hasil = obj1 // obj2
 print(hasil)
 # Output:
-# 
+# [5, 4, 5]
