@@ -34,5 +34,3 @@ class Fraction:
 
     def __truediv__(self, other):
         return Fraction(self.x / other.x, self.y / other.y)
-
-
