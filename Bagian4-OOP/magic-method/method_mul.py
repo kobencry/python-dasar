@@ -2,6 +2,11 @@
 # yang digunakan untuk mengimplementasikan operasi perkalian (*) pada objek.
 # method ini memungkinkan objek untuk berperilaku seperti tipe data bawaan yang mendukung operasi perkalian.
 
+# Syntax:
+# __mul__(self, other)
+# method __mul__ dijalankan saat operator * digunakan pada objek.
+# method ini menerima dua parameter: self (objek saat ini) dan other (objek yang dikalikan dengan objek saat ini)
+
 # Ketika Anda menggunakan operator perkalian (*) antara dua objek,
 # Python akan mencari dan memanggil magic method __mul__ pada objek pertama,
 # dan meneruskan objek kedua sebagai argumen.

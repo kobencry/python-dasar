@@ -27,5 +27,12 @@ print(hasil.nilai)
 # Output:
 # 5.0
 
+class Fraction:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
 
-        
+    def __truediv__(self, other):
+        return Fraction(self.x / other.x, self.y / other.y)
+
+
