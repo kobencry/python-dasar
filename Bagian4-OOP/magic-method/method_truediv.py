@@ -39,3 +39,23 @@ class Fraction:
 
     def __truediv__(self, other):
         return Fraction(self.x / other.x, self.y / other.y)
+
+# membuat objek Fraction
+obj1 = Fraction(100, 20)
+obj2 = Fraction(2, 5)
+
+# membagi objek dari obj1.x dengan obj1.y
+hasil = obj1.x / obj1.y # 100 / 20
+print(hasil)
+# Output:
+# 5.0
+
+# membagi objek dari obj1 dengan obj2
+hasil = obj1 / obj2
+print(hasil.x)
+# Output:
+# 50.0
+
+print(hasil.y)
+# Output:
+# 4.0
