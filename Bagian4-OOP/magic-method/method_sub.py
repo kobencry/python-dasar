@@ -2,6 +2,12 @@
 # yang digunakan untuk mengimplementasikan operasi pengurangan (-) pada objek.
 # method ini memungkinkan objek untuk berperilaku seperti tipe data bawaan yang mendukung operasi pengurangan.
 
+# Syntax:
+# __sub__(self, other)
+# Metode __sub__ dijalankan ketika operator - digunakan pada objek.
+# Metode ini menerima dua parameter: self (objek saat ini) dan other (objek yang dikurangkan).
+# nama parameter "other" bisa diganti dengan nama apapun 
+
 # Ketika Anda menggunakan operator pengurangan (-) antara dua objek,
 # Python akan mencari dan memanggil magic method __sub__ pada objek pertama,
 # dan meneruskan objek kedua sebagai argumen.
