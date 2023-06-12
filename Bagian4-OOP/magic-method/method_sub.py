@@ -4,8 +4,8 @@
 
 # Syntax:
 # __sub__(self, other)
-# Metode __sub__ dijalankan ketika operator - digunakan pada objek.
-# Metode ini menerima dua parameter: self (objek saat ini) dan other (objek yang dikurangkan).
+# method __sub__ dijalankan ketika operator - digunakan pada objek.
+# method ini menerima dua parameter: self (objek saat ini) dan other (objek yang dikurangkan).
 # nama parameter "other" bisa diganti dengan nama apapun 
 
 # Ketika Anda menggunakan operator pengurangan (-) antara dua objek,

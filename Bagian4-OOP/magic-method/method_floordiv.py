@@ -2,6 +2,12 @@
 # yang digunakan untuk mengimplementasikan operasi pembagian bulat (floor division) (//) pada objek.
 # method ini memungkinkan objek untuk berperilaku seperti tipe data bawaan yang mendukung operasi pembagian bulat.
 
+# Syntax:
+# __floordiv__(self, other)
+# method __floordiv__ dijalankan ketika operator // digunakan pada objek.
+# method ini menerima dua parameter: self (objek saat ini) dan other (objek yang digunakan sebagai pembagi).
+# nama parameter "other" bisa diganti dengan nama apapun 
+
 # Ketika Anda menggunakan operator pembagian bulat (//) antara dua objek,
 # Python akan mencari dan memanggil magic method __floordiv__ pada objek pertama,
 # dan meneruskan objek kedua sebagai argumen. 
