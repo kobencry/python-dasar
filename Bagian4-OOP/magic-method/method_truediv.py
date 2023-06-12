@@ -5,8 +5,8 @@
 
 # Syntax:
 # __truediv__(self, other)
-# Metode __truediv__ dijalankan saat operator / digunakan pada objek.
-# Metode ini menerima dua parameter: self (objek saat ini) dan other (objek yang dibagi dengan objek saat ini).
+# method __truediv__ dijalankan saat operator / digunakan pada objek.
+# method ini menerima dua parameter: self (objek saat ini) dan other (objek yang dibagi dengan objek saat ini).
 
 # Ketika method __truediv__ didefinisikan dalam sebuah kelas, 
 # kita dapat mengontrol bagaimana objek dari kelas tersebut berperilaku saat dibagi dengan objek lain.
