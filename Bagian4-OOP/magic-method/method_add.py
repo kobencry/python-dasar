@@ -2,6 +2,12 @@
 # yang digunakan untuk mengimplementasikan operasi penjumlahan (+) pada objek.
 # method ini memungkinkan objek untuk berperilaku seperti tipe data bawaan yang mendukung operasi penjumlahan.
 
+# Syntax:
+# __add__(self, other)
+# method __add__ dijalankan saat operator + digunakan pada objek.
+# method ini menerima dua parameter: self (objek saat ini) dan other (objek yang ditambahkan dengan objek saat ini).
+# nama parameter "other" bisa diganti dengan nama apapun 
+
 # Ketika Anda menggunakan operator penjumlahan (+) antara dua objek,
 # Python akan mencari dan memanggil magic method __add__ pada objek pertama,
 # dan meneruskan objek kedua sebagai argumen.
