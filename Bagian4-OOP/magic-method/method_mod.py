@@ -11,3 +11,24 @@
 # method __mod__ dijalankan ketika operator % digunakan pada objek.
 # method ini menerima dua parameter: self (objek saat ini) dan other (objek yang digunakan sebagai modulator).
 # nama parameter "other" bisa diganti dengan nama apapun
+
+# Berikut adalah contoh sederhana untuk mendemonstrasikan penggunaan method __mod__ dalam Python:
+
+class Modulus:
+    def __init__(self, nilai):
+        self.nilai = nilai
+
+    def __mod__(self, other):
+        if isinstance(other, Modulus):
+            return self.nilai % other.nilai
+        else:
+            return self.nilai % other
+
+obj1 = Modulus(10)
+obj2 = Modulus(20)
+
+hasil = obj1 % obj2
+print(hasil)
+# Output:
+# 10
+
