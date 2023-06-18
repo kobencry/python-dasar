@@ -24,11 +24,24 @@ class Modulus:
         else:
             return self.nilai % other
 
+# membuat objek Modulus
 obj1 = Modulus(10)
 obj2 = Modulus(20)
 
+# modulus antara dua objek obj1 dengan obj2
 hasil = obj1 % obj2
 print(hasil)
 # Output:
 # 10
 
+# modulus antara obj1 dengan angka
+hasil = obj1 % 3
+print(hasil)
+# Output:
+# 1
+
+# modulus antara obj2 dengan angka
+hasil = obj2 % 3
+print(hasil)
+# Output:
+# 2
