@@ -8,4 +8,6 @@
 
 # Syntax:
 # __mod__(self, other)
-
+# method __mod__ dijalankan ketika operator % digunakan pada objek.
+# method ini menerima dua parameter: self (objek saat ini) dan other (objek yang digunakan sebagai modulator).
+# nama parameter "other" bisa diganti dengan nama apapun
