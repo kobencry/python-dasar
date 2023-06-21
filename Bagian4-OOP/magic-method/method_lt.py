@@ -8,3 +8,38 @@
 # dan mengembalikan nilai False jika tidak.
 
 # Berikut adalah contoh penggunaan method __lt__ dalam sebuah kelas:
+
+class Mahasiswa:
+    def __init__(self, nilai):
+        self.nilai = nilai
+
+    def __lt__(self, other):
+        # Jika objek other juga merupakan objek dari kelas Mahasiswa 
+        if isinstance(other, Mahasiswa):
+            return self.nilai < other.nilai
+
+        # Jika objek other bukan merupakan objek Mahasiswa, 
+        # kita asumsikan bahwa other adalah bilangan bulat atau bilangan desimal. 
+        else:
+            return self.nilai < other
+
+# membuat objek Mahasiswa
+mhs1 = Mahasiswa(22)
+mhs2 = Mahasiswa(28)
+
+# membandingkan antara dua objek mhs1 dengan mhs2 dari kelas Mahasiswa
+hasil = mhs1 < mhs2
+print(hasil)
+# Output:
+# True
+
+hasil = mhs2 < mhs1
+print(hasil)
+# Output:
+# False
+
+# membandingkan antara mhs1 dengan bilangan bulat
+hasil = mhs1 < 50
+print(hasil)
+# Output:
+# True
