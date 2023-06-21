@@ -19,8 +19,11 @@ class Modulus:
         self.nilai = nilai
 
     def __mod__(self, other):
+        # Jika objek other juga merupakan objek dari kelas Modulus
         if isinstance(other, Modulus):
             return self.nilai % other.nilai
+        # Jika objek other bukan merupakan objek Modulus, 
+        # kita asumsikan bahwa other adalah bilangan bulat atau bilangan desimal. 
         else:
             return self.nilai % other
 
