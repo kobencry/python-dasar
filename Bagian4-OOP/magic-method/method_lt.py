@@ -2,6 +2,12 @@
 # yang digunakan untuk mendefinisikan perilaku objek saat dibandingkan dengan operator < (less than/kurang dari).
 # method ini memungkinkan kita untuk membandingkan dua objek dan menentukan apakah objek pertama lebih kecil daripada objek kedua.
 
+# Syntax:
+# __lt__(self, other)
+# method __lt__ dijalankan ketika operator < digunakan pada objek.
+# method ini menerima dua parameter: self (objek saat ini) dan other (objek yang digunakan sebagai less than/kurang dari).
+# nama parameter "other" bisa diganti dengan nama apapun
+
 # Ketika kita menggunakan operator < antara dua objek, 
 # Python akan mencari dan menggunakan method __lt__ untuk melakukan perbandingan.
 # method ini mengembalikan nilai True jika objek pertama kurang dari objek kedua dalam konteks perbandingan yang didefinisikan,
