@@ -27,3 +27,18 @@ class Mahasiswa:
         # kita asumsikan bahwa other adalah bilangan bulat atau bilangan desimal. 
         else:
             return self.nilai <= other
+
+# membuat objek Mahasiswa
+mhs1 = Mahasiswa(20)
+mhs2 = Mahasiswa(30)
+
+# membandingkan antara dua objek mhs1 dengan mhs2 dari kelas Mahasiswa
+hasil = mhs1 <= mhs2
+print(hasil)
+# Output:
+# True
+
+hasil = mhs2 <= mhs1
+print(hasil)
+# Output:
+# False
