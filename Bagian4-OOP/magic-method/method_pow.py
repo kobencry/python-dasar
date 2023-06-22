@@ -35,13 +35,13 @@ print(hasil)
 # Output:
 # 25
 
-# memangkatkan antara obj1 dengan bilangan bulat
+# memangkatkan antara objek obj1 dengan bilangan bulat
 hasil = obj1 ** 3
 print(hasil)
 # Output:
 # 125
 
-# memangkatkan antara obj2 dengan bilangan bulat
+# memangkatkan antara objek obj2 dengan bilangan bulat
 hasil = obj2 ** 3
 print(hasil)
 # Output:
