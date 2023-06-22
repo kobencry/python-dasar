@@ -44,7 +44,7 @@ print(hasil)
 # Output:
 # False
 
-# membandingkan antara mhs1 dengan bilangan bulat
+# membandingkan antara objek mhs1 dengan bilangan bulat
 hasil = mhs1 < 50
 print(hasil)
 # Output:
