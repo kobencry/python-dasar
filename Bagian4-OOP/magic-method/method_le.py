@@ -13,3 +13,17 @@
 # dan mengembalikan nilai False jika tidak.
 
 # Berikut adalah contoh penggunaan method __le__ dalam sebuah kelas:
+
+class Mahasiswa:
+    def __init__(self, nilai):
+        self.nilai = nilai
+
+    def __le__(self, other):
+        # Jika objek other juga merupakan objek dari kelas Mahasiswa 
+        if isinstance(other, Mahasiswa):
+            return self.nilai <= other.nilai
+
+        # Jika objek other bukan merupakan objek Mahasiswa, 
+        # kita asumsikan bahwa other adalah bilangan bulat atau bilangan desimal. 
+        else:
+            return self.nilai <= other
