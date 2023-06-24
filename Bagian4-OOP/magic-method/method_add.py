@@ -26,37 +26,65 @@ class Tambah:
         self.nilai = nilai
 
     def __add__(self, other):
-        return Tambah(self.nilai + other.nilai)
+        # Jika objek other juga merupakan objek dari kelas Mahasiswa 
+        if isinstance(other, Tambah):
+            return self.nilai + other.nilai
+        
+        # Jika objek other bukan merupakan objek Mahasiswa,
+        # kita asumsikan bahwa other adalah objek lain (tipe data apapun).
+        else:
+            return self.nilai + other
 
 # membuat objek Tambah
 x = Tambah(10)
 y = Tambah(20)
 
-# menjumlahkan dari kedua objek
+# menjumlahkan antara dua objek x dengan y dari kelas Tambah
 hasil = x + y
 
-print(hasil.nilai)
+print(hasil)
 # Output:
 # 30
 
-# menggunakan tipe data string dan list
+# menggunakan tipe data list yang berisi string
 nama1 = Tambah(['alice', 'carl'])
 nama2 = Tambah(['eliot', 'geral', 'hello world'])
 
+# menambahkan antara dua objek nama1 dengan nama2 dari kelas Tambah
 hasil = nama1 + nama2
-print(hasil.nilai)
+print(hasil)
 # Output:
 # ['alice', 'carl', 'eliot', 'geral', 'hello world']
 
+# membandingkan dengan cara penggunaan magic method __add__()
+# Syntax:
+# object.__add__(object/value)
 
-# Contoh menggunakan 2 attribute
+hasil = x.__add__(y)
+print(hasil)
+# Output:
+# 30
+
+hasil = nama1.__add__(nama2)
+print(hasil)
+# Output:
+# ['alice', 'carl', 'eliot', 'geral', 'hello world']
+
+# Contoh penggunaan magic method __add__() dengan 2 atribut
 class Tambah:
     def __init__(self, x, y):
         self.x = x
         self.y = y
 
     def __add__(self, other):
-        return Tambah(self.x + other.x, self.y + other.y)
+        # Jika objek other juga merupakan objek dari kelas Mahasiswa
+        if isinstance(other, Tambah):
+            return Tambah(self.x + other.x, self.y + other.y)
+        
+        # Jika objek other bukan merupakan objek Mahasiswa,
+        # kita asumsikan bahwa other adalah objek lain (tipe data apapun).
+        else:
+            return Tambah(self.x + other, self.y + other)
 
 # membuat objek Tambah
 obj1 = Tambah(1, 2)
@@ -76,6 +104,19 @@ print(hasil)
 
 # menjumlahkan objek dari obj1 dengan obj2 
 hasil = obj1 + obj2
+print(hasil.x)
+# Output:
+# 41
+
+print(hasil.y)
+# Output:
+# 62
+
+# membandingkan dengan cara penggunaan magic method __add__()
+# Syntax:
+# object.__add__(object/value)
+
+hasil = obj1.__add__(obj2)
 print(hasil.x)
 # Output:
 # 41
