@@ -63,3 +63,9 @@ hasil = mhs2.__lt__(mhs1)
 print(hasil)
 # Output
 # False
+
+# membandingkan antara objek mhs1 dengan value "bilangan bulat"
+hasil = mhs1.__lt__(50)
+print(hasil)
+# Output:
+# True

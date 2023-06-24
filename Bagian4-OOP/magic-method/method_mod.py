@@ -48,3 +48,18 @@ hasil = obj2 % 3
 print(hasil)
 # Output:
 # 2
+
+# modulus dengan cara penggunaan magic method __mod__()
+# Syntax:
+# object.__mod__(object/value)
+
+hasil = obj1.__mod__(obj2)
+print(hasil)
+# Output:
+# 10
+
+# modulus antara dua objek obj1 dengan value "bilangan bulat"
+hasil = obj1.__mod__(3)
+print(hasil)
+# Output:
+# 1
