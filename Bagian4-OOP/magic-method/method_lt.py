@@ -58,3 +58,8 @@ hasil = mhs1.__lt__(mhs2)
 print(hasil)
 # Output:
 # True
+
+hasil = mhs2.__lt__(mhs1)
+print(hasil)
+# Output
+# False
