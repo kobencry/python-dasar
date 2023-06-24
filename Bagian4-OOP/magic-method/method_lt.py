@@ -49,3 +49,12 @@ hasil = mhs1 < 50
 print(hasil)
 # Output:
 # True
+
+# membandingkan dengan cara penggunaan magic method __lt__()
+# Syntax:
+# object.__lt__(object/value)
+
+hasil = mhs1.__lt__(mhs2)
+print(hasil)
+# Output:
+# True
