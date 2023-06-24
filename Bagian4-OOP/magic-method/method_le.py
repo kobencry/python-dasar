@@ -48,3 +48,17 @@ hasil = mhs1 <= 50
 print(hasil)
 # Output:
 # True
+
+# membandingkan dengan cara penggunaan magic method __le__()
+# Syntax:
+# object.__le__(object/value)
+
+hasil = mhs1.__le__(mhs2)
+print(hasil)
+# Output:
+# True
+
+hasil = mhs2.__le__(mhs1)
+print(hasil)
+# Output:
+# False
