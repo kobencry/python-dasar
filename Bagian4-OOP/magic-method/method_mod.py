@@ -23,7 +23,7 @@ class Modulus:
         if isinstance(other, Modulus):
             return self.nilai % other.nilai
         # Jika objek other bukan merupakan objek Modulus, 
-        # kita asumsikan bahwa other adalah bilangan bulat atau bilangan desimal. 
+        # kita asumsikan bahwa other adalah objek lain (tide data apapun). 
         else:
             return self.nilai % other
 
