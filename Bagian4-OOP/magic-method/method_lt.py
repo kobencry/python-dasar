@@ -25,7 +25,7 @@ class Mahasiswa:
             return self.nilai < other.nilai
 
         # Jika objek other bukan merupakan objek Mahasiswa, 
-        # kita asumsikan bahwa other adalah bilangan bulat atau bilangan desimal. 
+        # kita asumsikan bahwa other adalah objek lain (tipe data apapun). 
         else:
             return self.nilai < other
 
