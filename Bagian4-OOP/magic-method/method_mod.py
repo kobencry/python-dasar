@@ -1,19 +1,25 @@
-# Magic method __mod__ adalah method khusus dalam Python 
-# yang digunakan untuk mengatur perilaku operasi modulo (%) antara dua objek.
-# method ini memungkinkan kita untuk mendefinisikan cara objek dari kelas yang kita buat berperilaku saat dioperasikan dengan operator modulo.
+# Dalam Python, magic method __mod__() adalah method khusus yang digunakan untuk mengimplementasikan operator modulus (%) pada suatu objek. 
+# method ini memungkinkan Anda untuk menghitung sisa hasil pembagian antara dua objek.
 
-# Ketika operator % digunakan antara dua objek,
-# Python akan mencari dan menggunakan method __mod__ untuk menentukan hasil modulo tersebut.
-# method ini memungkinkan kita mengendalikan bagaimana objek dari kelas yang kita definisikan akan dikenai operasi modulo.
+# Ketika operator % digunakan untuk membagi dua objek,
+# Python secara otomatis memanggil method __mod__() pada objek yang pertama, 
+# dan mengirimkan objek kedua sebagai argumen. 
+# method ini harus mengembalikan hasil modulus dari objek pertama terhadap objek kedua.
+
+# Deskripsi:
+# method __mod__() digunakan untuk mengimplementasikan operator modulus (%). 
+# method ini harus mengembalikan sisa hasil pembagian objek saat ini terhadap objek kedua.
 
 # Syntax:
-# __mod__(self, other)
-# method __mod__ dijalankan ketika operator % digunakan pada objek.
-# method ini menerima dua parameter: self (objek saat ini) dan other (objek yang digunakan sebagai modulator).
+# def __mod__(self, other):
+#   Implementasi logika perhitungan modulus
+
+# Parameter:
+# self: Merujuk pada objek saat ini.
+# other: Merupakan objek kedua yang akan digunakan dalam perhitungan modulus.
 # nama parameter "other" bisa diganti dengan nama apapun
 
-# Berikut adalah contoh sederhana untuk mendemonstrasikan penggunaan method __mod__ dalam Python:
-
+# Contoh penggunaan magic method __mod__():
 class Modulus:
     def __init__(self, nilai):
         self.nilai = nilai

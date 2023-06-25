@@ -1,20 +1,27 @@
-# Magic method __lt__ (less than/kurang dari) adalah method khusus dalam Python 
-# yang digunakan untuk mendefinisikan perilaku objek saat dibandingkan dengan operator < (less than/kurang dari).
-# method ini memungkinkan kita untuk membandingkan dua objek dan menentukan apakah objek pertama lebih kecil daripada objek kedua.
+# Dalam Python, magic method __lt__() adalah method khusus yang digunakan untuk mengimplementasikan operator kurang dari < pada suatu objek. 
+# method ini memungkinkan Anda untuk menentukan hubungan kurang dari antara dua objek.
+
+# Ketika operator < digunakan untuk membandingkan dua objek, 
+# Python secara otomatis memanggil method __lt__() pada objek yang pertama, 
+# dan mengirimkan objek kedua sebagai argumen. 
+# method ini harus mengembalikan True jika objek pertama kurang dari objek kedua,
+# dan False jika tidak.
+
+# Deskripsi:
+# method __lt__() digunakan untuk mengimplementasikan operator < kurang dari.
+# method ini harus mengembalikan True jika objek saat ini kurang dari objek kedua, 
+# dan False jika tidak.
 
 # Syntax:
-# __lt__(self, other)
-# method __lt__ dijalankan ketika operator < digunakan pada objek.
-# method ini menerima dua parameter: self (objek saat ini) dan other (objek yang digunakan sebagai less than/kurang dari).
+# def __lt__(self, other):
+#   Implementasi logika perbandingan kurang dari
+
+# Parameter:
+# self: Merujuk pada objek saat ini.
+# other: Merupakan objek kedua yang akan dibandingkan dengan objek saat ini.
 # nama parameter "other" bisa diganti dengan nama apapun
 
-# Ketika kita menggunakan operator < antara dua objek, 
-# Python akan mencari dan menggunakan method __lt__ untuk melakukan perbandingan.
-# method ini mengembalikan nilai True jika objek pertama kurang dari objek kedua dalam konteks perbandingan yang didefinisikan,
-# dan mengembalikan nilai False jika tidak.
-
-# Berikut adalah contoh penggunaan method __lt__ dalam sebuah kelas:
-
+# Contoh penggunaan magic method __lt__():
 class Mahasiswa:
     def __init__(self, nilai):
         self.nilai = nilai

@@ -1,19 +1,27 @@
-# Magic method __le__ (less than or equal to/kurang dari sama dengan) adalah method khusus dalam Python
-# yang digunakan untuk mendefinisikan perilaku objek saat dibandingkan dengan operator <= (kurang dari atau sama dengan).
-# method ini memungkinkan kita untuk membandingkan dua objek dan menentukan apakah objek pertama kurang dari atau sama dengan objek kedua.
+# Dalam Python, magic method __le__() adalah method khusus yang digunakan untuk mengimplementasikan operator kurang dari sama dengan <= pada suatu objek. 
+# method ini memungkinkan Anda untuk menentukan hubungan kurang dari sama dengan antara dua objek.
+
+# Ketika operator <= digunakan untuk membandingkan dua objek, 
+# Python secara otomatis memanggil method __le__() pada objek yang pertama, 
+# dan mengirimkan objek kedua sebagai argumen. 
+# method ini harus mengembalikan True jika objek pertama kurang dari atau sama dengan objek kedua,
+# dan False jika tidak.
+
+# Deskripsi:
+# method __le__() digunakan untuk mengimplementasikan operator <= "kurang dari sama dengan". 
+# method ini harus mengembalikan True jika objek saat ini kurang dari atau sama dengan objek kedua, 
+# dan False jika tidak.
 
 # Syntax:
-# __le__(self, other)
-# method __le__ dijalankan ketika operator <= digunakan pada objek.
-# method ini menerima dua parameter: self (objek saat ini) dan other (objek yang digunakan sebagai kurang dari sama dengan).
+# def __le__(self, other):
+#   Implementasi logika perbandingan kurang dari sama dengan
+
+# Parameter:
+# self: Merujuk pada objek saat ini.
+# other: Merupakan objek kedua yang akan dibandingkan dengan objek saat ini.
 # nama parameter "other" bisa diganti dengan nama apapun
 
-# Ketika kita menggunakan operator <= antara dua objek, Python akan mencari dan menggunakan method __le__ untuk melakukan perbandingan.
-# method ini mengembalikan nilai True jika objek pertama kurang dari atau sama dengan objek kedua dalam konteks perbandingan yang didefinisikan, 
-# dan mengembalikan nilai False jika tidak.
-
-# Berikut adalah contoh penggunaan method __le__ dalam sebuah kelas:
-
+# Contoh penggunaan magic method __le__():
 class Mahasiswa:
     def __init__(self, nilai):
         self.nilai = nilai
