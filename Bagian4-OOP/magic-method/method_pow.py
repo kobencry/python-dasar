@@ -1,16 +1,20 @@
-# Magic method __pow__ dalam Python digunakan untuk mengimplementasikan perilaku operator pangkat (**) pada objek.
+# Dalam Python, Magic method __pow__() adalah metode khusus dalam Python 
+# yang digunakan untuk mengimplementasikan operasi pangkat (**) pada suatu objek. 
+# Metode ini memungkinkan Anda untuk menentukan perilaku pangkat kustom pada objek Anda.
+
+# Definisi:
+# Metode __pow__() digunakan untuk mengimplementasikan operasi pangkat (**) pada objek. 
+# Metode ini harus mengembalikan hasil perpangkatan objek saat ini dengan objek yang diberikan.
 
 # Syntax:
-# __pow__(self, other)
-# method __pow__ dijalankan ketika operator ** digunakan pada objek.
-# method ini menerima dua parameter: self (objek saat ini) dan other (objek yang digunakan sebagai pangkat).
-# nama parameter "other" bisa diganti dengan nama apapun
+# def __pow__(self, other):
+#   Implementasi logika pangkat
 
-# Ketika kita menggunakan operator pangkat pada dua objek atau objek dengan bilangan lainnya, 
-# Python akan mencari dan menggunakan magic method __pow__ untuk menghitung hasil pangkat.
+# Parameter:
+# self: Merujuk pada objek saat ini.
+# other: Objek yang akan digunakan sebagai pangkat.
 
-# Berikut adalah contoh penggunaan magic method __pow__ dalam sebuah kelas:
-
+# Contoh penggunaan magic method __pow__():
 class Pangkat:
     def __init__(self, nilai):
         self.nilai = nilai
