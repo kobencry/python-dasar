@@ -21,12 +21,12 @@ class Menghitung:
         self.nilai = nilai
     
     def __iadd__(self, other):
-        # Jika objek other juga merupakan objek dari kelas Mahasiswa
+        # Jika objek other juga merupakan objek dari kelas Menghitung
         if isinstance(other, Menghitung):
             self.nilai += other.nilai
             return self
         
-        # Jika objek other bukan merupakan objek Mahasiswa, 
+        # Jika objek other bukan merupakan objek Menghitung, 
         # kita asumsikan bahwa other adalah objek lain (tipe data apapun).
         else:
             self.nilai += other
