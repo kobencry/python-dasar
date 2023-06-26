@@ -1,10 +1,10 @@
-# Dalam Python, magic method __iadd__() adalah metode khusus dalam Python 
+# Dalam Python, magic method __iadd__() adalah method khusus dalam Python 
 # yang digunakan untuk mengimplementasikan operasi penjumlahan dan penugasan += pada suatu objek.
-# Metode ini memungkinkan Anda untuk menentukan perilaku penjumlahan dan penugasan kustom pada objek Anda.
+# method ini memungkinkan Anda untuk menentukan perilaku penjumlahan dan penugasan kustom pada objek Anda.
 
 # Definisi:
-# Metode __iadd__() digunakan untuk mengimplementasikan operasi penjumlahan dan penugasan += pada objek. 
-# Metode ini memodifikasi objek saat ini dengan menambahkannya dengan objek yang diberikan.
+# method __iadd__() digunakan untuk mengimplementasikan operasi penjumlahan dan penugasan += pada objek. 
+# method ini memodifikasi objek saat ini dengan menambahkannya dengan objek yang diberikan.
 
 # Syntax:
 # def __iadd__(self, other):
@@ -13,6 +13,7 @@
 # Parameter:
 # self: Merujuk pada objek saat ini.
 # other: Objek yang akan ditambahkan ke objek saat ini.
+# nama parameter "other" bisa diganti dengan nama apapun 
 
 # Contoh penggunaan magic method __iadd__():
 class Menghitung:
