@@ -50,3 +50,19 @@ hasil = obj2 ** 3
 print(hasil)
 # Output:
 # 8
+
+# memangkatkan dengan cara penggunaan magic method __pow__()
+# Syntax:
+# object.__pow__(object/value)
+
+# memangkatkan antara dua objek obj1 dengan obj2 dari kelas Pangkat
+hasil = obj1.__pow__(obj2)
+print(hasil)
+# Output:
+# 25
+
+# memangkatkan antara objek obj1 dengan value "bilangan bulat".
+hasil = obj1.__pow__(3)
+print(hasil)
+# Output:
+# 125
