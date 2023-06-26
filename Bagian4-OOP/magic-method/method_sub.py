@@ -1,9 +1,9 @@
-# Dalam Python, Magic method __sub__() adalah metode khusus dalam Python 
+# Dalam Python, Magic method __sub__() adalah method khusus dalam Python 
 # yang digunakan untuk mengimplementasikan operasi pengurangan (-) pada suatu objek.
-# Metode ini memungkinkan Anda untuk menentukan perilaku pengurangan kustom pada objek Anda.
+# method ini memungkinkan Anda untuk menentukan perilaku pengurangan kustom pada objek Anda.
 
 # Definisi:
-# Metode __sub__() digunakan untuk mengimplementasikan operasi pengurangan (-) pada objek. Metode ini mengembalikan hasil pengurangan antara objek saat ini dengan objek yang diberikan.
+# method __sub__() digunakan untuk mengimplementasikan operasi pengurangan (-) pada objek. method ini mengembalikan hasil pengurangan antara objek saat ini dengan objek yang diberikan.
 
 # Syntax:
 # def __sub__(self, other):
