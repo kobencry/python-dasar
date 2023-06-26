@@ -47,5 +47,22 @@ print(x.nilai)
 # Output:
 # 20
 
+# penjumlahan dan penugasan dengan cara penggunaan magic method __iadd__()
+# Syntax:
+# object.__iadd__(object/value)
+
 # membuat objek Menghitung
-obj = Menghitung(2)
+obj1 = Menghitung(50)
+obj2 = Menghitung(100)
+
+# penjumlahan dan penugasan antara dua objek obj1 dengan obj2 dari kelas Menghitung
+obj1.__iadd__(obj2)
+print(obj1.nilai)
+# Output:
+# 150
+
+# penjumlahan dan penugasan antara objek obj1 dengan value "bilangan bulat"
+obj1.__iadd__(200)
+print(obj1.nilai)
+# Output:
+# 350
