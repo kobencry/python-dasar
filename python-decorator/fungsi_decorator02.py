@@ -43,3 +43,10 @@ hasil = func_tambah(3)
 print(hasil)
 # Output:
 # 8
+
+# Ketika fungsi matematika(5) dipanggil, 
+# kita mendapatkan fungsi matematika dengan x=5, 
+# yang kemudian ditetapkan ke variabel func_tambah. 
+# Variabel ini sekarang dapat digunakan sebagai fungsi untuk menambahkan 5 pada suatu nilai.
+# Pada contoh di atas, pemanggilan fungsi func_tambah(3) akan menghasilkan 8, 
+# karena 5 ditambahkan dengan 3.
