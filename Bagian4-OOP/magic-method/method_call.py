@@ -72,3 +72,34 @@ obj(1, 2, a=3, b=4)
 # Output:
 # Objek dibuat
 # Objek dipanggil dengan argumen: (1, 2) {'a': 3, 'b': 4}
+
+# Berikut beberapa contoh tambahan menggunakan fungsi decorator:
+import time
+
+class root:
+    def __init__(self, func):
+        self.func = func
+        self.jumlah = 0
+
+    def __call__(self, *args, **kwargs):
+        self.jumlah += 1
+        print(f"\rMemanggil fungsi {self.func.__name__}: {self.jumlah}", end='', flush=True)
+        rv = self.func(*args, **kwargs)
+        return rv
+
+@root
+def fibonaci(n):
+    if n < 2:
+        return n
+    else:
+        #print(n)
+        return fibonaci(n - 1) + fibonaci(n - 2)
+
+start = time.perf_counter()
+fibonaci(20)
+end = time.perf_counter()
+
+result = end - start
+print(f"\ntimes: {result} second")
+# Output:
+# 
