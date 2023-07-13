@@ -102,4 +102,5 @@ end = time.perf_counter()
 result = end - start
 print(f"\ntimes: {result} second")
 # Output:
-# 
+# Memanggil fungsi fibonaci: 21891
+# times: 8.8199903 second
