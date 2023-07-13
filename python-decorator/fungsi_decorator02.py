@@ -6,3 +6,15 @@
 
 # Berikut adalah sintaks umum untuk mendefinisikan fungsi dekorator
 # mengunakan konsep Nested Functions:
+
+# contoh 1
+def func_luar():
+    def func_dalam():
+        return "hello world"
+    return func_dalam
+
+hasil = func_luar()
+hasil = hasil()
+print(hasil)
+# Output:
+# hello world
