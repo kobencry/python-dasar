@@ -29,3 +29,17 @@ hasil = func_luar()
 print(hasil)
 # Output:
 # hello alice
+
+# Berikut beberapa contoh tambahan:
+#----------------------------------
+# Contoh fungsi dengan argumen/parameter
+def matematika(x):
+    def tambah(y):
+        return x + y
+    return tambah
+
+func_tambah = matematika(5)
+hasil = func_tambah(3)
+print(hasil)
+# Output:
+# 8
