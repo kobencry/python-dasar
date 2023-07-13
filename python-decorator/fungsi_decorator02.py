@@ -18,3 +18,14 @@ hasil = hasil()
 print(hasil)
 # Output:
 # hello world
+
+# contoh 2
+def func_luar():
+    def func_dalam():
+        return "hello alice"
+    return func_dalam()
+
+hasil = func_luar()
+print(hasil)
+# Output:
+# hello alice
