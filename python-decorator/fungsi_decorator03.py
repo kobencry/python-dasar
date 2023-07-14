@@ -65,3 +65,5 @@ def data_mahasiswa(nama, usia, email):
     print(f"nama:{nama}, usia:{usia}, email:{email}")
 
 data_mahasiswa(nama='alice', usia=20, email='alice@gmail.com')
+# Output:
+# nama:alice, usia:20, email:alice@gmail.com
