@@ -38,3 +38,27 @@ hello()
 # Output:
 # fungsi decorator
 # fungsi hello
+
+# Berikut beberapa contoh tambahan:
+#----------------------------------
+# Contoh fungsi dengan argumen *args atau **kwargs
+def main(func):
+    def wrapper(*args, **kwargs):
+        print("hello world")
+        func(*args, **kwargs)
+    return wrapper
+
+@main
+def getNama(nama):
+    print(f"hello {nama}")
+
+getNama("Alice")
+# Output:
+# hello world
+# hello Alice
+
+# menggunakan argumen list dan dictionary
+getNama(['alice', 'carl', 'eliot'])
+# Output:
+# hello world
+# hello ['alice', 'carl', 'eliot']
