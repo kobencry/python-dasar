@@ -23,3 +23,18 @@ hello()
 # -- sebelum --
 # Hello World
 # -- setelah --
+
+# Contoh 2
+def func_luar(func_lain):
+    def func_dalam():
+        print("fungsi decorator")
+        func_lain()
+    return func_dalam
+
+@func_luar
+def hello():
+    print("fungsi hello")
+hello()
+# Output:
+# fungsi decorator
+# fungsi hello
