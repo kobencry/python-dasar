@@ -44,7 +44,6 @@ hello()
 # Contoh fungsi dengan argumen *args atau **kwargs
 def main(func):
     def wrapper(*args, **kwargs):
-        print("hello world")
         func(*args, **kwargs)
     return wrapper
 
@@ -54,11 +53,15 @@ def getNama(nama):
 
 getNama("Alice")
 # Output:
-# hello world
 # hello Alice
 
 # menggunakan argumen list dan dictionary
 getNama(['alice', 'carl', 'eliot'])
 # Output:
-# hello world
 # hello ['alice', 'carl', 'eliot']
+
+@main
+def data_mahasiswa(nama, usia, email):
+    print(f"nama:{nama}, usia:{usia}, email:{email}")
+
+data_mahasiswa(nama='alice', usia=20, email='alice@gmail.com')
