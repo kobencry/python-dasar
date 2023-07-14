@@ -67,3 +67,6 @@ def data_mahasiswa(nama, usia, email):
 data_mahasiswa(nama='alice', usia=20, email='alice@gmail.com')
 # Output:
 # nama:alice, usia:20, email:alice@gmail.com
+
+# Dengan menggunakan dekorator, kita dapat menambahkan logika tambahan sebelum dan setelah 
+# eksekusi fungsi yang asli secara efisien dan elegan.
