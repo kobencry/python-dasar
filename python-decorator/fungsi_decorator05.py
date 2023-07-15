@@ -61,3 +61,49 @@ input_user("Hello World!")
 # Hello World!
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # ******************************
+
+# Berikut beberapa contoh tambahan:
+import time
+
+# fungsi untuk menghitung jumlah yang di panggil
+def counter(func):
+    def wrapper(*args, **kwargs):
+        jumlah = callable(func)
+        result = func(*args, **kwargs)
+        wrapper.jumlah += jumlah
+        print(f"Memanggil fungsi {func.__name__}, {wrapper.jumlah} kali")
+        return result
+    wrapper.jumlah = 0
+    return wrapper
+
+# fungsi untuk menghitung jumlah waktu
+def ex_timer(func):
+    def wrapper(*args, **kwargs):
+        start_time = time.perf_counter()
+        result = func(*args, **kwargs)
+        end_time = time.perf_counter()
+        total_time = end_time - start_time
+        wrapper.total_time += total_time
+        return result
+    wrapper.total_time = 0.0
+    return wrapper
+
+@ex_timer
+@counter
+def faktorial(n):
+    """Menghitung bilangan faktorial dengan fungsi rekursif"""
+    if n == 1:
+        return n
+    else:
+        return (n * faktorial(n - 1))
+
+print(f"Hasil: {faktorial(5)}")
+print(f"Total time: {faktorial.total_time} seconds")
+# Output:
+# Memanggil fungsi faktorial, 1 kali
+# Memanggil fungsi faktorial, 2 kali
+# Memanggil fungsi faktorial, 3 kali
+# Memanggil fungsi faktorial, 4 kali
+# Memanggil fungsi faktorial, 5 kali
+# Hasil: 120
+# Total time: 0.12798595428466797 seconds
