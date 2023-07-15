@@ -40,3 +40,12 @@ def tambah(a, b):
 
 output = tambah(2, 3)
 print("Hasil:", output)
+# Output:
+# Sebelum eksekusi fungsi
+# Sedang menjumlahkan...
+# Setelah eksekusi fungsi
+# Hasil: 5
+
+# Dengan menggunakan kombinasi "print" dan "return" di dalam fungsi decorator, 
+# Anda dapat melakukan tindakan tambahan sebelum dan setelah eksekusi fungsi,
+# dan tetap mengembalikan nilai yang dihasilkan oleh fungsi tersebut.
