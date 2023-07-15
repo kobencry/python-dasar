@@ -23,3 +23,20 @@ print(main(100, 200))
 # Output:
 # 100
 # 200
+
+# contoh 2
+def decorator(func):
+    def wrapper(*args, **kwargs):
+        print("Sebelum eksekusi fungsi")
+        result = func(*args, **kwargs)
+        print("Setelah eksekusi fungsi")
+        return result
+    return wrapper
+
+@decorator
+def tambah(a, b):
+    print("Sedang menjumlahkan...")
+    return a + b
+
+output = tambah(2, 3)
+print("Hasil:", output)
