@@ -17,3 +17,17 @@ def dekorator2(func):
         func(*args, **kwargs)
         print("Dekorator 2: Setelah eksekusi fungsi")
     return wrapper
+
+# Ingat Anda bisa meletakan dekorator tersebut dengan terurut atau pun tidak terurut
+@dekorator1
+@dekorator2
+def tambah(x, y):
+    print(x + y)
+
+tambah(5, 5)
+# Output:
+# Dekorator 1: Sebelum eksekusi fungsi
+# Dekorator 2: Sebelum eksekusi fungsi
+# 10
+# Dekorator 2: Setelah eksekusi fungsi
+# Dekorator 1: Setelah eksekusi fungsi
