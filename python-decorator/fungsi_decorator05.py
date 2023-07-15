@@ -48,3 +48,16 @@ def persen(func):
         func(*args, **kwargs)
         print("%" * 30)
     return wrapper
+
+@bintang
+@persen
+def input_user(text):
+    print(text)
+
+input_user("Hello World!")
+# Output:
+# ******************************
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+# Hello World!
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+# ******************************
