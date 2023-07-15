@@ -31,3 +31,20 @@ tambah(5, 5)
 # 10
 # Dekorator 2: Setelah eksekusi fungsi
 # Dekorator 1: Setelah eksekusi fungsi
+
+# Contoh 2
+# fungsi teks bintang
+def bintang(func):
+    def wrapper(*args, **kwargs):
+        print("*" * 30)
+        func(*args, **kwargs)
+        print("*" * 30)
+    return wrapper
+
+# fungsi teks persen
+def persen(func):
+    def wrapper(*args, **kwargs):
+        print("%" * 30)
+        func(*args, **kwargs)
+        print("%" * 30)
+    return wrapper
