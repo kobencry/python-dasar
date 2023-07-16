@@ -76,6 +76,15 @@ def counter(func):
     wrapper.jumlah = 0
     return wrapper
 
+# fungsi decorator diatas bisa juga seperti ini
+# def counter(func, jumlah_func= {}):
+#     jumlah_func[func] = 0
+#     def wrapper(*args, **kwargs):
+#         jumlah_func[func] += 1
+#         print(f"Memanggil fungsi {func.__name__}, {jumlah_func[func]} kali")
+#         return func(*args, **kwargs)
+#     return wrapper
+
 # fungsi untuk menghitung jumlah waktu
 def ex_timer(func):
     def wrapper(*args, **kwargs):
