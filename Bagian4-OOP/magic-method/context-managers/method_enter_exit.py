@@ -19,3 +19,12 @@
 # def __exit__(self, exc_type, exc_value, traceback):
     # Logika atau tindakan yang akan dilakukan saat keluar dari blok konteks
     # Biasanya berhubungan dengan penanganan eksepsi (exception handling)
+
+# Parameter
+# self: Merujuk pada instance objek yang sedang digunakan.
+# exc_type: Merupakan tipe eksepsi yang diangkat, jika ada.
+#           Jika tidak ada eksepsi, maka exc_type akan bernilai None.
+# exc_value: Merupakan instance eksepsi yang diangkat, jika ada.
+#            Jika tidak ada eksepsi, maka exc_value akan bernilai None.
+# traceback: Merupakan traceback (jejak panggilan) exception/pengecualian yang diangkat, jika ada. 
+#            Jika tidak ada eksepsi, maka traceback akan bernilai None.
