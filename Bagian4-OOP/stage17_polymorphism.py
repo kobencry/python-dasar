@@ -113,7 +113,7 @@ class DigitalProduct(Product): #subclass
         super().__init__(name, price)
         self.size = size
     
-    # methdo instance
+    # method instance
     def calculate_discount(self, discount):
         self.price -= (self.price * discount/100)
     
