@@ -10,3 +10,12 @@
 # Metode ini bertanggung jawab untuk menangani pengecualian(exception) 
 # yang terjadi dalam blok konteks dan melakukan tindakan yang sesuai, 
 # seperti membersihkan sumber daya atau menangani eksepsi tersebut.
+
+# Definisi dan penggunaan deskripsi syntax dari __enter__ dan __exit__ adalah sebagai berikut:
+# def __enter__(self):
+    # Logika atau tindakan yang akan dilakukan saat memasuki blok konteks
+    # Mengembalikan objek yang akan digunakan dalam blok konteks
+
+# def __exit__(self, exc_type, exc_value, traceback):
+    # Logika atau tindakan yang akan dilakukan saat keluar dari blok konteks
+    # Biasanya berhubungan dengan penanganan eksepsi (exception handling)
