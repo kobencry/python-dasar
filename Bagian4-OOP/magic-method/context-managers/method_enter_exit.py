@@ -42,3 +42,28 @@ class FileOpener:
     
     def __exit__(self, exc_type, exc_value, traceback):
         self.objek_file.close()
+
+# Menggunakan blok konteks with untuk membuka file
+with FileOpener("demo.txt") as f:
+    # Melakukan operasi pada file yang terbuka
+    data = f.read()
+    print(data)
+# Output:
+# #=======================================
+# #ini adalah file example.txt
+# #=======================================
+#      o   o       _______
+#       \./       /       \
+#     [x]v{@}    < Hello.. |
+#    |       |    \_______/
+#     '.^^^.'   
+#  )--o-(#)-o--(
+#      ( V )
+#     /__|__\
+
+# Pada penggunaan with, __enter__ dieksekusi saat masuk ke dalam blok konteks,
+# dan hasil return dari metode ini akan ditugaskan ke variabel yang didefinisikan 
+# di dalam statement with. 
+# Ketika keluar dari blok konteks, baik karena selesai atau terjadi 
+# exception/pengecualian, __exit__ akan dieksekusi untuk menangani exception
+# dan melakukan tindakan yang sesuai.
