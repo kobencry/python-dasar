@@ -23,7 +23,7 @@
 # other: Merupakan objek kedua yang dibandingkan dengan objek saat ini.
 # nama parameter "other" bisa diganti dengan nama apapun
 
-# Contoh penggunaan magic method __gt__():
+# Berikut adalah contoh penggunaan magic method __gt__ dalam sebuah kelas:
 class Mahasiswa:
     def __init__(self, nilai):
         self.nilai = nilai

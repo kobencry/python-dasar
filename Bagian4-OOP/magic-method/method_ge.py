@@ -22,7 +22,7 @@
 # other: Merupakan objek kedua yang dibandingkan dengan objek saat ini.
 # nama parameter "other" bisa diganti dengan nama apapun
 
-# Contoh penggunaan magic method __ge__():
+# Berikut adalah contoh penggunaan magic method __ge__ dalam sebuah kelas:
 class Mahasiswa:
     def __init__(self, nilai):
         self.nilai = nilai
