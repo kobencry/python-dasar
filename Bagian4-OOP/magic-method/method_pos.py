@@ -5,8 +5,7 @@
 # method __pos__ harus mengembalikan hasil positif dari objek tersebut. 
 # method ini dipanggil ketika Anda menggunakan operator + pada instance objek yang Anda buat.
 
-# Berikut adalah contoh penggunaan method __pos__:
-
+# Berikut adalah contoh penggunaan method __pos__ dalam sebuah kelas:
 from collections import Counter
 
 class Positif:

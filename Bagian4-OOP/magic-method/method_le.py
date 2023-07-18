@@ -21,7 +21,7 @@
 # other: Merupakan objek kedua yang akan dibandingkan dengan objek saat ini.
 # nama parameter "other" bisa diganti dengan nama apapun
 
-# Contoh penggunaan magic method __le__():
+# Berikut adalah contoh penggunaan magic method __le__ dalam sebuah kelas:
 class Mahasiswa:
     def __init__(self, nilai):
         self.nilai = nilai

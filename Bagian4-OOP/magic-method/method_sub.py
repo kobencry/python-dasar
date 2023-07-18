@@ -14,7 +14,7 @@
 # other: Objek yang akan dikurangkan dari objek saat ini.
 # nama parameter "other" bisa diganti dengan nama apapun 
 
-# Contoh penggunaan magic method __sub__():
+# Contoh penggunaan magic method __sub__ dalam sebuah kelas:
 class Kurang:
     def __init__(self, nilai):
         self.nilai = nilai

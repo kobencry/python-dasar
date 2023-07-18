@@ -14,8 +14,7 @@
 # Kita dapat mengimplementasikan method __truediv__ untuk melakukan operasi pembagian sejati 
 # sesuai dengan kebutuhan aplikasi atau kelas yang kita definisikan.
 
-# Berikut adalah contoh sederhana untuk mendemonstrasikan penggunaan method __truediv__ dalam Python:
-
+# Berikut adalah contoh penggunaan method __truediv__ dalam sebuah kelas:
 class TrueDiv:
     def __init__(self, nilai):
         self.nilai = nilai
@@ -33,6 +32,7 @@ print(hasil.nilai)
 # Output:
 # 5.0
 
+# Berikut adalah contoh penggunaan magic method __truediv__() dengan 2 atribut
 class Fraction:
     def __init__(self, x, y):
         self.x = x

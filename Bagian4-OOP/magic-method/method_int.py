@@ -6,8 +6,7 @@
 # method __int__ harus mengembalikan representasi integer dari objek.
 # method ini dipanggil ketika Anda menggunakan fungsi int() pada instance objek yang Anda buat.
 
-# Berikut adalah contoh penggunaan method __int__:
-
+# Berikut adalah contoh penggunaan method __int__ dalam sebuah kelas:
 class NilaiInteger:
     def __init__(self, nilai):
         self.nilai = nilai

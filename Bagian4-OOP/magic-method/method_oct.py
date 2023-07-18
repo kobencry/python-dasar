@@ -6,8 +6,7 @@
 # method __oct__ harus mengembalikan representasi oktal dari objek dalam bentuk string dengan awalan "0o".
 # method ini dipanggil ketika Anda menggunakan fungsi oct() pada instance objek yang Anda buat.
 
-# Berikut adalah contoh penggunaan method __oct__:
-
+# Berikut adalah contoh penggunaan method __oct__ dalam sebuah kelas:
 class NilaiOctal:
     def __init__(self, nilai):
         self.nilai = nilai

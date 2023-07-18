@@ -12,8 +12,7 @@
 # dan meneruskan objek kedua sebagai argumen.
 # method ini harus mengembalikan hasil perkalian objek tersebut.
 
-# Berikut adalah contoh penggunaan magic method __mul__ pada suatu kelas:
-
+# Berikut adalah contoh penggunaan magic method __mul__ dalam sebuah kelas:
 class Kali:
     def __init__(self, nilai):
         self.nilai = nilai

@@ -15,7 +15,7 @@
 # other: Objek yang akan digunakan sebagai pangkat.
 # nama parameter "other" bisa diganti dengan nama apapun 
 
-# Contoh penggunaan magic method __pow__():
+# Berikut adalah contoh penggunaan magic method __pow__ dalam sebuah kelas:
 class Pangkat:
     def __init__(self, nilai):
         self.nilai = nilai

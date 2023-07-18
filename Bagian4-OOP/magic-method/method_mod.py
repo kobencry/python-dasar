@@ -19,7 +19,7 @@
 # other: Merupakan objek kedua yang akan digunakan dalam perhitungan modulus.
 # nama parameter "other" bisa diganti dengan nama apapun
 
-# Contoh penggunaan magic method __mod__():
+# Berikut adalah contoh penggunaan magic method __mod__ dalam sebuah kelas:
 class Modulus:
     def __init__(self, nilai):
         self.nilai = nilai
