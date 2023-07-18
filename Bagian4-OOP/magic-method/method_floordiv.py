@@ -55,24 +55,41 @@ print(hasil)
 # Output:
 # 5
 
-class Fraction:
-    def __init__(self, nilai):
-        self.nilai = nilai
-
+# Contoh penggunaan magic method __floordiv__() dengan 2 atribut
+class FloorDiv:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    
     def __floordiv__(self, other):
-        if type(self.nilai) == list:
-            hasil = []
-            for i, j in zip(self.nilai, other.nilai):
-                hasil.append(i // j)
-            return hasil
+        # Jika objek other juga merupakan objek dari kelas FloorDiv 
+        if isinstance(other, FloorDiv):
+            return FloorDiv(self.x // other.y, self.y // other.y)
+        
+        # Jika objek other bukan merupakan objek FloorDiv,
+        # kita asumsikan bahwa other adalah objek lain (tipe data apapun).
         else:
-            return Fraction(self.nilai // other.nilai)
+            return FloorDiv(self.x // other, self.y // other)
+    
+# membuat objek Floordiv
+obj1 = FloorDiv(100, 200)
+obj2 = FloorDiv(2, 5)
 
-# membuat objek Fraction
-obj1 = Fraction([10, 20, 30])
-obj2 = Fraction([2, 5, 6])
-
-hasil = obj1 // obj2
+# pembagian antara dua objek obj1.x dengan obj2.y dari kelas FloorDiv
+hasil = obj1.x // obj2.y # 100 // 5
 print(hasil)
 # Output:
-# [5, 4, 5]
+# 20
+
+# pembagian dengan cara penggunaan magic method __floordiv__()
+# Syntax:
+# object.__floordiv__(object/value)
+
+hasil = obj1.__floordiv__(obj2)
+print(hasil.x)  # 100 // 2
+# Output:
+# 20
+
+print(hasil.y)  # 200 // 5
+# Output:
+# 40
