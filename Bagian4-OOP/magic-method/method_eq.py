@@ -13,7 +13,7 @@
     # Mengembalikan True jika self sama dengan other, False jika tidak
 
 # Parameter:
-# self: Merujuk pada objek saat ini yang memanggil method __eq__.
+# self: Merujuk pada objek saat ini.
 # other: Merujuk pada objek yang dibandingkan dengan objek saat ini.
 # nama parameter "other" bisa diganti dengan nama apapun
 
