@@ -15,7 +15,7 @@
 # other: Objek yang akan ditambahkan ke objek saat ini.
 # nama parameter "other" bisa diganti dengan nama apapun 
 
-# Contoh penggunaan magic method __iadd__():
+# Berikut adalah contoh penggunaan magic method __iadd__ dalam sebuah kelas:
 class Menghitung:
     def __init__(self, nilai):
         self.nilai = nilai

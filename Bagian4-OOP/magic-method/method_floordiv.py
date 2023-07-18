@@ -20,7 +20,7 @@
 # dan meneruskan objek kedua sebagai argumen. 
 # method ini harus mengembalikan hasil pembagian bulat objek tersebut.
 
-# Berikut adalah contoh penggunaan magic method __floordiv__ pada suatu kelas:
+# Berikut adalah contoh penggunaan magic method __floordiv__ dalam sebuah kelas:
 class FloorDiv:
     def __init__(self, nilai):
         self.nilai = nilai
