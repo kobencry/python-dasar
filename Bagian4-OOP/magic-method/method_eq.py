@@ -84,3 +84,41 @@ class EqualTo:
         # kita asumsikan bahwa other adalah bilangan bulat atau bilangan desimal. 
         else:
             return EqualTo(self.x == other, self.y == other)
+
+# membuat objek EqualTo
+obj1 = EqualTo(20, 50)
+obj2 = EqualTo(20, 100)
+
+# membandingkan antara dua objek obj1.x dengan obj2.y dari kelas EqualTo
+hasil = obj1.x == obj2.y # 20 == 100
+print(hasil)
+# Output:
+# False
+
+# membandingkan antara dua objek obj1.x dengan obj2.x dari kelas EqualTo
+hasil = obj1.x == obj2.x # 20 == 20
+print(hasil)
+# Output:
+# True
+
+# membandingkan dengan cara penggunaan magic method __eq__()
+# Syntax:
+# object.__eq__(object/value)
+
+# membandingkan antara dua objek obj1 dan obj2 dari kelas Mahasiswa
+hasil = obj1.__eq__(obj2)
+print(hasil.x)
+# Output:
+# True
+
+print(hasil.y)
+# Output:
+# False
+
+# membandingkan antara objek obj1 dengan value "bilangan bulat"
+hasil = obj1.__eq__(20)
+print(hasil.x)  # 20 == 20
+print(hasil.y)  # 50 == 20
+# Output:
+# True
+# False
