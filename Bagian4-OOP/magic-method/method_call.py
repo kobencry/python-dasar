@@ -1,27 +1,24 @@
-# method __call__() adalah method khusus yang digunakan untuk memungkinkan objek dipanggil seperti fungsi.
-# Method ini digunakan untuk memberikan sifat fungsi pada objek, 
-# sehingga objek dapat diperlakukan seperti fungsi dan dipanggil dengan argumen.
+# Dalam Python, Magic method __call__ adalah Method khusus dalam Python 
+# yang digunakan untuk membuat objek dapat dipanggil seperti sebuah fungsi. 
+# Ketika sebuah objek memiliki Method __call__ yang diimplementasikan, 
+# objek tersebut dapat dianggap sebagai fungsi dan dapat dipanggil menggunakan tanda kurung ().
 
-# Ketika suatu objek dipanggil, Python akan mencari method __call__() pada kelas objek. 
-# Jika method __call__() ditemukan, maka Python akan memanggil method tersebut dan menjalankan blok kode di dalamnya.
-# Method __call__() biasanya digunakan untuk mengimplementasikan objek yang dapat dipanggil, 
-# seperti decorator atau class-based views pada web framework.
+# Deskripsi:
+# Method __call__ memungkinkan kita untuk mendefinisikan perilaku ketika objek tersebut dipanggil.
+# Dengan mengimplementasikan Method ini, kita dapat mengubah objek kita agar dapat berperilaku seperti fungsi, 
+# sehingga dapat menerima argumen dan mengembalikan hasil seperti fungsi pada umumnya.
 
-# Syntax
-# class MyClass:
-#    def __call__(self, arg1, arg2, ...):
-        # kode yang akan dijalankan saat objek dipanggil seperti fungsi
+# Syntax:
+# def __call__(self, *args, **kwargs):
+    # implementasi perilaku ketika objek dipanggil
 
-# Nilai Parameter
-# Parameter             Deskripsi
-# self                  merujuk pada objek itu sendiri.
-# arg1, arg2, ...       argumen yang diberikan saat objek dipanggil seperti fungsi.
+# Parameter
+# self: Merujuk pada objek saat ini.
+# *args: Berisi argumen posisi yang diteruskan saat objek dipanggil.
+# **kwargs: Berisi argumen kata kunci yang diteruskan saat objek dipanggil.
 
-# Dalam method __call__(), kita dapat menentukan logika atau kode yang 
-# ingin dijalankan ketika objek tersebut dipanggil seperti fungsi. 
-# Kode yang dituliskan pada method __call__() akan dieksekusi saat objek dipanggil seperti fungsi.
 
-# Berikut ini adalah contoh sederhana penggunaan metode __call__()
+# Berikut ini adalah contoh sederhana penggunaan metode __call__ dalam sebuah kelas:
 class A:
     def __call__(self):
         return "hello world"
@@ -64,14 +61,14 @@ class A:
         print('Objek dibuat')
     
     def __call__(self, *args, **kwargs):
-        print('Objek dipanggil dengan argumen:', args, kwargs)
+        print('Objek dipanggil dengan nilai argumen:', args, kwargs)
 
 # Membuat objek dan memanggilnya
 obj = A()
 obj(1, 2, a=3, b=4)
 # Output:
 # Objek dibuat
-# Objek dipanggil dengan argumen: (1, 2) {'a': 3, 'b': 4}
+# Objek dipanggil dengan nilai argumen: (1, 2) {'a': 3, 'b': 4}
 
 # Berikut beberapa contoh tambahan menggunakan fungsi decorator:
 import time
