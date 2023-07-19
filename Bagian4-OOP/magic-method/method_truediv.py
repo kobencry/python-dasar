@@ -3,10 +3,13 @@
 # Ketika kita menggunakan operator / antara dua objek, 
 # Python akan mencari dan menggunakan method __truediv__ untuk menentukan hasil pembagian tersebut.
 
+# Deskripsi:
+# Method __add__() digunakan untuk mengimplementasikan operator penjumlahan +. 
+# Method ini harus mengembalikan hasil penjumlahan objek saat ini dengan objek kedua.
+
+
 # Syntax:
-# __truediv__(self, other)
-# method __truediv__ dijalankan saat operator / digunakan pada objek.
-# method ini menerima dua parameter: self (objek saat ini) dan other (objek yang dibagi dengan objek saat ini).
+
 # nama parameter "other" bisa diganti dengan nama apapun 
 
 # Ketika method __truediv__ didefinisikan dalam sebuah kelas, 
