@@ -1,4 +1,4 @@
-# Magic method __eq__ (equal to/sama dengan) adalah method khusus dalam Python
+# Dalam Python, Magic method __eq__ (equal to/sama dengan) adalah method khusus dalam Python
 # yang digunakan untuk mendefinisikan perilaku objek saat dibandingkan dengan operator == (sama dengan).
 # method ini memungkinkan kita untuk membandingkan dua objek dan menentukan apakah objek tersebut sama atau tidak.
 
