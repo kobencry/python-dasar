@@ -1,21 +1,23 @@
-# Magic method __truediv__ adalah method khusus dalam Python 
-# yang digunakan untuk mendefinisikan perilaku operasi pembagian sejati (/) antara objek. 
-# Ketika kita menggunakan operator / antara dua objek, 
-# Python akan mencari dan menggunakan method __truediv__ untuk menentukan hasil pembagian tersebut.
+# Dalam Python, Magic method __truediv__ merupakan salah satu Method khusus dalam Python 
+# yang digunakan untuk mengimplementasikan perilaku pembagian menggunakan operator '/' pada objek
+# yang dibuat dari kelas yang kita definisikan.
+
+# Method ini disebut "true division" karena menghasilkan hasil pembagian sejati(hasil bilangan pecahan) 
+# daripada pembagian floor (hasil bilangan bulat) yang diberikan oleh Method __floordiv__.
 
 # Deskripsi:
-# Method __add__() digunakan untuk mengimplementasikan operator penjumlahan +. 
-# Method ini harus mengembalikan hasil penjumlahan objek saat ini dengan objek kedua.
-
+# Method __truediv__ memungkinkan kita untuk mendefinisikan perilaku pembagian pada objek yang kita definisikan.
+# Ketika operator '/' digunakan pada objek, Method ini akan dipanggil secara otomatis. 
+# Kita dapat mengontrol hasil pembagian sesuai kebutuhan kita.
 
 # Syntax:
+# def __truediv__(self, other):
+    # Implementasikan operasi pembagian antara self dan other
+    # Return hasil pembagian
 
+# self: Merujuk pada objek saat ini.
+# other: Merujuk pada objek yang akan dibagi dengan objek saat ini.
 # nama parameter "other" bisa diganti dengan nama apapun 
-
-# Ketika method __truediv__ didefinisikan dalam sebuah kelas, 
-# kita dapat mengontrol bagaimana objek dari kelas tersebut berperilaku saat dibagi dengan objek lain.
-# Kita dapat mengimplementasikan method __truediv__ untuk melakukan operasi pembagian sejati 
-# sesuai dengan kebutuhan aplikasi atau kelas yang kita definisikan.
 
 # Berikut adalah contoh penggunaan method __truediv__ dalam sebuah kelas:
 class TrueDiv:
@@ -23,43 +25,93 @@ class TrueDiv:
         self.nilai = nilai
 
     def __truediv__(self, other):
-        return TrueDiv(self.nilai / other.nilai)
+        if isinstance(other, TrueDiv):
+            return self.nilai / other.nilai
+        
+        else:
+            return self.nilai / other
 
 # membuat objek TrueDiv
 obj1 = TrueDiv(10)
 obj2 = TrueDiv(2)
 
-# membagi antara dua objek obj1 dengan obj2
+# pembagian antara dua objek obj1 dengan obj2 dari kelas TrueDiv
 hasil = obj1 / obj2
-print(hasil.nilai)
-# Output:
-# 5.0
-
-# Berikut adalah contoh penggunaan magic method __truediv__() dengan 2 atribut
-class Fraction:
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
-
-    def __truediv__(self, other):
-        return Fraction(self.x / other.x, self.y / other.y)
-
-# membuat objek Fraction
-obj1 = Fraction(100, 20)
-obj2 = Fraction(2, 5)
-
-# membagi objek dari obj1.x dengan obj1.y
-hasil = obj1.x / obj1.y # 100 / 20
 print(hasil)
 # Output:
 # 5.0
 
-# membagi objek dari obj1 dengan obj2
-hasil = obj1 / obj2
-print(hasil.x)
+# pembagian antara dua objek obj2 dengan obj1 dari kelas TrueDiv
+hasil = obj2 / obj1
+print(hasil)
 # Output:
-# 50.0
+# 0.2
 
-print(hasil.y)
+# pembagian antara objek obj1 dengan bilangan bulat
+hasil = obj1 / 3
+print(hasil)
 # Output:
-# 4.0
+# 3.3333333333333335
+
+# pembagian dengan cara penggunaan magic method __truediv__()
+# Syntax:
+# object.__truediv__(object/value)
+
+# pembagian antara dua objek obj1 dan obj2 dari kelas TrueDiv
+hasil = obj1.__truediv__(obj2)
+print(hasil)
+# Output:
+# 5.0
+
+# pembagian antara objek obj1 dengan bilangan bulat
+hasil = obj1.__truediv__(3)
+print(hasil)
+# Output:
+# 3.3333333333333335
+
+# Berikut adalah contoh penggunaan magic method __truediv__ dengan 2 atribut
+class Fraction:
+    def __init__(self, pembilang, penyebut):
+        self.pembilang = pembilang
+        self.penyebut = penyebut
+    
+    # Membagi bilangan pecahan dengan bilangan bulat
+    def __truediv__(self, other):
+        # Jika objek other juga merupakan objek dari kelas Fraction
+        if isinstance(other, Fraction):
+            return Fraction(self.pembilang * other.penyebut, self.penyebut * other.pembilang)
+        
+        # Jika objek other bukan merupakan objek Fraction,
+        # kita asumsikan bahwa other adalah objek lain (tipe data apapun)
+        else:
+            return Fraction(self.pembilang, self.penyebut * other)
+    
+    # Menampilkan hasil bilangan pecahan dan bilangan bulat
+    def __str__(self):
+        return f"{self.pembilang}/{self.penyebut}"
+
+# membuat objek Fraction
+obj1 = Fraction(3, 4)
+obj2 = Fraction(2, 5)
+
+# pembagian antara dua objek obj1 dan obj2 dari kelas Fraction
+hasil = obj1 / obj2
+print(hasil) 
+# Output:
+# 15/8
+
+# pembagian antara objek obj1 dengan bilangan bulat
+hasil = obj1 / 2
+print(hasil)
+# Output:
+# 3/8
+
+# pembagian dengan cara penggunaan magic method __truediv__()
+# Syntax:
+# object.__truediv__(object/value)
+
+# pembagian antara dua objek obj1 dan obj2 dari kelas Fraction
+hasil = obj1.__truediv__(obj2)
+print(hasil)
+# Output:
+# 15/8
