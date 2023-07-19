@@ -5,7 +5,7 @@
 # magic method __complex__ harus mengembalikan representasi kompleks dari objek dalam bentuk bilangan kompleks.
 # method ini dipanggil ketika Anda menggunakan fungsi complex() pada instance objek yang Anda buat.
 
-# Berikut adalah contoh penggunaan method __complex__:
+# Berikut adalah contoh penggunaan method __complex__ dalam sebuah kelas:
 class Nilai:
     def __init__(self, bilangan_real, bilangan_imajiner):
         self.bilangan_real = bilangan_real
