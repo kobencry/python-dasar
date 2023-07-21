@@ -1,4 +1,6 @@
-# Berikut adalah contoh mencari nilai terbesar dan terkecil menggunakan rekursif
+# Berikut adalah contoh mencari nilai terbesar dan terkecil menggunakan rekursif:
+
+# fungsi mencari nilai terbesar
 def num_max(arr):
     nilai_terbesar = arr[0]
     #print(f"{len(arr)} > 1: {len(arr) > 1}")
@@ -24,6 +26,7 @@ print(num_max(angka))
 # Output:
 # 20
 
+# fungsi mencari nilai terkecil
 def num_min(arr):
     nilai_terkecil = arr[0]
 
