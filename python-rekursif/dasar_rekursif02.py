@@ -18,3 +18,23 @@ main(5)
 # perulangan ke 3
 # perulangan ke 4
 # perulangan ke 5
+
+# Berikut ini adalah contoh implementasi fungsi rekursif yang meniru fungsi for loop dalam Python:
+def for_loop(start, stop, step=1):
+    print("hello world", start)
+
+    if start >= stop: # base case (basis dasar rekursif) kapan rekursif harus berhenti
+        # statemen "return" berguna untuk 
+        # mengembalikan nilai atau menghentikan eksekusi fungsi
+        return
+    
+    else:
+        for_loop(start + step, stop, step) # pemanggilan fungsi rekursif
+
+for_loop(1, 5)
+# Output:
+# hello world 1
+# hello world 2
+# hello world 3
+# hello world 4
+# hello world 5
