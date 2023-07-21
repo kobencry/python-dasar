@@ -18,3 +18,8 @@ angka = [0, 20, 100, -10, 3]
 print(num_max(angka))
 # Output:
 # 100
+
+angka = [20]
+print(num_max(angka))
+# Output:
+# 20
