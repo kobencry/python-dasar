@@ -38,3 +38,11 @@ for_loop(1, 5)
 # hello world 3
 # hello world 4
 # hello world 5
+
+for_loop(0, 8, 2)
+# Output:
+# hello world 0
+# hello world 2
+# hello world 4
+# hello world 6
+# hello world 8
