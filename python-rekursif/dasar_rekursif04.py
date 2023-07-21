@@ -23,3 +23,24 @@ angka = [20]
 print(num_max(angka))
 # Output:
 # 20
+
+def num_min(arr):
+    nilai_terkecil = arr[0]
+
+    if len(arr) > 1:
+        row = num_min(arr[1:])
+        # print(row)
+
+        # print(f"{row} < {nilai_terkecil}: {row < nilai_terkecil}")
+        if row < nilai_terkecil:
+            nilai_terkecil = row
+            # print(nilai_terkecil)
+
+    # print(f"{arr} -> {nilai_terkecil}")
+    return nilai_terkecil
+
+angka = [0, 20, 100, -10, 3]
+
+print(num_min(angka))
+# Output:
+# -10
