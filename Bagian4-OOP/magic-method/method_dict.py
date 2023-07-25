@@ -9,3 +9,17 @@
  
 # Syntax:
 # object.__dict__
+
+# Berikut ini adalah contoh penggunaan magic method __dict__ dalam sebuah kelas:
+class Mahasiswa:
+    def __init__(self, nama, usia):
+        self.nama = nama
+        self.usia = usia
+    
+# membuat objek Mahasiswa
+mhs = Mahasiswa("Alice", 20)
+
+# Mengakses atribut objek dalam bentuk kamus(dictionary)
+print(mhs.__dict__)
+# Output:
+# {'nama': 'Alice', 'usia': 20}

@@ -7,7 +7,7 @@
 # method ini dipanggil ketika Anda memanggil fungsi abs() pada sebuah instance dari kelas Anda 
 # atau ketika Anda menggunakan fungsi abs() bawaan secara langsung pada sebuah objek.
 
-# Berikut adalah contoh penggunaan method __abs__ dalam sebuah kelas:
+# Berikut adalah contoh penggunaan magic method __abs__ dalam sebuah kelas:
 class Nilai:
     def __init__(self, angka):
         self.angka = angka
