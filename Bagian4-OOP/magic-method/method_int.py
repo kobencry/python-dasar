@@ -1,4 +1,4 @@
-# Magic method __int__ adalah method khusus dalam Python 
+# Dalam Python, magic method __int__ adalah method khusus dalam Python 
 # yang digunakan untuk mengimplementasikan konversi objek menjadi tipe data integer.
 # method ini memungkinkan Anda untuk mendefinisikan perilaku konversi objek menjadi
 # bilangan bulat saat menggunakan fungsi bawaan int().
@@ -6,7 +6,7 @@
 # method __int__ harus mengembalikan representasi integer dari objek.
 # method ini dipanggil ketika Anda menggunakan fungsi int() pada instance objek yang Anda buat.
 
-# Berikut adalah contoh penggunaan method __int__ dalam sebuah kelas:
+# Berikut adalah contoh penggunaan magic method __int__ dalam sebuah kelas:
 class NilaiInteger:
     def __init__(self, nilai):
         self.nilai = nilai
@@ -14,6 +14,7 @@ class NilaiInteger:
     def __int__(self):
         return int(self.nilai)
 
+# membuat objek NilaiInteger
 x = NilaiInteger(25.9999999)
 print(x.__int__())
 # Output:
