@@ -10,7 +10,7 @@
 # Syntax:
 # object.__dict__
 
-# Berikut ini adalah contoh penggunaan magic method __dict__ dalam sebuah kelas:
+# Berikut adalah contoh penggunaan magic method __dict__ dalam sebuah kelas:
 class Mahasiswa:
     def __init__(self, nama, usia):
         self.nama = nama

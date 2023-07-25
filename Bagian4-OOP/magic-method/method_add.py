@@ -20,7 +20,7 @@
 # other: Merupakan objek kedua yang akan dijumlahkan dengan objek saat ini.
 # nama parameter "other" bisa diganti dengan nama apapun 
 
-# Contoh penggunaan magic method __add__():
+# Berikut adalah contoh penggunaan magic method __add__ dalam sebuah kelas:
 class Tambah:
     def __init__(self, nilai):
         self.nilai = nilai
