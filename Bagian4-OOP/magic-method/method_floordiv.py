@@ -55,7 +55,7 @@ print(hasil)
 # Output:
 # 5
 
-# Contoh penggunaan magic method __floordiv__() dengan 2 atribut
+# Berikut adalah contoh penggunaan magic method __floordiv__() dengan 2 atribut
 class FloorDiv:
     def __init__(self, x, y):
         self.x = x
