@@ -1,4 +1,4 @@
-# Magic method __float__ adalah method khusus dalam Python 
+# Dalam Python, magic method __float__ adalah method khusus dalam Python 
 # yang digunakan untuk mengimplementasikan konversi objek menjadi tipe data float.
 # method ini memungkinkan Anda untuk mendefinisikan perilaku konversi objek menjadi
 # bilangan desimal saat menggunakan fungsi bawaan float().
