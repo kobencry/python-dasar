@@ -6,8 +6,7 @@
 # method __hex__ harus mengembalikan representasi heksadesimal dari objek dalam bentuk string dengan awalan "0x".
 # method ini dipanggil ketika Anda menggunakan fungsi hex() pada instance objek yang Anda buat.
 
-# Berikut adalah contoh penggunaan method __hex__:
-
+# Berikut adalah contoh penggunaan magic method __hex__ dalam sebuah kelas:
 class NilaiHexa:
     def __init__(self, nilai):
         self.nilai = nilai
