@@ -18,11 +18,12 @@
 # **kwargs: Berisi argumen kata kunci yang diteruskan saat objek dipanggil.
 
 
-# Berikut ini adalah contoh sederhana penggunaan metode __call__ dalam sebuah kelas:
+# Berikut adalah contoh sederhana penggunaan metode __call__ dalam sebuah kelas:
 class A:
     def __call__(self):
         return "hello world"
 
+# membuat objek A
 x = A()
 y = A()
 print(x())
