@@ -17,7 +17,7 @@
 # other: Merujuk pada objek yang dibandingkan dengan objek saat ini.
 # nama parameter "other" bisa diganti dengan nama apapun
 
-# Berikut adalah contoh penggunaan method __eq__ dalam sebuah kelas:
+# Berikut adalah contoh penggunaan magic method __eq__ dalam sebuah kelas:
 class Mahasiswa:
     def __init__(self, nilai):
         self.nilai = nilai

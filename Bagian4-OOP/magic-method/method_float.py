@@ -6,8 +6,7 @@
 # method __float__ harus mengembalikan representasi float dari objek.
 # method ini dipanggil ketika Anda menggunakan fungsi float() pada instance objek yang Anda buat.
 
-# Berikut adalah contoh penggunaan method __float__:
-
+# Berikut adalah contoh penggunaan magic method __float__ dalam sebuah kelas:
 class NilaiFloat:
     def __init__(self, nilai):
         self.nilai = nilai
@@ -15,6 +14,7 @@ class NilaiFloat:
     def __float__(self):
         return float(self.nilai)
 
+# membuat objek NilaiFloat
 x = NilaiFloat(5)
 print(x.__float__())
 # Output:
