@@ -23,3 +23,8 @@ mhs = Mahasiswa("Alice", 20)
 print(mhs.__dict__)
 # Output:
 # {'nama': 'Alice', 'usia': 20}
+
+# Dalam contoh di atas, kita memiliki kelas Mahasiswa dengan dua atribut, nama dan usia.
+# Ketika kita membuat objek mhs dari kelas tersebut, 
+# kita dapat mengakses atribut objek dalam bentuk kamus(dictionary) menggunakan magic method __dict__. 
+# Hasilnya adalah kamus yang berisi pasangan kunci-nilai dari atribut objek.
