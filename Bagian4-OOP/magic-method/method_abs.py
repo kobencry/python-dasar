@@ -15,6 +15,7 @@ class Nilai:
     def __abs__(self):
         return abs(self.angka)
 
+# membuat objek Nilai
 x = Nilai(-10)
 print(x.__abs__())
 # Output:
