@@ -25,6 +25,7 @@ print(int(x))
 # Output:
 # 25
 
+# membuat objek NilaiInteger
 y = NilaiInteger(0xff)
 print(y.__int__())
 # Output:
