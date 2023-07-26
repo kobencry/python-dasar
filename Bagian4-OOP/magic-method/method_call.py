@@ -17,7 +17,6 @@
 # *args: Berisi argumen posisi yang diteruskan saat objek dipanggil.
 # **kwargs: Berisi argumen kata kunci yang diteruskan saat objek dipanggil.
 
-
 # Berikut adalah contoh sederhana penggunaan magic method __call__ dalam sebuah kelas:
 class A:
     def __call__(self):
