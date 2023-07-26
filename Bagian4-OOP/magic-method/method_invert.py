@@ -1,4 +1,4 @@
-# Magic method __invert__ digunakan dalam Python untuk melakukan operasi bitwise negasi pada objek.
+# Dalam Python, magic method __invert__ digunakan dalam Python untuk melakukan operasi bitwise negasi pada objek.
 # Operasi bitwise negasi mengubah setiap bit dalam representasi biner objek menjadi kebalikannya.
 
 # Berikut adalah contoh penggunaan magic method __invert__ dalam sebuah kelas:
