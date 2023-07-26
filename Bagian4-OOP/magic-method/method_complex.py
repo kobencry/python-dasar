@@ -1,4 +1,4 @@
-# Magic method __complex__ adalah method khusus dalam Python 
+# Dalam Python, magic method __complex__ adalah method khusus dalam Python 
 # yang digunakan untuk mengimplementasikan konversi objek menjadi tipe data kompleks (complex).
 # method ini memungkinkan Anda untuk mendefinisikan perilaku konversi objek menjadi bilangan kompleks saat menggunakan fungsi bawaan complex().
 
