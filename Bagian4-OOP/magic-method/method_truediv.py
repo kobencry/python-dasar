@@ -19,15 +19,18 @@
 # other: Merujuk pada objek yang akan dibagi dengan objek saat ini.
 # nama parameter "other" bisa diganti dengan nama apapun 
 
-# Berikut adalah contoh penggunaan method __truediv__ dalam sebuah kelas:
+# Berikut adalah contoh penggunaan magic method __truediv__ dalam sebuah kelas:
 class TrueDiv:
     def __init__(self, nilai):
         self.nilai = nilai
 
     def __truediv__(self, other):
+        # Jika objek other juga merupakan objek dari kelas TrueDiv
         if isinstance(other, TrueDiv):
             return self.nilai / other.nilai
-        
+
+        # Jika objek other bukan merupakan objek TrueDiv, 
+        # kita asumsikan bahwa other adalah objek lain (tipe data apapun).
         else:
             return self.nilai / other
 
