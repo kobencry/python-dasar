@@ -5,7 +5,7 @@
 # method __neg__ harus mengembalikan hasil negasi dari objek tersebut.
 # method ini dipanggil ketika Anda menggunakan operator - pada instance objek yang Anda buat.
 
-# Berikut adalah contoh penggunaan method __neg__ dalam sebuah kelas:
+# Berikut adalah contoh penggunaan magic method __neg__ dalam sebuah kelas:
 class Negative:
     def __init__(self, nilai):
         self.nilai = nilai
@@ -13,11 +13,13 @@ class Negative:
     def __neg__(self):
         return -self.nilai
 
+# membuat objek Negative
 x = Negative(5)
 print(-x)
 # Output:
 # -5
 
+# membuat objek Negative
 y = Negative(25.3333)
 print(-y)
 # Output:
@@ -31,6 +33,7 @@ class Reverse:
     def __neg__(self):
         return self.nama[::-1]
 
+# membuat objek Reverse
 x = Reverse("alice")
 print(-x)
 # Output:
