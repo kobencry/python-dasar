@@ -18,17 +18,30 @@ class Kali:
         self.nilai = nilai
 
     def __mul__(self, other):
-        return Kali(self.nilai * other.nilai)
+        # Jika objek other juga merupakan objek dari kelas Kali
+        if isinstance(other, Kali):
+            return self.nilai * other.nilai
+        
+        # Jika objek other bukan merupakan objek Mahasiswa, 
+        # kita asumsikan bahwa other adalah objek lain (tipe data apapun).
+        else:
+            return self.nilai * other
 
 # membuat objek Kali
 obj1 = Kali(2)
 obj2 = Kali(3)
 
-# mengalikan dari kedua objek
+# mengalikan antara dua objek obj1 dengan obj2 dari kelas Kali
 hasil = obj1 * obj2
-print(hasil.nilai)
+print(hasil)
 # Output:
 # 6
+
+# manglaikan antara dua objek obj1 dengan bilangan bulat
+hasil = obj1 * 10
+print(hasil)
+# Output:
+# 20
 
 # Contoh menggunakan  2 atribut
 class Kali:
