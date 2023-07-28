@@ -32,3 +32,17 @@ class Menghitung:
             return self
 
 # membuat objek Menghitung
+x = Menghitung(5)
+y = Menghitung(2)
+
+# perkalian dan penugasan antara dua objek x dengan y dari kelas Menghitung
+x *= y
+print(x.nilai)
+# Output:
+# 10
+
+# perkalian dan penugasan antara dua objek x dengan bilangan bulat
+x *= 10
+print(x.nilai)
+# Output:
+# 100
