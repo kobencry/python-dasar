@@ -8,19 +8,27 @@
 
 # Syntax:
 # def __imul__(self, other):
-    # Implementasikan operasi penggandaan dalam tempat pada objek
+    # Implementasikan operasi perkalian dan penugasan dalam tempat pada objek
 
 # Parameter:
 # self: Merujuk pada objek saat ini.
-# other: Merupakan objek kedua yang akan digunakan untuk operasi penggandaan.
+# other: objek yang akan dikalikan ke objek saat ini.
 # nama parameter "other" bisa diganti dengan nama apapun
 
+# Berikut adalah contoh penggunaan magic method __imul__ dalam sebuah kelas:
 class Menghitung:
     def __init__(self, nilai):
         self.nilai = nilai
     
     def __imul__(self, other):
+        # Jika objek other juga merupakan objek dari kelas Menghitung
         if isinstance(other, Menghitung):
-            return self.nilai * other.nilai
+            self.nilai *= other.nilai
+            return self
+        # Jika objek other bukan merupakan objek dari kelas Menghitung, 
+        # kita asumsikan bahwa other adalah objek lain (tipe data apapun).
         else:
-            return self.nilai * other
+            self.nilai *= other
+            return self
+
+# membuat objek Menghitung

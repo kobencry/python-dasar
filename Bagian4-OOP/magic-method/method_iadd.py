@@ -26,7 +26,7 @@ class Menghitung:
             self.nilai += other.nilai
             return self
         
-        # Jika objek other bukan merupakan objek Menghitung, 
+        # Jika objek other bukan merupakan objek dari kelas Menghitung, 
         # kita asumsikan bahwa other adalah objek lain (tipe data apapun).
         else:
             self.nilai += other
