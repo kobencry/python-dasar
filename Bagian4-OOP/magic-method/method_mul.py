@@ -2,15 +2,18 @@
 # yang digunakan untuk mengimplementasikan operasi perkalian (*) pada objek.
 # method ini memungkinkan objek untuk berperilaku seperti tipe data bawaan yang mendukung operasi perkalian.
 
-# Syntax:
-# __mul__(self, other)
-# method __mul__ dijalankan saat operator * digunakan pada objek.
-# method ini menerima dua parameter: self (objek saat ini) dan other (objek yang dikalikan dengan objek saat ini)
+# Deskripsi:
+# Method __mul__() digunakan untuk mengimplementasikan operator perkalian *. 
+# Method ini harus mengembalikan hasil perkalian objek saat ini dengan objek kedua.
 
-# Ketika Anda menggunakan operator perkalian (*) antara dua objek,
-# Python akan mencari dan memanggil magic method __mul__ pada objek pertama,
-# dan meneruskan objek kedua sebagai argumen.
-# method ini harus mengembalikan hasil perkalian objek tersebut.
+# Syntax:
+# def __mul__(self, other):
+    # Implementasi logika perkalian
+
+# Parameter:
+# self: Merujuk pada objek saat ini.
+# other: Merupakan objek kedua yang akan dikalikan dengan objek saat ini.
+# nama parameter "other" bisa diganti dengan nama apapun 
 
 # Berikut adalah contoh penggunaan magic method __mul__ dalam sebuah kelas:
 class Kali:
