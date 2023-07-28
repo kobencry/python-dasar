@@ -1,4 +1,4 @@
-# Magic method __mul__ adalah method khusus dalam Python
+# Dalam Python, magic method __mul__ adalah method khusus dalam Python
 # yang digunakan untuk mengimplementasikan operasi perkalian (*) pada objek.
 # method ini memungkinkan objek untuk berperilaku seperti tipe data bawaan yang mendukung operasi perkalian.
 
@@ -30,7 +30,7 @@ print(hasil.nilai)
 # Output:
 # 6
 
-# Contoh menggunakan  2 attribute
+# Contoh menggunakan  2 atribut
 class Kali:
     def __init__(self, x, y):
         self.x = x
