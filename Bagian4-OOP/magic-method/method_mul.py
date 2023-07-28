@@ -25,7 +25,7 @@ class Kali:
         if isinstance(other, Kali):
             return self.nilai * other.nilai
         
-        # Jika objek other bukan merupakan objek Mahasiswa, 
+        # Jika objek other bukan merupakan objek Kali, 
         # kita asumsikan bahwa other adalah objek lain (tipe data apapun).
         else:
             return self.nilai * other
