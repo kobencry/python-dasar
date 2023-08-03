@@ -42,4 +42,7 @@ my_range = Range(1, 5)
 for num in my_range:
     print(num)
 # Output:
-# 
+# 1
+# 2
+# 3
+# 4
